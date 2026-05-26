@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Theme } from "@/data/landing";
 
 interface ThemeTileProps {
@@ -7,7 +8,14 @@ interface ThemeTileProps {
 export function ThemeTile({ theme }: ThemeTileProps) {
   return (
     <div className="group relative aspect-square cursor-pointer overflow-hidden rounded-sm">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#5c4a3a] to-[#3d3225] transition-all duration-250 group-hover:scale-105" />
+      <Image
+        src={theme.image}
+        alt={theme.title}
+        fill
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+        className="object-cover transition-transform duration-250 group-hover:scale-105"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-anthracite/80 via-anthracite/30 to-transparent" />
       <div className="absolute inset-0 bg-terracotta/0 transition-colors duration-250 group-hover:bg-terracotta/30" />
 
       <div className="relative flex h-full flex-col justify-end p-4 md:p-5">

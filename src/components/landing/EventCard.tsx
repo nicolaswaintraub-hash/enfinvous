@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import type { Event } from "@/data/landing";
@@ -15,8 +16,15 @@ interface EventCardProps {
 export function EventCard({ event }: EventCardProps) {
   return (
     <article className="group flex flex-col overflow-hidden rounded-sm bg-card transition-all duration-250 hover:-translate-y-1 hover:shadow-[var(--shadow-card-hover)]">
-      <div className="relative aspect-[4/5] bg-gradient-to-br from-beige to-[#c9b9a8]">
-        <Badge variant={event.variant} className="absolute top-3 left-3">
+      <div className="relative aspect-[4/5] overflow-hidden">
+        <Image
+          src={event.image}
+          alt={event.title}
+          fill
+          sizes="(max-width: 640px) 85vw, (max-width: 1024px) 50vw, 33vw"
+          className="object-cover"
+        />
+        <Badge variant={event.variant} className="absolute top-3 left-3 z-10">
           {variantLabels[event.variant]}
         </Badge>
       </div>

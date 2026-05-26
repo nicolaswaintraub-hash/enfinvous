@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 
@@ -7,18 +8,24 @@ const formats = [
     description:
       "Depuis chez vous, en direct, avec des intervenants d'exception. Posez vos questions, echangez, revivez en replay.",
     link: "/masterclasses-visio",
+    image:
+      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80",
   },
   {
     title: "Les Rendez-vous",
     description:
       "Rencontres et salons en presentiel, en petits groupes, dans des lieux d'exception soigneusement choisis.",
     link: "/rendez-vous",
+    image:
+      "https://images.unsplash.com/photo-1581954548122-4dff8989c0f7?auto=format&fit=crop&w=800&q=80",
   },
   {
     title: "Fenetres sur le monde",
     description:
       "Escapades et voyages culturels en cercle restreint, accompagnes par des experts passionnes.",
     link: "/rendez-vous",
+    image:
+      "https://images.unsplash.com/photo-1587723818999-d532b4dc23d7?auto=format&fit=crop&w=800&q=80",
   },
 ];
 
@@ -39,11 +46,15 @@ export function FormatsSection() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6">
           {formats.map((format) => (
             <div key={format.title} className="text-center">
-              <div
-                className="mx-auto mb-6 aspect-square w-full max-w-[280px] rounded-sm bg-gradient-to-br from-beige to-[#d4c4b0]"
-                role="img"
-                aria-label={format.title}
-              />
+              <div className="relative mx-auto mb-6 aspect-square w-full max-w-[280px] overflow-hidden rounded-sm">
+                <Image
+                  src={format.image}
+                  alt={format.title}
+                  fill
+                  sizes="(max-width: 768px) 80vw, 280px"
+                  className="object-cover"
+                />
+              </div>
               <h3 className="mb-3 font-serif text-[22px] font-medium md:text-[26px]">
                 {format.title}
               </h3>
