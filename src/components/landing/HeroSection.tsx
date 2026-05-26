@@ -47,12 +47,12 @@ export function HeroSection() {
       {/* Full-bleed background photograph */}
       <div ref={bgRef} className="absolute inset-0 -z-20" aria-hidden="true">
         <Image
-          src="https://images.unsplash.com/photo-1632127257185-5d1261e46d93?auto=format&fit=crop&w=1920&q=80"
+          src="https://images.unsplash.com/photo-1519682718457-c82ce8296645?auto=format&fit=crop&w=1920&q=80"
           alt=""
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[center_30%]"
+          className="object-cover object-[center_45%]"
           style={{
             animation: entered
               ? "hero-ken-burns 8s ease-out 0.2s both"
