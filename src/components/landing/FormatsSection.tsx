@@ -9,7 +9,7 @@ const formats = [
       "Depuis chez vous, en direct, avec des intervenants d'exception. Posez vos questions, echangez, revivez en replay.",
     link: "/masterclasses-visio",
     image:
-      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1612832164313-ac0d7e07b5ce?auto=format&fit=crop&w=800&q=80",
   },
   {
     title: "Les Rendez-vous",
