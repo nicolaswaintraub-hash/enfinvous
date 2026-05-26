@@ -1,6 +1,7 @@
 "use client";
 
 import { ChevronDown } from "lucide-react";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -43,10 +44,26 @@ export function HeroSection() {
 
   return (
     <section className="relative flex min-h-dvh items-center justify-center overflow-hidden">
-      {/* Static warm gradient background */}
+      {/* Full-bleed background photograph */}
+      <div ref={bgRef} className="absolute inset-0 -z-20" aria-hidden="true">
+        <Image
+          src="https://images.unsplash.com/photo-1632127257185-5d1261e46d93?auto=format&fit=crop&w=1920&q=80"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[center_30%]"
+          style={{
+            animation: entered
+              ? "hero-ken-burns 8s ease-out 0.2s both"
+              : "none",
+          }}
+        />
+      </div>
+
+      {/* Warm gradient overlay */}
       <div
-        ref={bgRef}
-        className="absolute inset-0 -z-10 bg-gradient-to-br from-[#3d3225] via-[#5c4a3a] to-[#2a2520]"
+        className="absolute inset-0 -z-10 bg-gradient-to-br from-[#3d3225]/85 via-[#5c4a3a]/70 to-[#2a2520]/85 md:from-[#3d3225]/70 md:via-[#5c4a3a]/55 md:to-[#2a2520]/70"
         aria-hidden="true"
       />
 
