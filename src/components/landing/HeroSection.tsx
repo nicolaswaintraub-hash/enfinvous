@@ -47,7 +47,7 @@ export function HeroSection() {
       {/* Full-bleed background photograph */}
       <div ref={bgRef} className="absolute inset-0 -z-20" aria-hidden="true">
         <Image
-          src="https://images.unsplash.com/photo-1519682718457-c82ce8296645?auto=format&fit=crop&w=1920&q=80"
+          src="https://image.shutterstock.com/image-photo/cheerful-senior-women-gray-hair-laughing-600nw-2750100189.jpg"
           alt=""
           fill
           priority

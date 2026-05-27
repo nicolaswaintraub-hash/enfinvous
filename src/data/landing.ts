@@ -53,7 +53,7 @@ export const events: Event[] = [
     variant: "visio",
     description: "Une plongee dans l'art du tirage, entre patience et lumiere.",
     image:
-      "https://images.unsplash.com/photo-1520549233664-03f65c1d1327?auto=format&fit=crop&w=800&q=80",
+      "https://image.shutterstock.com/image-photo/happy-bearded-senior-man-vintage-camera-600nw-2579567943.jpg",
   },
   {
     id: "2",
@@ -66,7 +66,7 @@ export const events: Event[] = [
     description:
       "Cinq domaines d'exception, commentes par une sommeliere passionnee.",
     image:
-      "https://images.unsplash.com/photo-1626364700645-13f3cebdadc4?auto=format&fit=crop&w=800&q=80",
+      "https://image.shutterstock.com/image-photo/confident-elderly-positive-smiling-man-tasting-600nw-1902582988.jpg",
   },
   {
     id: "3",
@@ -79,7 +79,7 @@ export const events: Event[] = [
     description:
       "Un voyage musical guide par l'un des grands chefs d'orchestre.",
     image:
-      "https://images.unsplash.com/photo-1761263485069-04ead8a08785?auto=format&fit=crop&w=800&q=80",
+      "https://image.shutterstock.com/image-photo/professional-conductor-baton-on-white-background-600nw-2247142097.jpg",
   },
   {
     id: "4",
@@ -92,7 +92,7 @@ export const events: Event[] = [
     description:
       "L'ecriture comme espace de liberte et de reconquete personnelle.",
     image:
-      "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?auto=format&fit=crop&w=800&q=80",
+      "https://image.shutterstock.com/image-photo/mature-writer-working-on-essay-writing-600nw-2260641597.jpg",
   },
   {
     id: "5",
@@ -105,7 +105,7 @@ export const events: Event[] = [
     description:
       "Un parcours exclusif dans les salles habituellement fermees au public.",
     image:
-      "https://images.unsplash.com/photo-1606819717115-9159c900370b?auto=format&fit=crop&w=800&q=80",
+      "https://image.shutterstock.com/image-photo/individual-admiring-colorful-modern-artworks-contemporary-600nw-2632939805.jpg",
   },
   {
     id: "6",
@@ -118,7 +118,7 @@ export const events: Event[] = [
     description:
       "Comment transformer la retraite en un acte de creation de soi.",
     image:
-      "https://images.unsplash.com/photo-1595123550441-d377e017de6a?auto=format&fit=crop&w=800&q=80",
+      "https://image.shutterstock.com/image-photo/vertical-shot-happy-thoughtful-senior-man-600nw-2396556913.jpg",
   },
 ];
 
@@ -128,42 +128,42 @@ export const experts: Expert[] = [
     name: "Marc Riboud",
     discipline: "Photographie",
     image:
-      "https://images.unsplash.com/photo-1523278669709-c05da80b6a65?auto=format&fit=crop&w=800&q=80",
+      "https://image.shutterstock.com/image-photo/portrait-senior-man-photography-enthusiast-who-600nw-2743942967.jpg",
   },
   {
     id: "2",
     name: "Claire Vallée",
     discipline: "Gastronomie",
     image:
-      "https://images.unsplash.com/photo-1701878198293-d1f3641efdb3?auto=format&fit=crop&w=800&q=80",
+      "https://image.shutterstock.com/image-photo/portrait-beautiful-senior-woman-on-gray-600nw-2753367011.jpg",
   },
   {
     id: "3",
     name: "Philippe Jordan",
     discipline: "Musique classique",
     image:
-      "https://images.unsplash.com/photo-1699521376923-b07550a613f0?auto=format&fit=crop&w=800&q=80",
+      "https://image.shutterstock.com/image-photo/distinguished-older-gentleman-exudes-confidence-this-600nw-2323313887.jpg",
   },
   {
     id: "4",
     name: "Annie Ernaux",
     discipline: "Litterature",
     image:
-      "https://images.unsplash.com/photo-1663429122432-c2769373768f?auto=format&fit=crop&w=800&q=80",
+      "https://image.shutterstock.com/image-photo/studio-portrait-senior-woman-smile-funny-600nw-2544254763.jpg",
   },
   {
     id: "5",
     name: "Caroline Bourgeois",
     discipline: "Art contemporain",
     image:
-      "https://images.unsplash.com/photo-1679931992291-ce0b18468e92?auto=format&fit=crop&w=800&q=80",
+      "https://image.shutterstock.com/image-photo/senior-woman-holding-examining-vibrant-abstract-600nw-2632939913.jpg",
   },
   {
     id: "6",
     name: "Cynthia Fleury",
     discipline: "Philosophie",
     image:
-      "https://images.unsplash.com/photo-1517462964-21fdcec3f25b?auto=format&fit=crop&w=800&q=80",
+      "https://image.shutterstock.com/image-photo/happy-senior-woman-600nw-370677797.jpg",
   },
 ];
 
@@ -173,56 +173,56 @@ export const themes: Theme[] = [
     title: "Culture et decouverte",
     tagline: "Elargir ses horizons, nourrir sa curiosite.",
     image:
-      "https://images.unsplash.com/photo-1762766768612-aaae5389b3ec?auto=format&fit=crop&w=800&q=80",
+      "https://image.shutterstock.com/image-photo/senior-man-examining-beautiful-paintings-art-600nw-2614716249.jpg",
   },
   {
     id: "2",
     title: "Creativite et apprentissage",
     tagline: "Reveler ce que vous n'avez jamais ose exprimer.",
     image:
-      "https://images.unsplash.com/photo-1755520795091-adf1f3f307e0?auto=format&fit=crop&w=800&q=80",
+      "https://image.shutterstock.com/image-photo/smiling-senior-woman-enjoying-nature-camera-600nw-2586291429.jpg",
   },
   {
     id: "3",
     title: "Gastronomie",
     tagline: "Partager le plaisir des saveurs rares.",
     image:
-      "https://images.unsplash.com/photo-1599458252573-56ae36120de1?auto=format&fit=crop&w=800&q=80",
+      "https://image.shutterstock.com/image-photo/diverse-senior-couple-preparing-meal-using-600nw-2526903605.jpg",
   },
   {
     id: "4",
     title: "Numerique",
     tagline: "Maitriser les outils d'aujourd'hui, sans complexe.",
     image:
-      "https://images.unsplash.com/photo-1653035975957-4d2bc40e1e96?auto=format&fit=crop&w=800&q=80",
+      "https://image.shutterstock.com/image-photo/senior-man-learning-digital-skills-tutor-600nw-2705788047.jpg",
   },
   {
     id: "5",
     title: "Voyages",
     tagline: "Partir en cercle restreint, revenir transforme.",
     image:
-      "https://images.unsplash.com/photo-1568282167464-cb0d811b05c2?auto=format&fit=crop&w=800&q=80",
+      "https://image.shutterstock.com/image-photo/group-elderly-friends-suitcases-bags-gather-600nw-2219446801.jpg",
   },
   {
     id: "6",
     title: "Bien-etre",
     tagline: "Prendre soin de soi avec elegance et douceur.",
     image:
-      "https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=800&q=80",
+      "https://image.shutterstock.com/image-photo/senior-couple-yoga-meditation-breathing-nature-600nw-2710892563.jpg",
   },
   {
     id: "7",
     title: "Sexualite et intimite",
     tagline: "Oser aborder ce qui compte, en toute confiance.",
     image:
-      "https://images.unsplash.com/photo-1560439972-1af698047fa3?auto=format&fit=crop&w=800&q=80",
+      "https://image.shutterstock.com/image-photo/portrait-lovely-senior-couple-on-beige-600nw-2617461885.jpg",
   },
   {
     id: "8",
     title: "Conferences et debats",
     tagline: "Echanger entre esprits libres, sans concession.",
     image:
-      "https://images.unsplash.com/photo-1758839295128-b04f48b1b08c?auto=format&fit=crop&w=800&q=80",
+      "https://image.shutterstock.com/image-photo/senior-woman-audience-interacting-using-microphone-600nw-2728975945.jpg",
   },
 ];
 

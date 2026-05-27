@@ -9,7 +9,7 @@ const formats = [
       "Depuis chez vous, en direct, avec des intervenants d'exception. Posez vos questions, echangez, revivez en replay.",
     link: "/masterclasses-visio",
     image:
-      "https://images.unsplash.com/photo-1612832164313-ac0d7e07b5ce?auto=format&fit=crop&w=800&q=80",
+      "https://image.shutterstock.com/image-photo/older-woman-learning-digital-skills-during-600nw-2705788075.jpg",
   },
   {
     title: "Les Rendez-vous",
@@ -17,7 +17,7 @@ const formats = [
       "Rencontres et salons en presentiel, en petits groupes, dans des lieux d'exception soigneusement choisis.",
     link: "/rendez-vous",
     image:
-      "https://images.unsplash.com/photo-1581954548122-4dff8989c0f7?auto=format&fit=crop&w=800&q=80",
+      "https://image.shutterstock.com/image-photo/happy-senior-woman-welcoming-multiracial-friends-600nw-2139103751.jpg",
   },
   {
     title: "Fenetres sur le monde",
@@ -25,7 +25,7 @@ const formats = [
       "Escapades et voyages culturels en cercle restreint, accompagnes par des experts passionnes.",
     link: "/rendez-vous",
     image:
-      "https://images.unsplash.com/photo-1587723818999-d532b4dc23d7?auto=format&fit=crop&w=800&q=80",
+      "https://image.shutterstock.com/image-photo/group-positive-senior-people-looking-map-600nw-1843893163.jpg",
   },
 ];
 
