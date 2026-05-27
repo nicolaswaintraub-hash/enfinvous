@@ -116,7 +116,7 @@ export function HeroSection() {
         />
 
         <h1
-          className="mx-auto max-w-3xl font-serif text-[40px] font-normal leading-[1.1] italic md:text-[64px]"
+          className="mx-auto max-w-3xl font-serif text-[28px] font-normal leading-[1.1] italic sm:text-[36px] md:text-[64px]"
           style={{
             animation: entered
               ? "hero-reveal-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.7s both"
