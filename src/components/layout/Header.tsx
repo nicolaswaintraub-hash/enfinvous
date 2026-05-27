@@ -57,7 +57,7 @@ export function Header() {
               key={link.href}
               href={link.href}
               className={cn(
-                "font-sans text-sm font-medium transition-colors duration-500",
+                "font-sans text-base font-medium transition-colors duration-500",
                 isScrolled
                   ? "text-foreground/70 hover:text-foreground"
                   : "text-creme/80 hover:text-creme",
@@ -71,7 +71,7 @@ export function Header() {
 
         {/* Mobile controls */}
         <div className="flex items-center gap-3 lg:hidden">
-          <Button size="sm" className="hidden text-xs sm:inline-flex">
+          <Button size="sm" className="hidden text-sm sm:inline-flex">
             S'abonner
           </Button>
           <button

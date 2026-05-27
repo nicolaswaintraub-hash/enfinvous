@@ -105,8 +105,8 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
       </nav>
 
       <div className="relative px-8 pb-8 text-center">
-        <p className="font-serif text-sm italic text-creme/40">
-          Le cercle des passions retrouvees.
+        <p className="font-serif text-base italic text-creme/40">
+          Le cercle des eveilles de la vie.
         </p>
       </div>
     </div>

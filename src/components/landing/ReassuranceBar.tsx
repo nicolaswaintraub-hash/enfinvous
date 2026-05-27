@@ -21,7 +21,7 @@ export function ReassuranceBar() {
                 />
               )}
               <item.icon className="size-5 text-foreground/70" />
-              <span className="font-sans text-sm font-medium text-foreground/80">
+              <span className="font-sans text-base font-medium text-foreground/80">
                 {item.label}
               </span>
             </div>

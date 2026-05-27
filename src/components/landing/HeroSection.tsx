@@ -92,7 +92,7 @@ export function HeroSection() {
       <div className="relative px-4 text-center text-creme">
         <p
           className={cn(
-            "mb-6 font-sans text-[13px] font-medium uppercase tracking-[0.2em] text-creme/60",
+            "mb-6 font-sans text-[15px] font-medium uppercase tracking-[0.2em] text-creme/60",
             entered ? "opacity-100" : "opacity-0",
           )}
           style={{
@@ -101,7 +101,7 @@ export function HeroSection() {
               : "none",
           }}
         >
-          Le cercle des passions retrouvees
+          Le cercle des eveilles de la vie
         </p>
 
         <div
@@ -125,7 +125,7 @@ export function HeroSection() {
         >
           Enfin, le temps de vivre
           <br />
-          ce qui vous passionne vraiment.
+          ce qui vous passionne.
         </h1>
 
         <div
@@ -140,7 +140,7 @@ export function HeroSection() {
         />
 
         <p
-          className="mt-8 font-sans text-[13px] font-medium uppercase tracking-[0.15em] text-creme/50"
+          className="mt-8 font-sans text-[15px] font-medium uppercase tracking-[0.15em] text-creme/50"
           style={{
             animation: entered
               ? "hero-reveal-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.3s both"

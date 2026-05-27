@@ -19,7 +19,7 @@ export function SectionHeading({
   return (
     <div className={cn("mb-10 md:mb-16 text-center", className)}>
       {surtitre && (
-        <p className="mb-3 font-sans text-[13px] font-medium uppercase tracking-[0.15em] text-muted-foreground">
+        <p className="mb-3 font-sans text-[15px] font-medium uppercase tracking-[0.15em] text-muted-foreground">
           {surtitre}
         </p>
       )}

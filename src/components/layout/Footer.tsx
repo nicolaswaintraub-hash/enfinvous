@@ -28,12 +28,12 @@ export function Footer() {
               Enfin·Vous
             </Link>
             <p className="mt-3 font-serif text-base italic text-muted-foreground">
-              Le cercle des passions retrouvees.
+              Le cercle des eveilles de la vie.
             </p>
           </div>
 
           <div>
-            <p className="mb-4 font-sans text-[13px] font-medium uppercase tracking-[0.15em] text-muted-foreground">
+            <p className="mb-4 font-sans text-[15px] font-medium uppercase tracking-[0.15em] text-muted-foreground">
               Decouvrir
             </p>
             <ul className="space-y-2">
@@ -41,7 +41,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="font-sans text-sm text-foreground/80 transition-colors hover:text-terracotta"
+                    className="font-sans text-base text-foreground/80 transition-colors hover:text-terracotta"
                   >
                     {link.label}
                   </Link>
@@ -51,7 +51,7 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="mb-4 font-sans text-[13px] font-medium uppercase tracking-[0.15em] text-muted-foreground">
+            <p className="mb-4 font-sans text-[15px] font-medium uppercase tracking-[0.15em] text-muted-foreground">
               Informations
             </p>
             <ul className="space-y-2">
@@ -59,7 +59,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="font-sans text-sm text-foreground/80 transition-colors hover:text-terracotta"
+                    className="font-sans text-base text-foreground/80 transition-colors hover:text-terracotta"
                   >
                     {link.label}
                   </Link>
@@ -69,17 +69,17 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="mb-4 font-sans text-[13px] font-medium uppercase tracking-[0.15em] text-muted-foreground">
+            <p className="mb-4 font-sans text-[15px] font-medium uppercase tracking-[0.15em] text-muted-foreground">
               Assistance
             </p>
             <a
               href="tel:+33100000000"
-              className="inline-flex items-center gap-2 font-sans text-sm text-foreground/80 transition-colors hover:text-terracotta"
+              className="inline-flex items-center gap-2 font-sans text-base text-foreground/80 transition-colors hover:text-terracotta"
             >
               <Phone className="size-4" />
               01 00 00 00 00
             </a>
-            <p className="mt-2 font-sans text-xs text-muted-foreground">
+            <p className="mt-2 font-sans text-sm text-muted-foreground">
               Du lundi au vendredi, 9h-18h
             </p>
           </div>
@@ -87,7 +87,7 @@ export function Footer() {
 
         <Separator className="my-8 bg-foreground/10" />
 
-        <p className="text-center font-sans text-xs text-muted-foreground">
+        <p className="text-center font-sans text-sm text-muted-foreground">
           &copy; {new Date().getFullYear()} EnfinVous. Tous droits reserves.
         </p>
       </Container>

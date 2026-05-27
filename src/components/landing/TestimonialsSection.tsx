@@ -25,7 +25,7 @@ export function TestimonialsSection() {
               <blockquote className="font-serif text-lg italic leading-relaxed md:text-[20px]">
                 &laquo;&nbsp;{testimonial.quote}&nbsp;&raquo;
               </blockquote>
-              <p className="mt-4 font-sans text-sm text-muted-foreground">
+              <p className="mt-4 font-sans text-base text-muted-foreground">
                 — {testimonial.name}, {testimonial.age} ans, {testimonial.city}
               </p>
             </div>

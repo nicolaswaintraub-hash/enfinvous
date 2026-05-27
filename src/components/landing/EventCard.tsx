@@ -30,21 +30,21 @@ export function EventCard({ event }: EventCardProps) {
       </div>
 
       <div className="flex flex-1 flex-col p-4">
-        <p className="mb-1 font-sans text-[11px] font-medium uppercase tracking-[0.15em] text-muted-foreground">
+        <p className="mb-1 font-sans text-sm font-medium uppercase tracking-[0.15em] text-muted-foreground">
           {event.date}
         </p>
         <h3 className="mb-2 font-serif text-[20px] font-medium leading-snug md:text-[22px]">
           {event.title}
         </h3>
-        <p className="mb-3 font-sans text-sm leading-relaxed text-foreground/80">
+        <p className="mb-3 font-sans text-base leading-relaxed text-foreground/80">
           {event.description}
         </p>
         <div className="mt-auto flex items-center justify-between">
-          <span className="font-sans text-[13px] text-muted-foreground">
+          <span className="font-sans text-[15px] text-muted-foreground">
             {event.time} &middot; {event.duration} &middot; {event.expert}
           </span>
         </div>
-        <Button variant="tertiary" className="mt-3 self-start text-sm">
+        <Button variant="tertiary" className="mt-3 self-start text-base">
           Je reserve
         </Button>
       </div>

@@ -31,9 +31,9 @@
   --color-sage: #a9c1bd;
   --color-gold: #c4a87a;
 
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--font-cormorant), ui-serif, Georgia, serif;
-  --font-heading: var(--font-cormorant), ui-serif, Georgia, serif;
+  --font-sans: var(--font-roboto-slab), "Roboto Slab", ui-serif, Georgia, serif;
+  --font-serif: var(--font-roboto-slab), "Roboto Slab", ui-serif, Georgia, serif;
+  --font-heading: var(--font-roboto-slab), "Roboto Slab", ui-serif, Georgia, serif;
 
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);

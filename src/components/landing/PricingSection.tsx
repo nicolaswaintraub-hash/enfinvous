@@ -42,7 +42,7 @@ export function PricingSection() {
                 <span className="font-serif text-[40px] font-medium">
                   {plan.price}&nbsp;&euro;
                 </span>
-                <span className="font-sans text-sm text-muted-foreground">
+                <span className="font-sans text-base text-muted-foreground">
                   / {plan.period}
                 </span>
               </div>
@@ -69,7 +69,7 @@ export function PricingSection() {
           ))}
         </div>
 
-        <p className="mt-6 text-center font-sans text-sm text-muted-foreground">
+        <p className="mt-6 text-center font-sans text-base text-muted-foreground">
           Sans engagement. Resiliez a tout moment.
         </p>
       </Container>

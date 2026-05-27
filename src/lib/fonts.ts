@@ -1,15 +1,8 @@
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Roboto_Slab } from "next/font/google";
 
-export const cormorant = Cormorant_Garamond({
+export const robotoSlab = Roboto_Slab({
   subsets: ["latin", "latin-ext"],
-  weight: ["400", "500"],
-  style: ["normal", "italic"],
-  variable: "--font-cormorant",
-  display: "swap",
-});
-
-export const inter = Inter({
-  subsets: ["latin", "latin-ext"],
-  variable: "--font-inter",
+  weight: ["300", "400", "500", "700"],
+  variable: "--font-roboto-slab",
   display: "swap",
 });

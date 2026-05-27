@@ -21,7 +21,7 @@ export function ExpertCard({ expert }: ExpertCardProps) {
           <p className="font-serif text-lg font-medium italic text-creme drop-shadow-md">
             {expert.name}
           </p>
-          <p className="font-sans text-sm text-creme/80 drop-shadow-md">
+          <p className="font-sans text-base text-creme/80 drop-shadow-md">
             {expert.discipline}
           </p>
         </div>
