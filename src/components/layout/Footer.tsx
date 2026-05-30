@@ -10,9 +10,9 @@ const navLinks = [
 ];
 
 const legalLinks = [
-  { href: "/mentions-legales", label: "Mentions legales" },
+  { href: "/mentions-legales", label: "Mentions légales" },
   { href: "/cgu", label: "CGU" },
-  { href: "/confidentialite", label: "Confidentialite" },
+  { href: "/confidentialite", label: "Confidentialité" },
   { href: "/cookies", label: "Cookies" },
 ];
 
@@ -28,13 +28,13 @@ export function Footer() {
               Enfin·Vous
             </Link>
             <p className="mt-3 font-serif text-base italic text-muted-foreground">
-              Le cercle des eveilles de la vie.
+              Le cercle des éveillés de la vie.
             </p>
           </div>
 
           <div>
             <p className="mb-4 font-sans text-[15px] font-medium uppercase tracking-[0.15em] text-muted-foreground">
-              Decouvrir
+              Découvrir
             </p>
             <ul className="space-y-2">
               {navLinks.map((link) => (
@@ -88,7 +88,7 @@ export function Footer() {
         <Separator className="my-8 bg-foreground/10" />
 
         <p className="text-center font-sans text-sm text-muted-foreground">
-          &copy; {new Date().getFullYear()} EnfinVous. Tous droits reserves.
+          &copy; {new Date().getFullYear()} EnfinVous. Tous droits réservés.
         </p>
       </Container>
     </footer>

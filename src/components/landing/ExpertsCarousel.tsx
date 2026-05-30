@@ -49,7 +49,7 @@ export function ExpertsCarousel() {
             {experts.map((expert) => (
               <CarouselItem
                 key={expert.id}
-                className="pl-4 basis-[60%] sm:basis-1/3 lg:basis-1/4"
+                className="pl-4 basis-[80%] sm:basis-1/3 lg:basis-1/4"
               >
                 <ExpertCard expert={expert} />
               </CarouselItem>
@@ -57,7 +57,7 @@ export function ExpertsCarousel() {
           </CarouselContent>
           <CarouselPrevious
             className="-left-4 md:-left-12 border-foreground/20 bg-background hover:bg-foreground hover:text-background"
-            aria-label="Expert precedent"
+            aria-label="Expert précédent"
           />
           <CarouselNext
             className="-right-4 md:-right-12 border-foreground/20 bg-background hover:bg-foreground hover:text-background"

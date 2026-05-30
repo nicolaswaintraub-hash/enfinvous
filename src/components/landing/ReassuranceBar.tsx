@@ -3,8 +3,8 @@ import { Container } from "@/components/ui/container";
 
 const items = [
   { icon: Shield, label: "Sans engagement" },
-  { icon: Headphones, label: "Assistance dediee" },
-  { icon: Users, label: "Communaute privee" },
+  { icon: Headphones, label: "Assistance dédiée" },
+  { icon: Users, label: "Communauté privée" },
 ];
 
 export function ReassuranceBar() {

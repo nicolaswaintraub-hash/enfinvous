@@ -4,11 +4,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "EnfinVous — Le Cercle des Passions Retrouvees",
+    default: "EnfinVous — Le Cercle des Passions Retrouvées",
     template: "%s | EnfinVous",
   },
   description:
-    "Masterclasses en visioconference et rencontres en presentiel pour vivre vos passions. Rejoignez le cercle.",
+    "Masterclasses en visioconférence et rencontres en présentiel pour vivre vos passions. Rejoignez le cercle.",
 };
 
 export default function RootLayout({

@@ -10,7 +10,7 @@ const badgeVariants = cva(
         default: "bg-primary text-primary-foreground",
         visio: "bg-terracotta text-primary-foreground",
         presentiel: "bg-sage text-foreground",
-        signature: "bg-gold/20 text-foreground border border-gold",
+        signature: "badge-signature",
       },
     },
     defaultVariants: {

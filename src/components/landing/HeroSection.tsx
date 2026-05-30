@@ -52,7 +52,7 @@ export function HeroSection() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[center_45%]"
+          className="object-cover object-[center_45%] brightness-110 contrast-[1.02]"
           style={{
             animation: entered
               ? "hero-ken-burns 8s ease-out 0.2s both"
@@ -63,7 +63,7 @@ export function HeroSection() {
 
       {/* Warm gradient overlay */}
       <div
-        className="absolute inset-0 -z-10 bg-gradient-to-br from-[#3d3225]/85 via-[#5c4a3a]/70 to-[#2a2520]/85 md:from-[#3d3225]/70 md:via-[#5c4a3a]/55 md:to-[#2a2520]/70"
+        className="absolute inset-0 -z-10 bg-gradient-to-br from-[#3d3225]/60 via-[#5c4a3a]/45 to-[#2a2520]/60 md:from-[#3d3225]/45 md:via-[#5c4a3a]/30 md:to-[#2a2520]/45"
         aria-hidden="true"
       />
 
@@ -72,7 +72,7 @@ export function HeroSection() {
         className="absolute inset-0 -z-10"
         style={{
           background:
-            "radial-gradient(ellipse 60% 50% at 50% 40%, rgba(196,168,122,0.08) 0%, transparent 70%), linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 40%, rgba(0,0,0,0.2) 100%)",
+            "radial-gradient(ellipse 60% 50% at 50% 40%, rgba(196,168,122,0.08) 0%, transparent 70%), linear-gradient(to top, rgba(0,0,0,0.35) 0%, transparent 40%, rgba(0,0,0,0.2) 100%)",
         }}
         aria-hidden="true"
       />
@@ -92,16 +92,17 @@ export function HeroSection() {
       <div className="relative px-4 text-center text-creme">
         <p
           className={cn(
-            "mb-6 font-sans text-[15px] font-medium uppercase tracking-[0.2em] text-creme/60",
+            "mb-6 font-sans text-[15px] font-medium uppercase tracking-[0.2em] text-creme/90",
             entered ? "opacity-100" : "opacity-0",
           )}
           style={{
+            textShadow: "0 1px 16px rgba(0,0,0,0.55)",
             animation: entered
               ? "hero-reveal-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both"
               : "none",
           }}
         >
-          Le cercle des eveilles de la vie
+          Le cercle des éveillés de la vie
         </p>
 
         <div
@@ -116,8 +117,9 @@ export function HeroSection() {
         />
 
         <h1
-          className="mx-auto max-w-3xl font-serif text-[28px] font-normal leading-[1.1] italic sm:text-[36px] md:text-[64px]"
+          className="mx-auto max-w-3xl font-serif text-[28px] font-normal leading-[1.1] sm:text-[36px] md:text-[64px]"
           style={{
+            textShadow: "0 2px 24px rgba(0,0,0,0.5)",
             animation: entered
               ? "hero-reveal-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.7s both"
               : "none",
@@ -140,14 +142,15 @@ export function HeroSection() {
         />
 
         <p
-          className="mt-8 font-sans text-[15px] font-medium uppercase tracking-[0.15em] text-creme/50"
+          className="mt-8 font-sans text-[15px] font-medium uppercase tracking-[0.15em] text-creme/90"
           style={{
+            textShadow: "0 1px 16px rgba(0,0,0,0.55)",
             animation: entered
               ? "hero-reveal-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.3s both"
               : "none",
           }}
         >
-          Masterclasses en visio &middot; Rencontres en presentiel &middot;
+          Masterclasses en visio &middot; Rencontres en présentiel &middot;
           Escapades culturelles
         </p>
 
@@ -165,7 +168,7 @@ export function HeroSection() {
             size="lg"
             className="border-creme/30 text-creme hover:bg-creme hover:text-foreground"
           >
-            Decouvrir le programme
+            Découvrir le programme
           </Button>
         </div>
       </div>

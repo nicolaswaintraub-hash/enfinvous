@@ -32,7 +32,7 @@ export function EventsCarousel() {
       <Container>
         <SectionHeading
           surtitre="A venir"
-          title="Prochains evenements"
+          title="Vos rendez-vous"
           id="events-heading"
         />
 
@@ -43,7 +43,7 @@ export function EventsCarousel() {
               : { align: "start", loop: false }
           }
           className="mx-auto max-w-[calc(1280px-3rem)]"
-          aria-label="Prochains evenements"
+          aria-label="Vos rendez-vous"
         >
           <CarouselContent className="-ml-4">
             {events.map((event) => (
@@ -57,11 +57,11 @@ export function EventsCarousel() {
           </CarouselContent>
           <CarouselPrevious
             className="-left-4 md:-left-12 border-foreground/20 bg-background hover:bg-foreground hover:text-background"
-            aria-label="Evenement precedent"
+            aria-label="Événement précédent"
           />
           <CarouselNext
             className="-right-4 md:-right-12 border-foreground/20 bg-background hover:bg-foreground hover:text-background"
-            aria-label="Evenement suivant"
+            aria-label="Événement suivant"
           />
         </Carousel>
       </Container>

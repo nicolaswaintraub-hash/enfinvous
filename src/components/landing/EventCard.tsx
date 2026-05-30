@@ -6,7 +6,7 @@ import type { Event } from "@/data/landing";
 const variantLabels: Record<string, string> = {
   visio: "Masterclass",
   presentiel: "Rendez-vous",
-  signature: "Evenement signature",
+  signature: "Événement signature",
 };
 
 interface EventCardProps {
@@ -24,7 +24,16 @@ export function EventCard({ event }: EventCardProps) {
           sizes="(max-width: 640px) 85vw, (max-width: 1024px) 50vw, 33vw"
           className="object-cover"
         />
-        <Badge variant={event.variant} className="absolute top-3 left-3 z-10">
+        <Badge
+          variant={event.variant}
+          className="absolute top-3 left-3 z-10 gap-1.5"
+        >
+          {event.variant === "signature" && (
+            <span
+              className="size-1.5 rotate-45 bg-anthracite/70"
+              aria-hidden="true"
+            />
+          )}
           {variantLabels[event.variant]}
         </Badge>
       </div>
@@ -45,7 +54,7 @@ export function EventCard({ event }: EventCardProps) {
           </span>
         </div>
         <Button variant="tertiary" className="mt-3 self-start text-base">
-          Je reserve
+          Je réserve
         </Button>
       </div>
     </article>

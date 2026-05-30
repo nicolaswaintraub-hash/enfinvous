@@ -1,77 +1,87 @@
-import { Check } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { ArrowRight, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { plans } from "@/data/landing";
-import { cn } from "@/lib/utils";
+import { plan } from "@/data/landing";
 
 export function PricingSection() {
   return (
     <section
-      className="py-12 md:py-16 lg:py-24 bg-beige"
+      className="relative overflow-hidden py-12 md:py-16 lg:py-24 bg-beige"
       aria-labelledby="pricing-heading"
     >
-      <Container>
+      <div aria-hidden className="abo-glow" />
+
+      <Container className="relative">
         <SectionHeading
           surtitre="Rejoignez le cercle"
-          title="Choisissez votre formule"
+          title="L'abonnement EnfinVous"
           id="pricing-heading"
         />
 
-        <div className="mx-auto grid max-w-3xl grid-cols-1 gap-6 md:grid-cols-2">
-          {plans.map((plan) => (
-            <div
-              key={plan.id}
-              className={cn(
-                "flex flex-col rounded-sm bg-background p-6 md:p-8",
-                plan.highlighted && "border border-gold ring-1 ring-gold/30",
-              )}
-            >
-              {plan.highlighted && (
-                <Badge variant="signature" className="mb-4 self-start">
-                  Recommande
-                </Badge>
-              )}
+        <div className="abo-panel mx-auto max-w-4xl overflow-hidden rounded-lg">
+          <div className="grid grid-cols-1 md:grid-cols-[1.05fr_0.95fr]">
+            {/* Décision — nom, prix, appel à l'action */}
+            <div className="flex flex-col gap-7 p-8 md:p-12">
+              <span className="abo-tag inline-flex w-fit items-center rounded-full px-3.5 py-1.5 font-sans text-[12px] font-medium uppercase tracking-[0.16em]">
+                Formule unique · Tout inclus
+              </span>
 
-              <h3 className="font-serif text-[24px] font-medium md:text-[28px]">
-                {plan.name}
-              </h3>
-
-              <div className="mt-3 flex items-baseline gap-1">
-                <span className="font-serif text-[40px] font-medium">
-                  {plan.price}&nbsp;&euro;
-                </span>
-                <span className="font-sans text-base text-muted-foreground">
-                  / {plan.period}
-                </span>
+              <div className="flex flex-col gap-2">
+                <h3 className="font-serif text-[34px] font-medium leading-none text-foreground md:text-[44px]">
+                  {plan.name}
+                </h3>
+                <p className="font-sans text-[15px] leading-snug text-muted-foreground md:text-base">
+                  Tout l'univers EnfinVous, sans la moindre limite.
+                </p>
               </div>
 
-              <ul className="mt-6 flex-1 space-y-3">
+              <div className="flex flex-col gap-3">
+                <div className="flex items-baseline gap-1.5">
+                  <span className="font-serif text-[64px] font-medium leading-none text-foreground md:text-[72px]">
+                    {plan.price}
+                  </span>
+                  <span className="font-serif text-[30px] font-medium leading-none text-terracotta">
+                    &euro;
+                  </span>
+                  <span className="self-end pb-2 font-sans text-base text-muted-foreground">
+                    / {plan.period}
+                  </span>
+                </div>
+                <p className="font-sans text-[13px] uppercase tracking-[0.14em] text-muted-foreground">
+                  Sans engagement · Résiliez à tout moment
+                </p>
+              </div>
+
+              <Button
+                size="lg"
+                className="abo-cta group/cta mt-1 w-full gap-2.5 text-[16px]"
+              >
+                Rejoindre le cercle
+                <ArrowRight className="size-[18px] transition-transform duration-300 group-hover/cta:translate-x-1" />
+              </Button>
+            </div>
+
+            {/* Inclus — les avantages */}
+            <div className="border-t border-gold/30 bg-gold/[0.05] p-8 md:border-t-0 md:border-l md:p-12">
+              <p className="mb-6 font-sans text-[12px] font-medium uppercase tracking-[0.18em] text-terracotta">
+                Ce qui est inclus
+              </p>
+              <ul className="space-y-4">
                 {plan.features.map((feature) => (
-                  <li
-                    key={feature}
-                    className="flex items-start gap-2 font-sans text-[15px] leading-snug"
-                  >
-                    <Check className="mt-0.5 size-4 shrink-0 text-terracotta" />
-                    {feature}
+                  <li key={feature} className="flex items-start gap-3">
+                    <span className="abo-check mt-0.5 size-6 shrink-0 rounded-full">
+                      <Check className="size-[14px]" strokeWidth={2.5} />
+                    </span>
+                    <span className="font-sans text-[15px] leading-snug text-foreground/90 md:text-base">
+                      {feature}
+                    </span>
                   </li>
                 ))}
               </ul>
-
-              <Button
-                variant={plan.highlighted ? "default" : "secondary"}
-                className="mt-8 w-full"
-              >
-                Choisir cette formule
-              </Button>
             </div>
-          ))}
+          </div>
         </div>
-
-        <p className="mt-6 text-center font-sans text-base text-muted-foreground">
-          Sans engagement. Resiliez a tout moment.
-        </p>
       </Container>
     </section>
   );

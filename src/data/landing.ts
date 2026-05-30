@@ -39,7 +39,6 @@ export interface Plan {
   price: number;
   period: string;
   features: string[];
-  highlighted: boolean;
 }
 
 export const events: Event[] = [
@@ -51,59 +50,59 @@ export const events: Event[] = [
     duration: "1h15",
     expert: "Marc Riboud",
     variant: "visio",
-    description: "Une plongee dans l'art du tirage, entre patience et lumiere.",
+    description: "Une plongée dans l'art du tirage, entre patience et lumière.",
     image:
       "https://image.shutterstock.com/image-photo/happy-bearded-senior-man-vintage-camera-600nw-2579567943.jpg",
   },
   {
     id: "2",
-    title: "Degustation : les grands crus de Bourgogne",
+    title: "Dégustation : les grands crus de Bourgogne",
     date: "Mercredi 28 mai",
     time: "18h00",
     duration: "2h",
     expert: "Claire Vallée",
     variant: "presentiel",
     description:
-      "Cinq domaines d'exception, commentes par une sommeliere passionnee.",
+      "Cinq domaines d'exception, commentés par une sommelière passionnée.",
     image:
       "https://image.shutterstock.com/image-photo/confident-elderly-positive-smiling-man-tasting-600nw-1902582988.jpg",
   },
   {
     id: "3",
-    title: "Opera : comprendre Wagner en trois actes",
+    title: "Libido : le désir après 60 ans",
     date: "Jeudi 29 mai",
     time: "10h00",
     duration: "1h30",
-    expert: "Philippe Jordan",
+    expert: "Dr. Sylvie Lacombe",
     variant: "signature",
     description:
-      "Un voyage musical guide par l'un des grands chefs d'orchestre.",
+      "Une conversation sincère sur le désir et l'intimité, abordée avec délicatesse et sans tabou.",
     image:
-      "https://image.shutterstock.com/image-photo/professional-conductor-baton-on-white-background-600nw-2247142097.jpg",
+      "https://images.unsplash.com/photo-1625690987114-86f5af994b49?auto=format&fit=crop&w=900&h=1125&q=80",
   },
   {
     id: "4",
-    title: "Ecriture : trouver sa voix apres soixante ans",
+    title: "Écriture : trouver sa voix après soixante ans",
     date: "Vendredi 30 mai",
     time: "11h00",
     duration: "1h",
     expert: "Annie Ernaux",
     variant: "visio",
     description:
-      "L'ecriture comme espace de liberte et de reconquete personnelle.",
+      "L'écriture comme espace de liberté et de reconquête personnelle.",
     image:
       "https://image.shutterstock.com/image-photo/mature-writer-working-on-essay-writing-600nw-2260641597.jpg",
   },
   {
     id: "5",
-    title: "Visite privee : la collection Pinault",
+    title: "Visite privée : la collection Pinault",
     date: "Samedi 31 mai",
     time: "10h30",
     duration: "2h30",
     expert: "Caroline Bourgeois",
     variant: "presentiel",
     description:
-      "Un parcours exclusif dans les salles habituellement fermees au public.",
+      "Un parcours exclusif dans les salles habituellement fermées au public.",
     image:
       "https://image.shutterstock.com/image-photo/individual-admiring-colorful-modern-artworks-contemporary-600nw-2632939805.jpg",
   },
@@ -116,7 +115,7 @@ export const events: Event[] = [
     expert: "Cynthia Fleury",
     variant: "visio",
     description:
-      "Comment transformer la retraite en un acte de creation de soi.",
+      "Comment transformer la retraite en un acte de création de soi.",
     image:
       "https://image.shutterstock.com/image-photo/vertical-shot-happy-thoughtful-senior-man-600nw-2396556913.jpg",
   },
@@ -147,7 +146,7 @@ export const experts: Expert[] = [
   {
     id: "4",
     name: "Annie Ernaux",
-    discipline: "Litterature",
+    discipline: "Littérature",
     image:
       "https://image.shutterstock.com/image-photo/studio-portrait-senior-woman-smile-funny-600nw-2544254763.jpg",
   },
@@ -170,15 +169,15 @@ export const experts: Expert[] = [
 export const themes: Theme[] = [
   {
     id: "1",
-    title: "Culture et decouverte",
-    tagline: "Elargir ses horizons, nourrir sa curiosite.",
+    title: "Culture et découverte",
+    tagline: "Élargir ses horizons, nourrir sa curiosité.",
     image:
       "https://image.shutterstock.com/image-photo/senior-man-examining-beautiful-paintings-art-600nw-2614716249.jpg",
   },
   {
     id: "2",
-    title: "Creativite et apprentissage",
-    tagline: "Reveler ce que vous n'avez jamais ose exprimer.",
+    title: "Créativité et apprentissage",
+    tagline: "Révéler ce que vous n'avez jamais osé exprimer.",
     image:
       "https://image.shutterstock.com/image-photo/smiling-senior-woman-enjoying-nature-camera-600nw-2586291429.jpg",
   },
@@ -191,36 +190,36 @@ export const themes: Theme[] = [
   },
   {
     id: "4",
-    title: "Numerique",
-    tagline: "Maitriser les outils d'aujourd'hui, sans complexe.",
+    title: "Numérique",
+    tagline: "Maîtriser les outils d'aujourd'hui, sans complexe.",
     image:
       "https://image.shutterstock.com/image-photo/senior-man-learning-digital-skills-tutor-600nw-2705788047.jpg",
   },
   {
     id: "5",
     title: "Voyages",
-    tagline: "Partir en cercle restreint, revenir transforme.",
+    tagline: "Partir en cercle restreint, revenir transformé.",
     image:
       "https://image.shutterstock.com/image-photo/group-elderly-friends-suitcases-bags-gather-600nw-2219446801.jpg",
   },
   {
     id: "6",
-    title: "Bien-etre",
-    tagline: "Prendre soin de soi avec elegance et douceur.",
+    title: "Bien-être",
+    tagline: "Prendre soin de soi avec élégance et douceur.",
     image:
       "https://image.shutterstock.com/image-photo/senior-couple-yoga-meditation-breathing-nature-600nw-2710892563.jpg",
   },
   {
     id: "7",
-    title: "Sexualite et intimite",
+    title: "Sexualité et intimité",
     tagline: "Oser aborder ce qui compte, en toute confiance.",
     image:
       "https://image.shutterstock.com/image-photo/portrait-lovely-senior-couple-on-beige-600nw-2617461885.jpg",
   },
   {
     id: "8",
-    title: "Conferences et debats",
-    tagline: "Echanger entre esprits libres, sans concession.",
+    title: "Conférences et débats",
+    tagline: "Échanger entre esprits libres, sans concession.",
     image:
       "https://image.shutterstock.com/image-photo/senior-woman-audience-interacting-using-microphone-600nw-2728975945.jpg",
   },
@@ -229,53 +228,38 @@ export const themes: Theme[] = [
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "J'ai retrouve le plaisir d'etre surprise. Chaque semaine, une rencontre qui me rappelle pourquoi j'aime vivre.",
-    name: "Helene",
+      "J'ai retrouvé le plaisir d'être surprise. Chaque semaine, une rencontre qui me rappelle pourquoi j'aime vivre.",
+    name: "Hélène",
     age: 67,
     city: "Paris",
   },
   {
     quote:
-      "Ce qui me touche, c'est la qualite des intervenants et la bienveillance du cercle. On se sent chez soi.",
+      "Ce qui me touche, c'est la qualité des intervenants et la bienveillance du cercle. On se sent chez soi.",
     name: "Bernard",
     age: 72,
     city: "Lyon",
   },
   {
     quote:
-      "Depuis que j'ai rejoint le cercle, mes journees ont repris du relief. C'est un luxe discret.",
-    name: "Francoise",
+      "Depuis que j'ai rejoint le cercle, mes journées ont repris du relief. C'est un luxe discret.",
+    name: "Françoise",
     age: 65,
     city: "Bordeaux",
   },
 ];
 
-export const plans: Plan[] = [
-  {
-    id: "masterclasses",
-    name: "Masterclasses",
-    price: 19,
-    period: "mois",
-    features: [
-      "Acces illimite aux masterclasses en visio",
-      "Replays disponibles a tout moment",
-      "Echanges en direct avec les intervenants",
-      "Programme renouvele chaque semaine",
-    ],
-    highlighted: false,
-  },
-  {
-    id: "illimite",
-    name: "Illimite",
-    price: 29,
-    period: "mois",
-    features: [
-      "Tout le contenu Masterclasses",
-      "Acces aux rendez-vous en presentiel",
-      "Escapades et voyages culturels",
-      "Priorite sur les evenements signature",
-      "Communaute privee et echanges privilegies",
-    ],
-    highlighted: true,
-  },
-];
+export const plan: Plan = {
+  id: "illimite",
+  name: "Illimité",
+  price: 29,
+  period: "mois",
+  features: [
+    "Accès illimité aux masterclasses en visio",
+    "Replays disponibles à tout moment",
+    "Rendez-vous culturels en présentiel",
+    "Escapades et voyages culturels",
+    "Priorité sur les événements signature",
+    "Communauté privée et échanges privilégiés",
+  ],
+};

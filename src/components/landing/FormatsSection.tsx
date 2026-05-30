@@ -6,7 +6,7 @@ const formats = [
   {
     title: "Masterclass Visio",
     description:
-      "Depuis chez vous, en direct, avec des intervenants d'exception. Posez vos questions, echangez, revivez en replay.",
+      "Depuis chez vous, en direct, avec des intervenants d'exception. Posez vos questions, échangez, revivez en replay.",
     link: "/masterclasses-visio",
     image:
       "https://image.shutterstock.com/image-photo/older-woman-learning-digital-skills-during-600nw-2705788075.jpg",
@@ -14,15 +14,15 @@ const formats = [
   {
     title: "Les Rendez-vous",
     description:
-      "Rencontres et salons en presentiel, en petits groupes, dans des lieux d'exception soigneusement choisis.",
+      "Rencontres et salons en présentiel, en petits groupes, dans des lieux d'exception soigneusement choisis.",
     link: "/rendez-vous",
     image:
       "https://image.shutterstock.com/image-photo/happy-senior-woman-welcoming-multiracial-friends-600nw-2139103751.jpg",
   },
   {
-    title: "Fenetres sur le monde",
+    title: "Fenêtres sur le monde",
     description:
-      "Escapades et voyages culturels en cercle restreint, accompagnes par des experts passionnes.",
+      "Escapades et voyages culturels en cercle restreint, accompagnés par des experts passionnés.",
     link: "/rendez-vous",
     image:
       "https://image.shutterstock.com/image-photo/group-positive-senior-people-looking-map-600nw-1843893163.jpg",
@@ -38,7 +38,7 @@ export function FormatsSection() {
       <Container>
         <SectionHeading
           surtitre="Nos formats"
-          title="Trois facons de vivre vos passions"
+          title="Trois façons de vivre vos passions"
           separator
           id="formats-heading"
         />
