@@ -1,4 +1,4 @@
-import { CalendarDays, Clock, Play, Users } from "lucide-react";
+import { CalendarDays, Clock, Users } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
@@ -11,9 +11,9 @@ interface MasterclassCardProps {
 
 /**
  * Carte d'une masterclass — présentationnelle.
- * Reprend l'esthétique de EventCard (image niveaux de gris, élévation au survol)
- * et la complète d'une pastille grande famille, d'un indicateur replay,
- * du statut et de l'intervenant. La carte est l'unité terminale : pas de page détail.
+ * Reprend l'esthétique de EventCard (élévation au survol) et la complète
+ * d'une pastille grande famille, du statut et de l'intervenant.
+ * La carte est l'unité terminale : pas de page détail.
  */
 export function MasterclassCard({ entry }: MasterclassCardProps) {
   const tight = entry.status === "Bientôt complet";
@@ -26,7 +26,7 @@ export function MasterclassCard({ entry }: MasterclassCardProps) {
           alt={entry.title}
           fill
           sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 33vw"
-          className="object-cover grayscale transition-transform duration-500 group-hover:scale-[1.03]"
+          className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
         />
         {/* Voile haut pour la lisibilité des pastilles */}
         <div
@@ -36,12 +36,6 @@ export function MasterclassCard({ entry }: MasterclassCardProps) {
         <span className="absolute top-3 left-3 z-10 rounded-full bg-creme/90 px-3 py-1 font-sans text-[12px] font-medium uppercase tracking-[0.12em] text-anthracite backdrop-blur-sm">
           {entry.theme}
         </span>
-        {entry.replayAvailable && (
-          <span className="absolute top-3 right-3 z-10 inline-flex items-center gap-1.5 rounded-full bg-anthracite/70 px-2.5 py-1 font-sans text-[12px] font-medium text-creme/90 backdrop-blur-sm">
-            <Play className="size-3 fill-current" aria-hidden="true" />
-            Replay
-          </span>
-        )}
       </div>
 
       <div className="flex flex-1 flex-col p-5">
@@ -99,7 +93,7 @@ export function MasterclassCard({ entry }: MasterclassCardProps) {
               alt={entry.expertName}
               fill
               sizes="40px"
-              className="object-cover grayscale"
+              className="object-cover"
             />
           </div>
           <div className="min-w-0">
