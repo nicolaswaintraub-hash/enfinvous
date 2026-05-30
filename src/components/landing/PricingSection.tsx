@@ -7,7 +7,8 @@ import { plan } from "@/data/landing";
 export function PricingSection() {
   return (
     <section
-      className="relative overflow-hidden py-12 md:py-16 lg:py-24 bg-beige"
+      id="abonnement"
+      className="relative overflow-hidden py-12 md:py-16 lg:py-24 bg-beige scroll-mt-24"
       aria-labelledby="pricing-heading"
     >
       <div aria-hidden className="abo-glow" />

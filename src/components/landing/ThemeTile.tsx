@@ -22,7 +22,9 @@ export function ThemeTile({ theme }: ThemeTileProps) {
         <h3 className="font-serif text-lg font-medium text-creme drop-shadow-md md:text-xl">
           {theme.title}
         </h3>
-        <p className="mt-1 font-sans text-base text-creme/80">{theme.tagline}</p>
+        <p className="mt-1 font-sans text-base text-creme/80">
+          {theme.tagline}
+        </p>
       </div>
     </div>
   );

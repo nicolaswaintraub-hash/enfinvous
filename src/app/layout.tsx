@@ -17,10 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="fr"
-      className={`${robotoSlab.variable} antialiased`}
-    >
+    <html lang="fr" className={`${robotoSlab.variable} antialiased`}>
       <body className="min-h-dvh flex flex-col">
         <a
           href="#main-content"

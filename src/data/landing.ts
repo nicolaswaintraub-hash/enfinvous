@@ -10,6 +10,16 @@ export interface Event {
   variant: EventVariant;
   description: string;
   image: string;
+  /** Lieu de la rencontre, pour les événements en présentiel. */
+  venue?: string;
+  /** Ville de l'événement présentiel. */
+  city?: string;
+  /** Nombre de places encore disponibles (affiché en or sur la carte). */
+  spotsLeft?: number;
+  /** Grande famille, pour le filtre des listes (Rendez-vous). */
+  theme?: string;
+  /** Résumé long, pour les fiches éditoriales (programme, replay). */
+  summary?: string;
 }
 
 export interface Expert {
@@ -17,6 +27,8 @@ export interface Expert {
   name: string;
   discipline: string;
   image: string;
+  /** Biographie courte (80 à 120 mots), pour les fiches programme. */
+  bio?: string;
 }
 
 export interface Theme {
@@ -78,7 +90,7 @@ export const events: Event[] = [
     description:
       "Une conversation sincère sur le désir et l'intimité, abordée avec délicatesse et sans tabou.",
     image:
-      "https://images.unsplash.com/photo-1625690987114-86f5af994b49?auto=format&fit=crop&w=900&h=1125&q=80",
+      "https://image.shutterstock.com/image-photo/portrait-happy-senior-couple-hugging-each-600nw-2444364781.jpg",
   },
   {
     id: "4",
