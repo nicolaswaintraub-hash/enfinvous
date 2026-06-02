@@ -1,3 +1,4 @@
+import { AboutSection } from "@/components/landing/AboutSection";
 import { EventsCarousel } from "@/components/landing/EventsCarousel";
 import { ExpertsCarousel } from "@/components/landing/ExpertsCarousel";
 import { FormatsSection } from "@/components/landing/FormatsSection";
@@ -16,6 +17,9 @@ export default function Home() {
       <Header />
       <main id="main-content">
         <HeroSection />
+        <FadeIn>
+          <AboutSection />
+        </FadeIn>
         <FadeIn>
           <FormatsSection />
         </FadeIn>

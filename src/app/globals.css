@@ -337,3 +337,55 @@
     animation: none;
   }
 }
+
+/* ── Qui sommes-nous — panneau éditorial crème, halo doré discret ──── */
+.about-glow {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: min(680px, 94%);
+  height: 380px;
+  transform: translate(-50%, 0);
+  background:
+    radial-gradient(closest-side, rgba(196, 168, 122, 0.22), transparent 72%),
+    radial-gradient(closest-side, rgba(179, 84, 61, 0.08), transparent 76%);
+  filter: blur(96px);
+  pointer-events: none;
+  animation: abo-glow-pulse 9s ease-in-out infinite;
+}
+
+.about-panel {
+  position: relative;
+  background:
+    radial-gradient(
+      120% 120% at 0% 0%,
+      rgba(196, 168, 122, 0.1),
+      transparent 52%
+    ), linear-gradient(162deg, #fffdf9 0%, #faf6ef 48%, #f1e9dc 100%);
+  border: 1px solid rgba(196, 168, 122, 0.4);
+  box-shadow:
+    0 26px 56px -34px rgba(31, 34, 51, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.about-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #b8985f 18%,
+    #f3e6c6 50%,
+    #b8985f 82%,
+    transparent
+  );
+  opacity: 0.85;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-glow {
+    animation: none;
+  }
+}

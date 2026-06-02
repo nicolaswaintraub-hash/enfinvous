@@ -49,7 +49,7 @@ export function PricingSection() {
                     / {plan.period}
                   </span>
                 </div>
-                <p className="font-sans text-[13px] uppercase tracking-[0.14em] text-muted-foreground">
+                <p className="font-sans text-[12px] text-muted-foreground/55">
                   Sans engagement · Résiliez à tout moment
                 </p>
               </div>
@@ -58,7 +58,7 @@ export function PricingSection() {
                 size="lg"
                 className="abo-cta group/cta mt-1 w-full gap-2.5 text-[16px]"
               >
-                Rejoindre le cercle
+                Abonnez-vous
                 <ArrowRight className="size-[18px] transition-transform duration-300 group-hover/cta:translate-x-1" />
               </Button>
             </div>

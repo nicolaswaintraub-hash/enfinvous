@@ -5,7 +5,7 @@ import { Separator } from "@/components/ui/separator";
 
 const navLinks = [
   { href: "/masterclasses-visio", label: "Masterclass Visio" },
-  { href: "/rendez-vous", label: "Rendez-vous" },
+  { href: "/rendez-vous", label: "Rencontres" },
   { href: "/planning", label: "Planning" },
 ];
 

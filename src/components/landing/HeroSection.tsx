@@ -47,12 +47,12 @@ export function HeroSection() {
       {/* Full-bleed background photograph */}
       <div ref={bgRef} className="absolute inset-0 -z-20" aria-hidden="true">
         <Image
-          src="https://image.shutterstock.com/image-photo/cheerful-senior-women-gray-hair-laughing-600nw-2750100189.jpg"
+          src="https://image.shutterstock.com/image-photo/happy-senior-friends-laughing-together-on-600nw-2786385961.jpg"
           alt=""
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[center_45%] brightness-110 contrast-[1.02]"
+          className="object-cover object-[center_30%] brightness-125 contrast-[1.02] md:object-[center_100%]"
           style={{
             animation: entered
               ? "hero-ken-burns 8s ease-out 0.2s both"
@@ -63,7 +63,7 @@ export function HeroSection() {
 
       {/* Warm gradient overlay */}
       <div
-        className="absolute inset-0 -z-10 bg-gradient-to-br from-[#3d3225]/60 via-[#5c4a3a]/45 to-[#2a2520]/60 md:from-[#3d3225]/45 md:via-[#5c4a3a]/30 md:to-[#2a2520]/45"
+        className="absolute inset-0 -z-10 bg-gradient-to-br from-[#3d3225]/65 via-[#5c4a3a]/50 to-[#2a2520]/65 md:from-[#3d3225]/55 md:via-[#5c4a3a]/40 md:to-[#2a2520]/55"
         aria-hidden="true"
       />
 
@@ -89,14 +89,23 @@ export function HeroSection() {
       />
 
       {/* Content with staggered reveal */}
-      <div className="relative px-4 text-center text-creme">
+      <div className="relative mt-16 px-4 text-center text-creme">
+        {/* Localized scrim behind the text for legibility (does not dim the rest of the photo) */}
+        <div
+          className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[150%] w-[150%] max-w-[140vw] -translate-x-1/2 -translate-y-1/2"
+          style={{
+            background:
+              "radial-gradient(ellipse 60% 55% at 50% 50%, rgba(24,20,17,0.62) 0%, rgba(24,20,17,0.3) 55%, transparent 78%)",
+          }}
+          aria-hidden="true"
+        />
         <p
           className={cn(
             "mb-6 font-sans text-[15px] font-medium uppercase tracking-[0.2em] text-creme/90",
             entered ? "opacity-100" : "opacity-0",
           )}
           style={{
-            textShadow: "0 1px 16px rgba(0,0,0,0.55)",
+            textShadow: "0 1px 2px rgba(0,0,0,0.7), 0 1px 12px rgba(0,0,0,0.5)",
             animation: entered
               ? "hero-reveal-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both"
               : "none",
@@ -119,7 +128,8 @@ export function HeroSection() {
         <h1
           className="mx-auto max-w-3xl font-serif text-[28px] font-normal leading-[1.1] sm:text-[36px] md:text-[64px]"
           style={{
-            textShadow: "0 2px 24px rgba(0,0,0,0.5)",
+            textShadow:
+              "0 1px 2px rgba(0,0,0,0.8), 0 2px 6px rgba(0,0,0,0.6), 0 4px 22px rgba(0,0,0,0.45)",
             animation: entered
               ? "hero-reveal-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.7s both"
               : "none",
@@ -144,14 +154,17 @@ export function HeroSection() {
         <p
           className="mt-8 font-sans text-[15px] font-medium uppercase tracking-[0.15em] text-creme/90"
           style={{
-            textShadow: "0 1px 16px rgba(0,0,0,0.55)",
+            textShadow: "0 1px 2px rgba(0,0,0,0.7), 0 1px 12px rgba(0,0,0,0.5)",
             animation: entered
               ? "hero-reveal-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.3s both"
               : "none",
           }}
         >
-          Masterclasses en visio &middot; Rencontres en présentiel &middot;
-          Escapades culturelles
+          <span className="block sm:inline">Masterclasses en visio</span>
+          <span className="hidden sm:inline"> &middot; </span>
+          <span className="block sm:inline">Rencontres en présentiel</span>
+          <span className="hidden sm:inline"> &middot; </span>
+          <span className="block sm:inline">Escapades culturelles</span>
         </p>
 
         <div
@@ -166,7 +179,7 @@ export function HeroSection() {
           <Button
             variant="secondary"
             size="lg"
-            className="border-creme/30 text-creme hover:bg-creme hover:text-foreground"
+            className="border-creme/60 bg-foreground/55 text-creme hover:bg-creme hover:text-foreground"
           >
             Découvrir le programme
           </Button>
