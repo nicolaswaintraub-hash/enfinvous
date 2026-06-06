@@ -11,7 +11,6 @@ export function TestimonialsSection() {
     >
       <Container>
         <SectionHeading
-          surtitre="Témoignages"
           title="Ce que vivent nos membres"
           id="testimonials-heading"
         />

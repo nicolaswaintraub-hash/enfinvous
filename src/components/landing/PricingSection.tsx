@@ -14,11 +14,7 @@ export function PricingSection() {
       <div aria-hidden className="abo-glow" />
 
       <Container className="relative">
-        <SectionHeading
-          surtitre="Rejoignez le cercle"
-          title="L'abonnement EnfinVous"
-          id="pricing-heading"
-        />
+        <SectionHeading title="L'abonnement EnfinVous" id="pricing-heading" />
 
         <div className="abo-panel mx-auto max-w-4xl overflow-hidden rounded-lg">
           <div className="grid grid-cols-1 md:grid-cols-[1.05fr_0.95fr]">

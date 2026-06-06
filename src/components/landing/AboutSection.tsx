@@ -13,7 +13,7 @@ export function AboutSection() {
         <div className="about-panel mx-auto max-w-2xl rounded-lg px-6 py-10 text-center md:px-12 md:py-12">
           <p
             id="about-heading"
-            className="mb-5 font-sans text-[13px] font-medium uppercase tracking-[0.15em] text-muted-foreground"
+            className="mb-3 font-sans text-[15px] font-medium uppercase tracking-[0.15em] text-muted-foreground"
           >
             Qui sommes-nous
           </p>

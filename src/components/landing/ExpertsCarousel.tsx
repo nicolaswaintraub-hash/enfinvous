@@ -30,11 +30,7 @@ export function ExpertsCarousel() {
       aria-labelledby="experts-heading"
     >
       <Container>
-        <SectionHeading
-          surtitre="Le cercle"
-          title="Nos experts"
-          id="experts-heading"
-        />
+        <SectionHeading title="Nos experts" id="experts-heading" />
 
         <Carousel
           opts={

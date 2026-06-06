@@ -11,7 +11,6 @@ export function ThemesGrid() {
     >
       <Container>
         <SectionHeading
-          surtitre="Vos passions"
           title="Partager ses passions"
           separator
           id="themes-heading"
