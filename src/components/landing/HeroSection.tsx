@@ -32,9 +32,16 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section className="relative flex min-h-dvh items-center justify-center overflow-hidden">
-      {/* Full-bleed background photograph */}
-      <div ref={bgRef} className="absolute inset-0 -z-20" aria-hidden="true">
+    <section className="relative flex min-h-svh items-center justify-center overflow-hidden">
+      {/* Full-bleed background photograph. Anchored top and sized to the
+          *largest* viewport (lvh) so it always covers the hero even when the
+          mobile address bar collapses — the section itself stays at svh, so the
+          image's object-cover fit no longer re-scales (zoom effect) on scroll. */}
+      <div
+        ref={bgRef}
+        className="absolute inset-x-0 top-0 -z-20 h-[100lvh]"
+        aria-hidden="true"
+      >
         <Image
           src="https://image.shutterstock.com/image-photo/happy-senior-friends-laughing-together-on-600nw-2786385961.jpg"
           alt=""
