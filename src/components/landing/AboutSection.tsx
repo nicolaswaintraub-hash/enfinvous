@@ -11,12 +11,12 @@ export function AboutSection() {
 
       <Container className="relative">
         <div className="about-panel mx-auto max-w-2xl rounded-lg px-6 py-10 text-center md:px-12 md:py-12">
-          <p
+          <h2
             id="about-heading"
-            className="mb-3 font-sans text-[15px] font-medium uppercase tracking-[0.15em] text-muted-foreground"
+            className="mb-3 font-serif text-[28px] font-medium leading-tight md:text-[40px]"
           >
             Qui sommes-nous
-          </p>
+          </h2>
           <Separator className="mx-auto mb-8 w-12 bg-gold md:mb-10" />
 
           <p className="font-serif text-[18px] font-normal leading-snug md:text-[22px]">
