@@ -18,6 +18,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={`${robotoSlab.variable} antialiased`}>
+      <head>
+        {/* Sans JavaScript, l'IntersectionObserver ne tournera jamais : on
+            neutralise alors l'état caché des révélations au scroll pour que tout
+            le contenu reste visible (aucune section ni carte invisible). Inerte
+            quand le JS est actif — donc aucun décalage d'hydratation. */}
+        <noscript>
+          <style>{`.reveal-init,.reveal-stagger>*{opacity:1!important;transform:none!important;animation:none!important}`}</style>
+        </noscript>
+      </head>
       <body className="min-h-dvh flex flex-col">
         <a
           href="#main-content"

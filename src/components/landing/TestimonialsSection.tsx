@@ -1,4 +1,5 @@
 import { Container } from "@/components/ui/container";
+import { FadeIn } from "@/components/ui/fade-in";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Separator } from "@/components/ui/separator";
 import { testimonials } from "@/data/landing";
@@ -15,7 +16,10 @@ export function TestimonialsSection() {
           id="testimonials-heading"
         />
 
-        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-10 md:grid-cols-3">
+        <FadeIn
+          stagger
+          className="mx-auto grid max-w-5xl grid-cols-1 gap-10 md:grid-cols-3"
+        >
           {testimonials.map((testimonial, i) => (
             <div key={testimonial.name} className="text-center">
               {i > 0 && (
@@ -29,7 +33,7 @@ export function TestimonialsSection() {
               </p>
             </div>
           ))}
-        </div>
+        </FadeIn>
       </Container>
     </section>
   );

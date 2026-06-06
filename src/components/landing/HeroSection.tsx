@@ -6,41 +6,30 @@ import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-const ANIMATION_DURATION = 2200;
-
 export function HeroSection() {
   const bgRef = useRef<HTMLDivElement>(null);
   const [entered, setEntered] = useState(false);
-  const [scrollLocked, setScrollLocked] = useState(true);
   const [hideIndicator, setHideIndicator] = useState(false);
 
   useEffect(() => {
-    document.body.style.overflow = "hidden";
     const enterTimer = setTimeout(() => setEntered(true), 100);
-    const unlockTimer = setTimeout(() => {
-      setScrollLocked(false);
-      document.body.style.overflow = "";
-    }, ANIMATION_DURATION);
-
-    return () => {
-      clearTimeout(enterTimer);
-      clearTimeout(unlockTimer);
-      document.body.style.overflow = "";
-    };
+    return () => clearTimeout(enterTimer);
   }, []);
 
   useEffect(() => {
-    if (scrollLocked) return;
-
+    // Parallax only on pointer-precise / larger viewports. On mobile the
+    // browser address bar collapsing on scroll changes scrollY abruptly, which
+    // makes the translated background jump and exposes a gap below it.
+    const allowParallax = window.matchMedia("(min-width: 768px)").matches;
     const onScroll = () => {
-      if (bgRef.current) {
+      if (allowParallax && bgRef.current) {
         bgRef.current.style.transform = `translateY(${window.scrollY * 0.08}px)`;
       }
       setHideIndicator(window.scrollY > 200);
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, [scrollLocked]);
+  }, []);
 
   return (
     <section className="relative flex min-h-dvh items-center justify-center overflow-hidden">
@@ -180,6 +169,8 @@ export function HeroSection() {
             variant="secondary"
             size="lg"
             className="border-creme/60 bg-foreground/55 text-creme hover:bg-creme hover:text-foreground"
+            nativeButton={false}
+            render={(props) => <a href="#formats" {...props} />}
           >
             Découvrir le programme
           </Button>

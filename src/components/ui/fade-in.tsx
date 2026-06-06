@@ -7,9 +7,26 @@ interface FadeInProps {
   children: React.ReactNode;
   className?: string;
   as?: "div" | "section";
+  /**
+   * Cascade les enfants directs du conteneur un par un (filet doux ~120 ms),
+   * plutôt que de révéler le bloc d'un seul tenant. La grille passe l'état
+   * caché à ses enfants via la classe `.reveal-stagger` (voir globals.css).
+   */
+  stagger?: boolean;
+  /**
+   * Révélation un peu plus marquée (montée + léger « settle ») pour attirer
+   * l'œil — réservée à la carte d'abonnement.
+   */
+  highlight?: boolean;
 }
 
-export function FadeIn({ children, className, as: Tag = "div" }: FadeInProps) {
+export function FadeIn({
+  children,
+  className,
+  as: Tag = "div",
+  stagger = false,
+  highlight = false,
+}: FadeInProps) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -19,7 +36,14 @@ export function FadeIn({ children, className, as: Tag = "div" }: FadeInProps) {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.classList.add("animate-fade-in");
+          if (stagger) {
+            // Les enfants portent l'état caché ; on déclenche leur cascade.
+            el.classList.add("is-revealed");
+          } else {
+            el.classList.add(
+              highlight ? "animate-reveal-up-highlight" : "animate-reveal-up",
+            );
+          }
           observer.unobserve(el);
         }
       },
@@ -33,13 +57,16 @@ export function FadeIn({ children, className, as: Tag = "div" }: FadeInProps) {
 
     observer.observe(el);
     return () => observer.disconnect();
-  }, []);
+  }, [stagger, highlight]);
 
   return (
     <Tag
       ref={ref}
       className={cn(
-        "opacity-0 motion-reduce:opacity-100 motion-reduce:animate-none",
+        // L'état caché initial est porté par des classes CSS scopées sous `.js`
+        // (voir globals.css) : sans JS, rien n'est masqué — le contenu reste
+        // visible. En mode stagger, ce sont les enfants directs qui sont cachés.
+        stagger ? "reveal-stagger" : "reveal-init",
         className,
       )}
     >

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Container } from "@/components/ui/container";
+import { FadeIn } from "@/components/ui/fade-in";
 import { SectionHeading } from "@/components/ui/section-heading";
 
 const formats = [
@@ -9,36 +10,40 @@ const formats = [
       "Depuis chez vous, en direct, avec des intervenants d'exception. Posez vos questions, échangez, revivez en replay.",
     link: "/rendez-vous-du-savoir",
     image:
-      "https://image.shutterstock.com/image-photo/older-woman-learning-digital-skills-during-600nw-2705788075.jpg",
+      "https://image.shutterstock.com/image-photo/serious-elder-grey-haired-college-600nw-2156185771.jpg",
   },
   {
-    title: "Les Rendez-vous",
+    title: "Les Ateliers",
     description:
       "Ateliers et salons en présentiel, en petits groupes, dans des lieux d'exception soigneusement choisis.",
     link: "/rendez-vous",
     image:
-      "https://image.shutterstock.com/image-photo/happy-senior-woman-welcoming-multiracial-friends-600nw-2139103751.jpg",
+      "https://image.shutterstock.com/image-photo/when-pouring-red-wine-into-glass-600nw-2681993181.jpg",
   },
   {
     title: "Fenêtres sur le monde",
     description:
-      "Escapades et voyages culturels en cercle restreint, accompagnés par des experts passionnés.",
+      "Escapades et voyages culturels d'exception, accompagnés par des experts passionnés.",
     link: "/rendez-vous",
     image:
-      "https://image.shutterstock.com/image-photo/group-positive-senior-people-looking-map-600nw-1843893163.jpg",
+      "https://image.shutterstock.com/image-photo/castle-versailles-beautiful-glow-golden-hour-600nw-2556716313.jpg",
   },
 ];
 
 export function FormatsSection() {
   return (
     <section
-      className="py-12 md:py-16 lg:py-24"
+      id="formats"
+      className="scroll-mt-24 py-12 md:py-16 lg:py-24"
       aria-labelledby="formats-heading"
     >
       <Container>
         <SectionHeading title="Nos formats" separator id="formats-heading" />
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6">
+        <FadeIn
+          stagger
+          className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6"
+        >
           {formats.map((format) => (
             <div key={format.title} className="text-center">
               <div className="relative mx-auto mb-6 aspect-square w-full max-w-[280px] overflow-hidden rounded-sm">
@@ -64,7 +69,7 @@ export function FormatsSection() {
               </a>
             </div>
           ))}
-        </div>
+        </FadeIn>
       </Container>
     </section>
   );

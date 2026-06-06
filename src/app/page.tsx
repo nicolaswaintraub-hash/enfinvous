@@ -35,7 +35,7 @@ export default function Home() {
         <FadeIn>
           <TestimonialsSection />
         </FadeIn>
-        <FadeIn>
+        <FadeIn highlight>
           <PricingSection />
         </FadeIn>
       </main>

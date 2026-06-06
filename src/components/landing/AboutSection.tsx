@@ -1,63 +1,76 @@
+import Image from "next/image";
 import { Container } from "@/components/ui/container";
-import { Separator } from "@/components/ui/separator";
+import { FadeIn } from "@/components/ui/fade-in";
 
 export function AboutSection() {
   return (
     <section
-      className="relative overflow-hidden py-12 md:py-16 lg:py-24"
-      aria-labelledby="about-heading"
+      className="relative overflow-hidden pt-8 pb-12 md:pt-12 md:pb-16 lg:pt-16 lg:pb-24 bg-beige"
+      aria-label="Qui sommes-nous"
     >
-      <div aria-hidden className="about-glow" />
+      {/* Halo chaud, très diffus — donne de la profondeur au bloc */}
+      <span aria-hidden="true" className="about-aura" />
 
       <Container className="relative">
-        <div className="about-panel mx-auto max-w-2xl rounded-lg px-6 py-10 text-center md:px-12 md:py-12">
-          <h2
-            id="about-heading"
-            className="mb-3 font-serif text-[28px] font-medium leading-tight md:text-[40px]"
-          >
-            Qui sommes-nous
-          </h2>
-          <Separator className="mx-auto mb-8 w-12 bg-gold md:mb-10" />
+        <FadeIn
+          stagger
+          className="mx-auto grid max-w-5xl items-center gap-10 md:grid-cols-2 md:gap-14 lg:max-w-7xl lg:gap-24"
+        >
+          {/* Le récit — à gauche */}
+          <div className="text-center md:text-left">
+            <span className="about-kicker">Qui sommes-nous</span>
 
-          <p className="font-serif text-[18px] font-normal leading-snug md:text-[22px]">
-            <span className="block text-[20px] font-medium md:text-[24px]">
-              La retraite, c&apos;est le moment où le temps devient enfin le
-              vôtre.
-            </span>
-            <span className="mt-3 block text-foreground/80">
-              Pas celui des réunions, des obligations, des agendas imposés.{" "}
-              <span className="text-terracotta">Le&nbsp;vôtre&nbsp;—</span> pour
-              faire ce qui vous passionne vraiment, aller là où vous voulez,
-              rencontrer qui vous ressemble.
-            </span>
-          </p>
-
-          <p className="mx-auto mt-6 max-w-xl font-serif text-[18px] font-normal leading-snug text-foreground/80 md:text-[22px]">
-            <span className="font-medium text-foreground">EnfinVous</span> est
-            né pour cette liberté-là. Un cercle de retraités exigeants et
-            curieux qui ont décidé que cette période serait la plus riche de
-            leur vie.
-          </p>
-
-          <div className="mt-9 md:mt-10">
-            <p className="mb-4 font-serif text-[16px] font-normal italic leading-snug text-foreground md:text-[18px]">
-              Bienvenue dans le
+            {/* La phrase d'accroche — citation éditoriale */}
+            <p className="mt-5 font-serif text-[27px] font-medium leading-tight text-foreground md:text-[33px]">
+              La retraite, c&apos;est le moment où le temps devient enfin{" "}
+              <span className="about-accent">le vôtre</span>.
             </p>
-            <div className="flex items-center justify-center gap-3 sm:gap-4">
-              <span
-                className="h-px w-8 bg-gold/60 sm:w-14"
-                aria-hidden="true"
-              />
-              <span className="badge-signature whitespace-nowrap rounded-sm px-3 py-1 font-serif text-[13px] md:text-[16px]">
+
+            {/* Le récit — filet terracotta + interligne généreux pour le confort de lecture */}
+            <div className="about-narrative mt-7 space-y-5 md:mt-8">
+              <p className="font-sans text-[19px] leading-[1.75] text-foreground md:text-[21px]">
+                Plus de réunions ni d&apos;obligations. Vous êtes désormais
+                libre de faire ce qui vous passionne, d&apos;aller où vous le
+                souhaitez et de rencontrer des personnes qui vous ressemblent.
+              </p>
+              <p className="font-sans text-[19px] leading-[1.75] text-foreground md:text-[21px]">
+                <span className="font-semibold text-foreground">EnfinVous</span>{" "}
+                réunit des retraités curieux et passionnés qui vivent cette
+                nouvelle étape comme la plus belle de leur vie.
+              </p>
+            </div>
+
+            {/* La signature — plaque dorée « invitation » */}
+            <p className="about-signature mt-8 md:mt-9">
+              <span className="about-signature__label">Bienvenue dans le</span>
+              <span className="about-signature__name font-serif">
                 Cercle des Éveillés de la Vie
               </span>
-              <span
-                className="h-px w-8 bg-gold/60 sm:w-14"
-                aria-hidden="true"
-              />
-            </div>
+            </p>
           </div>
-        </div>
+
+          {/* Le portrait — cadre doré en couches, des visages réels — à droite */}
+          <div className="about-figure relative mx-auto w-full max-w-[460px] md:max-w-none">
+            <span aria-hidden="true" className="about-figure__frame" />
+            <div className="about-figure__photo relative aspect-[4/3] overflow-hidden lg:aspect-[16/10]">
+              <Image
+                src="https://images.pexels.com/photos/6838623/pexels-photo-6838623.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="Trois amis retraités, complices et rieurs, prennent une photo ensemble dans un parc baigné de lumière"
+                fill
+                sizes="(max-width: 768px) 90vw, (max-width: 1024px) 460px, 600px"
+                className="object-cover"
+              />
+              {/* Voile chaud léger pour fondre l'image dans la palette */}
+              <span aria-hidden="true" className="about-figure__wash" />
+            </div>
+
+            {/* Cartouche éditorial */}
+            <span className="about-figure__caption">
+              <span className="about-figure__caption-dot" aria-hidden="true" />
+              Le quotidien de nos membres
+            </span>
+          </div>
+        </FadeIn>
       </Container>
     </section>
   );

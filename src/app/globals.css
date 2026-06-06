@@ -47,6 +47,9 @@
   --shadow-card-hover: 0 8px 24px 0 rgb(31 34 51 / 0.12);
 
   --animate-fade-in: fade-in 400ms ease-out both;
+  /* Révélations au scroll — douces et lentes, pensées pour un lectorat 70+ */
+  --animate-reveal-up: reveal-up 650ms ease-out both;
+  --animate-reveal-up-highlight: reveal-up-highlight 720ms ease-out both;
 }
 
 :root {
@@ -79,6 +82,34 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Révélation au scroll — montée douce, plus généreuse que fade-in (22px) */
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Variante « mise en valeur » — montée plus marquée puis léger settle (abonnement) */
+@keyframes reveal-up-highlight {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.985);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(-3px) scale(1.004);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
 
@@ -171,6 +202,58 @@
 ::selection {
   background-color: var(--muted);
   color: var(--foreground);
+}
+
+/* ── Révélations au scroll ────────────────────────────────────────────
+   Les éléments partent cachés ; le composant FadeIn ajoute la classe
+   `animate-*` (ou `is-revealed`) à l'entrée dans le viewport.
+   Garde-fou sans JS : un <style> dans <noscript> (voir layout.tsx) remet tout
+   en visible si l'IntersectionObserver ne peut pas tourner — aucune section ni
+   carte ne reste invisible. Pas de classe sur <html>, donc aucun décalage
+   d'hydratation. */
+
+/* Bloc révélé d'un seul tenant (en-têtes de section, carrousels…) */
+.reveal-init {
+  opacity: 0;
+}
+
+/* Cascade des enfants directs — chaque carte monte l'une après l'autre */
+.reveal-stagger > * {
+  opacity: 0;
+}
+
+.reveal-stagger.is-revealed > * {
+  animation: reveal-up 650ms ease-out both;
+}
+
+/* Filet doux de 120 ms, plafonné dès le 5e enfant pour que la cascade reste
+   brève : la 1re carte arrive vite, et même une grille longue (ex. les thèmes)
+   ne fait jamais patienter. */
+.reveal-stagger.is-revealed > *:nth-child(1) {
+  animation-delay: 120ms;
+}
+.reveal-stagger.is-revealed > *:nth-child(2) {
+  animation-delay: 240ms;
+}
+.reveal-stagger.is-revealed > *:nth-child(3) {
+  animation-delay: 360ms;
+}
+.reveal-stagger.is-revealed > *:nth-child(4) {
+  animation-delay: 480ms;
+}
+.reveal-stagger.is-revealed > *:nth-child(n + 5) {
+  animation-delay: 560ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Tout visible immédiatement, aucune translation ni animation. */
+  .reveal-init,
+  .reveal-stagger > *,
+  .reveal-stagger.is-revealed > * {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
 }
 
 /* Signature event badge — gilded metallic foil with a slow specular sheen */
@@ -338,54 +421,230 @@
   }
 }
 
-/* ── Qui sommes-nous — panneau éditorial crème, halo doré discret ──── */
-.about-glow {
+/* ── Qui sommes-nous — récit éditorial, cadre doré, signature « invitation » ── */
+@keyframes about-aura-pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.72;
+    transform: scale(1.04);
+  }
+}
+
+.about-aura {
   position: absolute;
-  top: 10%;
-  left: 50%;
-  width: min(680px, 94%);
-  height: 380px;
-  transform: translate(-50%, 0);
+  top: 50%;
+  right: -8%;
+  width: min(640px, 60%);
+  height: 560px;
+  transform: translateY(-50%);
   background:
-    radial-gradient(closest-side, rgba(196, 168, 122, 0.22), transparent 72%),
-    radial-gradient(closest-side, rgba(179, 84, 61, 0.08), transparent 76%);
-  filter: blur(96px);
+    radial-gradient(closest-side, rgba(196, 168, 122, 0.3), transparent 70%),
+    radial-gradient(closest-side, rgba(179, 84, 61, 0.12), transparent 72%);
+  filter: blur(76px);
   pointer-events: none;
-  animation: abo-glow-pulse 9s ease-in-out infinite;
+  z-index: 0;
+  animation: about-aura-pulse 9s ease-in-out infinite;
 }
 
-.about-panel {
+/* Surtitre — petites capitales encadrées d'un filet doré */
+.about-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7em;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: #8a6d3b;
+}
+
+.about-kicker::before {
+  content: "";
+  width: 2.4rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #c4a87a);
+}
+
+@media (min-width: 768px) {
+  .about-kicker::before {
+    background: linear-gradient(90deg, #c4a87a, #b8985f);
+  }
+}
+
+/* Mot mis en valeur — trait doré dessiné « à la main » sous le mot */
+.about-accent {
   position: relative;
-  background:
-    radial-gradient(
-      120% 120% at 0% 0%,
-      rgba(196, 168, 122, 0.1),
-      transparent 52%
-    ), linear-gradient(162deg, #fffdf9 0%, #faf6ef 48%, #f1e9dc 100%);
-  border: 1px solid rgba(196, 168, 122, 0.4);
-  box-shadow:
-    0 26px 56px -34px rgba(31, 34, 51, 0.24),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  color: var(--color-terracotta);
+  white-space: nowrap;
 }
 
-.about-panel::before {
+.about-accent::after {
   content: "";
   position: absolute;
-  inset: 0 0 auto 0;
-  height: 3px;
+  left: -2%;
+  right: -2%;
+  bottom: 0.04em;
+  height: 0.42em;
   background: linear-gradient(
     90deg,
-    transparent,
-    #b8985f 18%,
-    #f3e6c6 50%,
-    #b8985f 82%,
-    transparent
+    rgba(196, 168, 122, 0.55),
+    rgba(196, 168, 122, 0.85) 50%,
+    rgba(196, 168, 122, 0.5)
   );
-  opacity: 0.85;
+  border-radius: 60% 40% 55% 45% / 100% 100% 0 0;
+  transform: rotate(-0.6deg);
+  z-index: -1;
+  opacity: 0.55;
+}
+
+/* Récit — filet terracotta vertical, posé à gauche sur grand écran */
+@media (min-width: 768px) {
+  .about-narrative {
+    position: relative;
+    padding-left: 1.6rem;
+  }
+
+  .about-narrative::before {
+    content: "";
+    position: absolute;
+    top: 0.35rem;
+    bottom: 0.35rem;
+    left: 0;
+    width: 3px;
+    border-radius: 999px;
+    background: linear-gradient(
+      180deg,
+      var(--color-terracotta),
+      rgba(179, 84, 61, 0.25)
+    );
+  }
+}
+
+/* Signature — plaque dorée annonçant l'adhésion */
+.about-signature {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  align-items: center;
+  padding: 1rem 1.6rem;
+  border: 1px solid rgba(196, 168, 122, 0.5);
+  border-radius: 2px;
+  background:
+    radial-gradient(
+      130% 130% at 0% 0%,
+      rgba(196, 168, 122, 0.16),
+      transparent 55%
+    ), linear-gradient(160deg, #ffffff 0%, #faf6ef 50%, #f3ebdf 100%);
+  box-shadow:
+    0 20px 42px -26px rgba(31, 34, 51, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+@media (min-width: 768px) {
+  .about-signature {
+    align-items: flex-start;
+  }
+}
+
+.about-signature__label {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #8a6d3b;
+}
+
+.about-signature__name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-terracotta);
+}
+
+@media (min-width: 768px) {
+  .about-signature__name {
+    font-size: 1.6rem;
+  }
+}
+
+/* Portrait — cadre doré décalé en couches */
+.about-figure__frame {
+  position: absolute;
+  inset: 0;
+  transform: translate(14px, 14px);
+  border: 1px solid rgba(196, 168, 122, 0.55);
+  border-radius: 2px;
+  background: linear-gradient(
+    135deg,
+    rgba(196, 168, 122, 0.18),
+    transparent 60%
+  );
+  z-index: -1;
+  pointer-events: none;
+}
+
+@media (min-width: 768px) {
+  .about-figure__frame {
+    transform: translate(18px, 18px);
+  }
+}
+
+.about-figure__photo {
+  border-radius: 2px;
+  /* Anneau doré + léger filet blanc intérieur, ombre chaude portée */
+  box-shadow:
+    0 0 0 1px rgba(196, 168, 122, 0.55),
+    inset 0 0 0 4px rgba(255, 255, 255, 0.88),
+    0 30px 60px -34px rgba(31, 34, 51, 0.5);
+}
+
+.about-figure__wash {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(31, 34, 51, 0) 55%,
+    rgba(179, 84, 61, 0.16) 100%
+  );
+}
+
+/* Cartouche éditorial sous l'image */
+.about-figure__caption {
+  position: absolute;
+  bottom: -0.85rem;
+  left: 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-anthracite);
+  background: var(--color-creme);
+  border: 1px solid rgba(196, 168, 122, 0.5);
+  border-radius: 2px;
+  box-shadow: 0 12px 26px -16px rgba(31, 34, 51, 0.4);
+}
+
+.about-figure__caption-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: var(--color-terracotta);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .about-glow {
+  .about-aura {
     animation: none;
   }
 }
