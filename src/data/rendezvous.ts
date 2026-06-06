@@ -64,7 +64,7 @@ export const presentielEvents: Event[] = [
     variant: "signature",
     theme: "Littérature",
     description:
-      "Une rencontre intimiste avec l'autrice, suivie d'un échange autour d'un thé, dans un salon d'exception.",
+      "Un atelier intimiste avec l'autrice, suivi d'un échange autour d'un thé, dans un salon d'exception.",
     image:
       "https://image.shutterstock.com/image-photo/elderly-woman-reading-desk-typewriter-cozy-600nw-2586315133.jpg",
     venue: "Hôtel Particulier Montmartre",
@@ -173,7 +173,7 @@ export const deroulementSteps: DeroulementStep[] = [
   {
     num: "02",
     title: "Convocation soignée",
-    text: "Vous recevez une invitation élégante : adresse, accès, déroulé de la rencontre et nom de votre complice du jour.",
+    text: "Vous recevez une invitation élégante : adresse, accès, déroulé de l'atelier et nom de votre complice du jour.",
   },
   {
     num: "03",
@@ -183,7 +183,7 @@ export const deroulementSteps: DeroulementStep[] = [
   {
     num: "04",
     title: "Souvenir partagé",
-    text: "La rencontre se prolonge autour d'un moment convivial. Vous repartez avec des visages, des mots, une émotion.",
+    text: "L'atelier se prolonge autour d'un moment convivial. Vous repartez avec des visages, des mots, une émotion.",
   },
 ];
 

@@ -8,8 +8,8 @@ import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { href: "/masterclasses-visio", label: "Masterclass Visio" },
-  { href: "/rendez-vous", label: "Rencontres" },
+  { href: "/rendez-vous-du-savoir", label: "Les rendez-vous du savoir" },
+  { href: "/rendez-vous", label: "Ateliers" },
   { href: "/planning", label: "Planning" },
   { href: "/entrer", label: "Se connecter" },
 ];

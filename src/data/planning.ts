@@ -190,7 +190,7 @@ export const slots: PlanningSlot[] = [
 ];
 
 export const legend: { variant: EventVariant; label: string }[] = [
-  { variant: "visio", label: "Masterclass en visio" },
+  { variant: "visio", label: "Rendez-vous du savoir en visio" },
   { variant: "presentiel", label: "Rendez-vous en présentiel" },
   { variant: "signature", label: "Événement signature" },
 ];

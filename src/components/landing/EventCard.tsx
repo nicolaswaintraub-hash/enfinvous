@@ -6,7 +6,7 @@ import type { Event } from "@/data/landing";
 import { cn } from "@/lib/utils";
 
 const variantLabels: Record<string, string> = {
-  visio: "Masterclass",
+  visio: "Rendez-vous du savoir",
   presentiel: "Rendez-vous",
   signature: "Événement signature",
 };

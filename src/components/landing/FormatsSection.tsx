@@ -4,17 +4,17 @@ import { SectionHeading } from "@/components/ui/section-heading";
 
 const formats = [
   {
-    title: "Masterclass Visio",
+    title: "Les rendez-vous du savoir",
     description:
       "Depuis chez vous, en direct, avec des intervenants d'exception. Posez vos questions, échangez, revivez en replay.",
-    link: "/masterclasses-visio",
+    link: "/rendez-vous-du-savoir",
     image:
       "https://image.shutterstock.com/image-photo/older-woman-learning-digital-skills-during-600nw-2705788075.jpg",
   },
   {
     title: "Les Rendez-vous",
     description:
-      "Rencontres et salons en présentiel, en petits groupes, dans des lieux d'exception soigneusement choisis.",
+      "Ateliers et salons en présentiel, en petits groupes, dans des lieux d'exception soigneusement choisis.",
     link: "/rendez-vous",
     image:
       "https://image.shutterstock.com/image-photo/happy-senior-woman-welcoming-multiracial-friends-600nw-2139103751.jpg",
@@ -36,12 +36,7 @@ export function FormatsSection() {
       aria-labelledby="formats-heading"
     >
       <Container>
-        <SectionHeading
-          surtitre="Nos formats"
-          title="Trois façons de vivre vos passions"
-          separator
-          id="formats-heading"
-        />
+        <SectionHeading title="Nos formats" separator id="formats-heading" />
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6">
           {formats.map((format) => (

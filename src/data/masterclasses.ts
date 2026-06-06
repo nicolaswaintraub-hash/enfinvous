@@ -1,4 +1,4 @@
-// Contenu de la page Masterclass Visio — maquette statique, ton EnfinVous.
+// Contenu de la page Les rendez-vous du savoir — maquette statique, ton EnfinVous.
 
 export interface PrincipleStep {
   num: string;
@@ -10,7 +10,7 @@ export const principleSteps: PrincipleStep[] = [
   {
     num: "01",
     title: "Je choisis",
-    text: "Vous parcourez le programme du mois et retenez la masterclass qui vous appelle. Une inscription, un clic, c'est noté.",
+    text: "Vous parcourez le programme du mois et retenez le rendez-vous du savoir qui vous appelle. Une inscription, un clic, c'est noté.",
   },
   {
     num: "02",
@@ -123,7 +123,7 @@ export const programme: ProgrammeEntry[] = [
     expertName: "Annie Ernaux",
     expertDiscipline: "Littérature",
     expertBio:
-      "Autrice de récits intimes salués par la critique, elle anime des rencontres d'écriture où la sincérité prime sur la performance.",
+      "Autrice de récits intimes salués par la critique, elle anime des ateliers d'écriture où la sincérité prime sur la performance.",
     expertImage:
       "https://image.shutterstock.com/image-photo/calm-senior-woman-red-sweater-sitting-600nw-2573037971.jpg",
     date: "Vendredi 30 mai",
@@ -139,7 +139,7 @@ export const programme: ProgrammeEntry[] = [
     theme: "Philosophie",
     title: "Repenser le temps libre",
     summary:
-      "Et si la retraite n'était pas une fin, mais une œuvre à composer ? Cynthia Fleury interroge notre rapport au temps retrouvé : comment lui donner forme, sens et désir. Une masterclass exigeante et lumineuse, pour faire de ses journées un acte de création de soi.",
+      "Et si la retraite n'était pas une fin, mais une œuvre à composer ? Cynthia Fleury interroge notre rapport au temps retrouvé : comment lui donner forme, sens et désir. Un rendez-vous du savoir exigeant et lumineux, pour faire de ses journées un acte de création de soi.",
     image:
       "https://image.shutterstock.com/image-photo/senior-asian-woman-have-happiness-wellbeing-600nw-1103392058.jpg",
     expertName: "Cynthia Fleury",

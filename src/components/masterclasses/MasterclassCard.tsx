@@ -10,7 +10,7 @@ interface MasterclassCardProps {
 }
 
 /**
- * Carte d'une masterclass — présentationnelle.
+ * Carte d'un rendez-vous du savoir — présentationnelle.
  * Reprend l'esthétique de EventCard (élévation au survol) et la complète
  * d'une pastille grande famille, du statut et de l'intervenant.
  * La carte est l'unité terminale : pas de page détail.

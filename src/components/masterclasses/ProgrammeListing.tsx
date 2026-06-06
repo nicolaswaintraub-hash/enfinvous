@@ -65,8 +65,8 @@ export function ProgrammeListing() {
 
         <p className="mx-auto -mt-4 mb-8 max-w-2xl text-center font-sans text-[17px] leading-relaxed text-foreground/80">
           Le programme du mois, à parcourir selon vos envies. Filtrez par
-          thématique, par date ou par disponibilité, et réservez la masterclass
-          qui vous appelle.
+          thématique, par date ou par disponibilité, et réservez le rendez-vous
+          du savoir qui vous appelle.
         </p>
 
         {/* Recherche par mot-clé */}
@@ -80,8 +80,8 @@ export function ProgrammeListing() {
               type="search"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Rechercher une masterclass, un intervenant…"
-              aria-label="Rechercher une masterclass"
+              placeholder="Rechercher un rendez-vous du savoir, un intervenant…"
+              aria-label="Rechercher un rendez-vous du savoir"
               className="w-full rounded-full border border-foreground/15 bg-background py-3.5 pr-5 pl-12 font-sans text-[16px] text-foreground placeholder:text-muted-foreground transition-colors hover:border-sage focus-visible:border-sage focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
             />
           </div>
@@ -115,8 +115,7 @@ export function ProgrammeListing() {
             aria-live="polite"
             className="font-sans text-[14px] text-muted-foreground"
           >
-            {visible.length}{" "}
-            {visible.length > 1 ? "masterclasses" : "masterclass"}
+            {visible.length} rendez-vous du savoir
           </p>
           {isFiltered && (
             <button
@@ -138,7 +137,7 @@ export function ProgrammeListing() {
         ) : (
           <div className="mx-auto max-w-md rounded-sm border border-foreground/10 bg-background px-6 py-14 text-center">
             <p className="font-serif text-[20px] font-medium text-foreground">
-              Aucune masterclass ne correspond à votre recherche
+              Aucun rendez-vous du savoir ne correspond à votre recherche
             </p>
             <p className="mt-2 font-sans text-[15px] leading-relaxed text-muted-foreground">
               Essayez d'élargir vos critères ou parcourez l'ensemble du

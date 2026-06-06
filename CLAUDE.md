@@ -37,5 +37,5 @@ Single-page, French-language showcase site (App Router). Content is **static** �
 ## Conventions
 
 - **Design tokens** (`globals.css`): brand palette is terracotta `#b3543d`, anthracite `#1f2233`, creme `#faf9f5`, beige `#efe9e1`, sage `#a9c1bd`, gold `#c4a87a`. Type is Roboto Slab. Reuse tokens/utility classes (e.g. `badge-signature`, `abo-*`); honor `prefers-reduced-motion`.
-- **Copy** is French and uses *vouvoiement*; no emojis. The word "atelier" is avoided across the site.
+- **Copy** is French and uses *vouvoiement*; no emojis. **Vocabulary:** "Atelier" is the approved keyword for the in-person sessions (it replaced "Rencontre", which is no longer used as a noun — the verb "rencontrer" is still fine). The visio format is named **"Les rendez-vous du savoir"** (formerly "Masterclass"); its route is `/rendez-vous-du-savoir`. The distinct in-person format keeps the name "Les Rendez-vous" at `/rendez-vous`. Note "rendez-vous du savoir" is invariable (no plural -s on "rendez-vous"). The in-person format is grammatically masculine (un atelier), so adapt articles/agreements accordingly.
 - **Imagery** is loaded from external hosts (Unsplash, Shutterstock) — whitelisted in `images.remotePatterns` (`next.config.ts`). Add new hosts there before using them.

@@ -80,7 +80,7 @@ export function ReplayMosaic() {
         onOpenChange={setOpen}
         surtitre="Médiathèque"
         title="Réservé aux membres"
-        description="Les replays sont l'un des privilèges du cercle. Rejoignez-nous pour revoir chaque masterclass à votre rythme."
+        description="Les replays sont l'un des privilèges du cercle. Rejoignez-nous pour revoir chaque rendez-vous du savoir à votre rythme."
         signature="Le cercle vous attend."
       >
         <Link

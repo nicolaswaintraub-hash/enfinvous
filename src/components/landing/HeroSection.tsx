@@ -160,9 +160,9 @@ export function HeroSection() {
               : "none",
           }}
         >
-          <span className="block sm:inline">Masterclasses en visio</span>
+          <span className="block sm:inline">Les rendez-vous du savoir</span>
           <span className="hidden sm:inline"> &middot; </span>
-          <span className="block sm:inline">Rencontres en présentiel</span>
+          <span className="block sm:inline">Ateliers en présentiel</span>
           <span className="hidden sm:inline"> &middot; </span>
           <span className="block sm:inline">Escapades culturelles</span>
         </p>

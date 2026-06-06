@@ -7,7 +7,7 @@ import { FadeIn } from "@/components/ui/fade-in";
 export const metadata: Metadata = {
   title: "Les Rendez-vous",
   description:
-    "Rencontres privilégiées, salons et escapades en présentiel, en petit comité. Les belles rencontres se font en petit comité.",
+    "Ateliers privilégiés, salons et escapades en présentiel, en petit comité. Les beaux ateliers se font en petit comité.",
 };
 
 export default function RendezVousPage() {

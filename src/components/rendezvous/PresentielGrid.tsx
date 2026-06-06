@@ -11,8 +11,8 @@ export function PresentielGrid() {
     >
       <Container>
         <SectionHeading
-          surtitre="Les prochaines rencontres"
-          title="Rencontres privilégiées"
+          surtitre="Les prochains ateliers"
+          title="Ateliers privilégiés"
           separator
           id="presentiel-heading"
         />

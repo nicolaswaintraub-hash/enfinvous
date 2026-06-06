@@ -10,7 +10,7 @@ export interface Event {
   variant: EventVariant;
   description: string;
   image: string;
-  /** Lieu de la rencontre, pour les événements en présentiel. */
+  /** Lieu de l'atelier, pour les événements en présentiel. */
   venue?: string;
   /** Ville de l'événement présentiel. */
   city?: string;
@@ -240,7 +240,7 @@ export const themes: Theme[] = [
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "J'ai retrouvé le plaisir d'être surprise. Chaque semaine, une rencontre qui me rappelle pourquoi j'aime vivre.",
+      "J'ai retrouvé le plaisir d'être surprise. Chaque semaine, un atelier qui me rappelle pourquoi j'aime vivre.",
     name: "Hélène",
     age: 67,
     city: "Paris",
@@ -267,7 +267,7 @@ export const plan: Plan = {
   price: 29,
   period: "mois",
   features: [
-    "Accès illimité aux masterclasses en visio",
+    "Accès illimité aux rendez-vous du savoir en visio",
     "Replays disponibles à tout moment",
     "Rendez-vous culturels en présentiel",
     "Escapades et voyages culturels",

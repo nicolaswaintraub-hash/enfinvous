@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     template: "%s | EnfinVous",
   },
   description:
-    "Masterclasses en visioconférence et rencontres en présentiel pour vivre vos passions. Rejoignez le cercle.",
+    "Les rendez-vous du savoir en visioconférence et ateliers en présentiel pour vivre vos passions. Rejoignez le cercle.",
 };
 
 export default function RootLayout({

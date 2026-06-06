@@ -58,14 +58,14 @@ export function PresentielListing() {
     >
       <Container>
         <SectionHeading
-          surtitre="Les prochaines rencontres"
-          title="Rencontres privilégiées"
+          surtitre="Les prochains ateliers"
+          title="Ateliers privilégiés"
           id="presentiel-heading"
         />
 
         <p className="mx-auto -mt-4 mb-8 max-w-2xl text-center font-sans text-[17px] leading-relaxed text-foreground/80">
-          Des rencontres en présentiel, en cercle restreint — quinze personnes
-          au plus. Filtrez par thématique, par ville ou par mois, et réservez la
+          Des ateliers en présentiel, en cercle restreint — quinze personnes au
+          plus. Filtrez par thématique, par ville ou par mois, et réservez le
           vôtre.
         </p>
 
@@ -80,8 +80,8 @@ export function PresentielListing() {
               type="search"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Rechercher une rencontre, un lieu, un intervenant…"
-              aria-label="Rechercher une rencontre"
+              placeholder="Rechercher un atelier, un lieu, un intervenant…"
+              aria-label="Rechercher un atelier"
               className="w-full rounded-full border border-foreground/15 bg-background py-3.5 pr-5 pl-12 font-sans text-[16px] text-foreground placeholder:text-muted-foreground transition-colors hover:border-sage focus-visible:border-sage focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
             />
           </div>
@@ -115,7 +115,7 @@ export function PresentielListing() {
             aria-live="polite"
             className="font-sans text-[14px] text-muted-foreground"
           >
-            {visible.length} {visible.length > 1 ? "rencontres" : "rencontre"}
+            {visible.length} {visible.length > 1 ? "ateliers" : "atelier"}
           </p>
           {isFiltered && (
             <button
@@ -137,17 +137,17 @@ export function PresentielListing() {
         ) : (
           <div className="mx-auto max-w-md rounded-sm border border-foreground/10 bg-background px-6 py-14 text-center">
             <p className="font-serif text-[20px] font-medium text-foreground">
-              Aucune rencontre ne correspond à votre recherche
+              Aucun atelier ne correspond à votre recherche
             </p>
             <p className="mt-2 font-sans text-[15px] leading-relaxed text-muted-foreground">
-              Essayez d'élargir vos critères ou parcourez toutes les rencontres.
+              Essayez d'élargir vos critères ou parcourez tous les ateliers.
             </p>
             <button
               type="button"
               onClick={reset}
               className="mt-5 font-sans text-[15px] font-medium text-foreground underline decoration-gold underline-offset-4 transition-colors hover:text-terracotta"
             >
-              Voir toutes les rencontres
+              Voir tous les ateliers
             </button>
           </div>
         )}

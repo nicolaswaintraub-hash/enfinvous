@@ -32,7 +32,7 @@ export function AboutSection() {
             </span>
           </p>
 
-          <p className="mx-auto mt-6 max-w-xl font-sans text-[15px] leading-relaxed text-muted-foreground md:text-[16px]">
+          <p className="mx-auto mt-6 max-w-xl font-serif text-[18px] font-normal leading-snug text-foreground/80 md:text-[22px]">
             <span className="font-medium text-foreground">EnfinVous</span> est
             né pour cette liberté-là. Un cercle de retraités exigeants et
             curieux qui ont décidé que cette période serait la plus riche de

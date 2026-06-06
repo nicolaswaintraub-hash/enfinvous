@@ -5,12 +5,12 @@ import { ProgrammeListing } from "@/components/masterclasses/ProgrammeListing";
 import { FadeIn } from "@/components/ui/fade-in";
 
 export const metadata: Metadata = {
-  title: "Masterclass Visio",
+  title: "Les rendez-vous du savoir",
   description:
-    "Des masterclasses en visioconférence animées par des intervenants d'exception, depuis le confort de chez vous. Le savoir, sans les contraintes.",
+    "Les rendez-vous du savoir en visioconférence, animés par des intervenants d'exception, depuis le confort de chez vous. Le savoir, sans les contraintes.",
 };
 
-export default function MasterclassesVisioPage() {
+export default function RendezVousDuSavoirPage() {
   return (
     <>
       <Header solid />

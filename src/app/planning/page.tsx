@@ -11,7 +11,7 @@ import { Container } from "@/components/ui/container";
 export const metadata: Metadata = {
   title: "Planning de la semaine",
   description:
-    "Découvrez la densité du programme EnfinVous : masterclasses en visio, rendez-vous en présentiel et événements signature, jour après jour.",
+    "Découvrez la densité du programme EnfinVous : les rendez-vous du savoir en visio, ateliers en présentiel et événements signature, jour après jour.",
 };
 
 export default function PlanningPage() {
