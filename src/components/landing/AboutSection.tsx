@@ -34,7 +34,7 @@ export function AboutSection() {
                 souhaitez et de rencontrer des personnes qui vous ressemblent.
               </p>
               <p className="font-sans text-[19px] leading-[1.75] text-foreground md:text-[21px]">
-                <span className="font-semibold text-foreground">EnfinVous</span>{" "}
+                <span className="font-semibold text-foreground">VivreEnfin</span>{" "}
                 réunit des retraités curieux et passionnés qui vivent cette
                 nouvelle étape comme la plus belle de leur vie.
               </p>

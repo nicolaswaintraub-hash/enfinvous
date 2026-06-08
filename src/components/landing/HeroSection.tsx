@@ -131,9 +131,9 @@ export function HeroSection() {
               : "none",
           }}
         >
-          Enfin, le temps de vivre
+          Vivre enfin
           <br />
-          ce qui vous passionne.
+          passionnément.
         </h1>
 
         <div

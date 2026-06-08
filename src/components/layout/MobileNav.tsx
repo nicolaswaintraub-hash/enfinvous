@@ -57,7 +57,7 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
           onClick={onClose}
           className="font-serif text-xl font-medium text-creme"
         >
-          Enfin·Vous
+          Vivre·Enfin
         </Link>
         <button
           type="button"

@@ -7,7 +7,7 @@ const formats = [
   {
     title: "Les rendez-vous du savoir",
     description:
-      "Depuis chez vous, en direct, avec des intervenants d'exception. Posez vos questions, échangez, revivez en replay.",
+      "Depuis chez vous, en visio, avec des intervenants d'exception. Posez vos questions, échangez, revivez en replay.",
     link: "/rendez-vous-du-savoir",
     image:
       "https://image.shutterstock.com/image-photo/serious-elder-grey-haired-college-600nw-2156185771.jpg",

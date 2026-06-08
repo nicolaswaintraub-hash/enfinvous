@@ -25,7 +25,7 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <Link href="/" className="font-serif text-2xl font-medium">
-              Enfin·Vous
+              Vivre·Enfin
             </Link>
             <p className="mt-3 font-serif text-base italic text-muted-foreground">
               Le cercle des éveillés de la vie.
@@ -88,7 +88,7 @@ export function Footer() {
         <Separator className="my-8 bg-foreground/10" />
 
         <p className="text-center font-sans text-sm text-muted-foreground">
-          &copy; {new Date().getFullYear()} EnfinVous. Tous droits réservés.
+          &copy; {new Date().getFullYear()} VivreEnfin. Tous droits réservés.
         </p>
       </Container>
     </footer>

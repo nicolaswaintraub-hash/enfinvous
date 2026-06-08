@@ -61,7 +61,7 @@ export function Header({ solid = false }: HeaderProps) {
               opaque ? "text-foreground" : "text-creme",
             )}
           >
-            Enfin·Vous
+            Vivre·Enfin
           </Link>
 
           {/* Desktop nav */}

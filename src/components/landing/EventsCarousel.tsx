@@ -30,7 +30,7 @@ export function EventsCarousel() {
       aria-labelledby="events-heading"
     >
       <Container>
-        <SectionHeading title="Vos rendez-vous" id="events-heading" />
+        <SectionHeading title="À ne pas rater" id="events-heading" />
 
         <Carousel
           opts={

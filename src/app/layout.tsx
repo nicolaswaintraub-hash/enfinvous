@@ -4,8 +4,8 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "EnfinVous — Le Cercle des Passions Retrouvées",
-    template: "%s | EnfinVous",
+    default: "VivreEnfin — Le Cercle des Passions Retrouvées",
+    template: "%s | VivreEnfin",
   },
   description:
     "Les rendez-vous du savoir en visioconférence et ateliers en présentiel pour vivre vos passions. Rejoignez le cercle.",

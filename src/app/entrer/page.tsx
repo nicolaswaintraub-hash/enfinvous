@@ -8,7 +8,7 @@ import { Header } from "@/components/layout/Header";
 export const metadata: Metadata = {
   title: "Entrer dans le cercle",
   description:
-    "Connectez-vous ou créez votre compte pour rejoindre le cercle EnfinVous.",
+    "Connectez-vous ou créez votre compte pour rejoindre le cercle VivreEnfin.",
 };
 
 export default function EntrerPage() {
@@ -30,10 +30,10 @@ export default function EntrerPage() {
             <div className="absolute inset-0 bg-gradient-to-t from-anthracite/70 via-anthracite/20 to-anthracite/30" />
             <div className="absolute inset-x-0 bottom-0 hidden p-10 lg:block">
               <p className="font-serif text-2xl font-medium text-creme">
-                Enfin·Vous
+                Vivre·Enfin
               </p>
               <p className="mt-2 max-w-sm font-serif text-[19px] italic leading-relaxed text-creme/85">
-                « Enfin, le temps de vivre ce qui vous passionne vraiment. »
+                « Vivre enfin passionnément. »
               </p>
             </div>
           </div>

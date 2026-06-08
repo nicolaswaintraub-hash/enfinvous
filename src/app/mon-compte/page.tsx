@@ -12,7 +12,7 @@ import { FadeIn } from "@/components/ui/fade-in";
 export const metadata: Metadata = {
   title: "Mon compte",
   description:
-    "Votre espace membre EnfinVous : abonnement, rendez-vous, favoris et parrainage.",
+    "Votre espace membre VivreEnfin : abonnement, rendez-vous, favoris et parrainage.",
 };
 
 export default function MonComptePage() {
