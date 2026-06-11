@@ -7,6 +7,8 @@ export interface Event {
   time: string;
   duration: string;
   expert: string;
+  /** Identifiant de l'expert qui présente (relie à `experts`), pour la vignette. */
+  expertId?: string;
   variant: EventVariant;
   description: string;
   image: string;
@@ -56,28 +58,45 @@ export interface Plan {
 export const events: Event[] = [
   {
     id: "1",
-    title: "Les secrets de la photographie argentique",
+    title: "Les secrets de la Bible",
     date: "Mardi 27 mai",
     time: "14h30",
     duration: "1h15",
-    expert: "Marc Riboud",
+    expert: "Frédéric Boyer",
+    expertId: "1",
     variant: "visio",
-    description: "Une plongée dans l'art du tirage, entre patience et lumière.",
+    description:
+      "Derrière les récits familiers se cachent des symboles et des sens oubliés. Une plongée passionnante pour redécouvrir la Bible autrement.",
     image:
-      "https://image.shutterstock.com/image-photo/happy-bearded-senior-man-vintage-camera-600nw-2579567943.jpg",
+      "https://images.pexels.com/photos/8675090/pexels-photo-8675090.jpeg?w=600",
   },
   {
     id: "2",
-    title: "Dégustation : les grands crus de Bourgogne",
+    title: "Cours d'œnologie : comprendre les grands crus de Bourgogne",
     date: "Mercredi 28 mai",
     time: "18h00",
     duration: "2h",
     expert: "Claire Vallée",
-    variant: "presentiel",
+    expertId: "2",
+    variant: "visio",
     description:
-      "Cinq domaines d'exception, commentés par une sommelière passionnée.",
+      "Cépages, terroirs et art de la dégustation, décryptés par une sommelière passionnée.",
     image:
       "https://image.shutterstock.com/image-photo/confident-elderly-positive-smiling-man-tasting-600nw-1902582988.jpg",
+  },
+  {
+    id: "8",
+    title: "Une fenêtre sur le monde : visite guidée du musée du Caire",
+    date: "Vendredi 30 mai",
+    time: "15h00",
+    duration: "1h30",
+    expert: "Caroline Bourgeois",
+    expertId: "5",
+    variant: "visio",
+    description:
+      "Depuis chez vous, parcourez les trésors du musée égyptien du Caire, des merveilles de Toutânkhamon aux salles des momies royales, commentés en direct.",
+    image:
+      "https://images.pexels.com/photos/6177483/pexels-photo-6177483.jpeg?w=600",
   },
   {
     id: "3",
@@ -86,37 +105,12 @@ export const events: Event[] = [
     time: "10h00",
     duration: "1h30",
     expert: "Dr. Sylvie Lacombe",
+    expertId: "7",
     variant: "signature",
     description:
       "Une conversation sincère sur le désir et l'intimité, abordée avec délicatesse et sans tabou.",
     image:
       "https://image.shutterstock.com/image-photo/portrait-happy-senior-couple-hugging-each-600nw-2444364781.jpg",
-  },
-  {
-    id: "4",
-    title: "Écriture : trouver sa voix après soixante ans",
-    date: "Vendredi 30 mai",
-    time: "11h00",
-    duration: "1h",
-    expert: "Annie Ernaux",
-    variant: "visio",
-    description:
-      "L'écriture comme espace de liberté et de reconquête personnelle.",
-    image:
-      "https://image.shutterstock.com/image-photo/mature-writer-working-on-essay-writing-600nw-2260641597.jpg",
-  },
-  {
-    id: "5",
-    title: "Visite privée : la collection Pinault",
-    date: "Samedi 31 mai",
-    time: "10h30",
-    duration: "2h30",
-    expert: "Caroline Bourgeois",
-    variant: "presentiel",
-    description:
-      "Un parcours exclusif dans les salles habituellement fermées au public.",
-    image:
-      "https://image.shutterstock.com/image-photo/individual-admiring-colorful-modern-artworks-contemporary-600nw-2632939805.jpg",
   },
   {
     id: "6",
@@ -125,6 +119,7 @@ export const events: Event[] = [
     time: "17h00",
     duration: "1h15",
     expert: "Cynthia Fleury",
+    expertId: "6",
     variant: "visio",
     description:
       "Comment transformer la retraite en un acte de création de soi.",
@@ -136,8 +131,8 @@ export const events: Event[] = [
 export const experts: Expert[] = [
   {
     id: "1",
-    name: "Marc Riboud",
-    discipline: "Photographie",
+    name: "Frédéric Boyer",
+    discipline: "Études bibliques",
     image:
       "https://image.shutterstock.com/image-photo/portrait-senior-man-photography-enthusiast-who-600nw-2743942967.jpg",
   },
@@ -175,6 +170,13 @@ export const experts: Expert[] = [
     discipline: "Philosophie",
     image:
       "https://image.shutterstock.com/image-photo/happy-senior-woman-600nw-370677797.jpg",
+  },
+  {
+    id: "7",
+    name: "Dr. Sylvie Lacombe",
+    discipline: "Sexologie",
+    image:
+      "https://image.shutterstock.com/image-photo/smiling-senior-woman-enjoying-nature-camera-600nw-2586291429.jpg",
   },
 ];
 

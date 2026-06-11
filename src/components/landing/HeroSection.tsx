@@ -122,7 +122,7 @@ export function HeroSection() {
         />
 
         <h1
-          className="mx-auto max-w-3xl font-serif text-[28px] font-normal leading-[1.1] sm:text-[36px] md:text-[64px]"
+          className="mx-auto max-w-none whitespace-nowrap font-serif text-[28px] font-normal leading-[1.1] sm:text-[36px] md:text-[56px]"
           style={{
             textShadow:
               "0 1px 2px rgba(0,0,0,0.8), 0 2px 6px rgba(0,0,0,0.6), 0 4px 22px rgba(0,0,0,0.45)",
@@ -131,9 +131,7 @@ export function HeroSection() {
               : "none",
           }}
         >
-          Vivre enfin
-          <br />
-          passionnément.
+          Vivre enfin passionnément !
         </h1>
 
         <div

@@ -11,11 +11,7 @@ export function ThemesGrid() {
       aria-labelledby="themes-heading"
     >
       <Container>
-        <SectionHeading
-          title="Partager ses passions"
-          separator
-          id="themes-heading"
-        />
+        <SectionHeading title="Thématiques" separator id="themes-heading" />
 
         <FadeIn
           stagger

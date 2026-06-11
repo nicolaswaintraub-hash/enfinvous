@@ -34,7 +34,9 @@ export function AboutSection() {
                 souhaitez et de rencontrer des personnes qui vous ressemblent.
               </p>
               <p className="font-sans text-[19px] leading-[1.75] text-foreground md:text-[21px]">
-                <span className="font-semibold text-foreground">VivreEnfin</span>{" "}
+                <span className="font-semibold text-foreground">
+                  VivreEnfin
+                </span>{" "}
                 réunit des retraités curieux et passionnés qui vivent cette
                 nouvelle étape comme la plus belle de leur vie.
               </p>
@@ -49,9 +51,8 @@ export function AboutSection() {
             </p>
           </div>
 
-          {/* Le portrait — cadre doré en couches, des visages réels — à droite */}
+          {/* Le portrait — des visages réels — à droite */}
           <div className="about-figure relative mx-auto w-full max-w-[460px] md:max-w-none">
-            <span aria-hidden="true" className="about-figure__frame" />
             <div className="about-figure__photo relative aspect-[4/3] overflow-hidden lg:aspect-[16/10]">
               <Image
                 src="https://images.pexels.com/photos/6838623/pexels-photo-6838623.jpeg?auto=compress&cs=tinysrgb&w=1200"
@@ -63,12 +64,6 @@ export function AboutSection() {
               {/* Voile chaud léger pour fondre l'image dans la palette */}
               <span aria-hidden="true" className="about-figure__wash" />
             </div>
-
-            {/* Cartouche éditorial */}
-            <span className="about-figure__caption">
-              <span className="about-figure__caption-dot" aria-hidden="true" />
-              Le quotidien de nos membres
-            </span>
           </div>
         </FadeIn>
       </Container>

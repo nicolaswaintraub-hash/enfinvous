@@ -7,7 +7,7 @@ import { FadeIn } from "@/components/ui/fade-in";
 export const metadata: Metadata = {
   title: "Les rendez-vous du savoir",
   description:
-    "Les rendez-vous du savoir en visioconférence, animés par des intervenants d'exception, depuis le confort de chez vous. Le savoir, sans les contraintes.",
+    "Les rendez-vous du savoir en visioconférence, animés par des intervenants d'exception, depuis le confort de chez vous. Des fenêtres sur le monde et le savoir, sans les contraintes.",
 };
 
 export default function RendezVousDuSavoirPage() {

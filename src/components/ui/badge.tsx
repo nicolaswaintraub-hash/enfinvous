@@ -11,6 +11,7 @@ const badgeVariants = cva(
         visio: "bg-terracotta text-primary-foreground",
         presentiel: "bg-sage text-foreground",
         signature: "badge-signature",
+        flag: "bg-creme/85 text-anthracite/85 ring-1 ring-anthracite/10 backdrop-blur-sm [&_svg]:text-anthracite/60",
       },
     },
     defaultVariants: {

@@ -573,28 +573,6 @@
   }
 }
 
-/* Portrait — cadre doré décalé en couches */
-.about-figure__frame {
-  position: absolute;
-  inset: 0;
-  transform: translate(14px, 14px);
-  border: 1px solid rgba(196, 168, 122, 0.55);
-  border-radius: 2px;
-  background: linear-gradient(
-    135deg,
-    rgba(196, 168, 122, 0.18),
-    transparent 60%
-  );
-  z-index: -1;
-  pointer-events: none;
-}
-
-@media (min-width: 768px) {
-  .about-figure__frame {
-    transform: translate(18px, 18px);
-  }
-}
-
 .about-figure__photo {
   border-radius: 2px;
   /* Anneau doré + léger filet blanc intérieur, ombre chaude portée */
@@ -613,34 +591,6 @@
     rgba(31, 34, 51, 0) 55%,
     rgba(179, 84, 61, 0.16) 100%
   );
-}
-
-/* Cartouche éditorial sous l'image */
-.about-figure__caption {
-  position: absolute;
-  bottom: -0.85rem;
-  left: 1.4rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 0.9rem;
-  font-family: var(--font-sans);
-  font-size: 0.74rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--color-anthracite);
-  background: var(--color-creme);
-  border: 1px solid rgba(196, 168, 122, 0.5);
-  border-radius: 2px;
-  box-shadow: 0 12px 26px -16px rgba(31, 34, 51, 0.4);
-}
-
-.about-figure__caption-dot {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 999px;
-  background: var(--color-terracotta);
 }
 
 @media (prefers-reduced-motion: reduce) {
