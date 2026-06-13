@@ -24,10 +24,22 @@ export function EventCard({ event, large = false, sizes }: EventCardProps) {
     ? experts.find((e) => e.id === event.expertId)
     : undefined;
 
-  // Le format réel se déduit du lieu : un atelier a un lieu (présentiel),
-  // les rendez-vous du savoir se tiennent en visio.
-  const isPresentiel = Boolean(event.venue);
-  const formatLabel = isPresentiel ? "Atelier" : "Rendez-vous du savoir";
+  // Le format pilote le badge : atelier (présentiel), fenêtre sur le monde
+  // (visio) ou rendez-vous du savoir (visio par défaut). Le lieu (`venue`)
+  // reste l'indicateur du présentiel pour le détail bas de carte.
+  const isPresentiel = event.variant === "presentiel" || Boolean(event.venue);
+  const isFenetre = event.variant === "fenetre";
+
+  const formatVariant = isPresentiel
+    ? "presentiel"
+    : isFenetre
+      ? "fenetre"
+      : "visio";
+  const formatLabel = isPresentiel
+    ? "Atelier"
+    : isFenetre
+      ? "Fenêtre sur le monde"
+      : "Rendez-vous du savoir";
 
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-sm bg-card transition-all duration-250 hover:-translate-y-1 hover:shadow-[var(--shadow-card-hover)]">
@@ -40,9 +52,7 @@ export function EventCard({ event, large = false, sizes }: EventCardProps) {
           className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
         />
         <div className="absolute top-3 left-3 z-10 flex flex-wrap items-center gap-1.5">
-          <Badge variant={isPresentiel ? "presentiel" : "visio"}>
-            {formatLabel}
-          </Badge>
+          <Badge variant={formatVariant}>{formatLabel}</Badge>
           <Badge variant="flag" className="gap-1">
             {isPresentiel ? (
               <MapPin className="size-3" aria-hidden="true" />

@@ -1,4 +1,4 @@
-export type EventVariant = "visio" | "presentiel" | "signature";
+export type EventVariant = "visio" | "presentiel" | "signature" | "fenetre";
 
 export interface Event {
   id: string;
@@ -72,15 +72,18 @@ export const events: Event[] = [
   },
   {
     id: "2",
-    title: "Cours d'œnologie : comprendre les grands crus de Bourgogne",
+    title: "Atelier d'œnologie : comprendre les grands crus de Bourgogne",
     date: "Mercredi 28 mai",
     time: "18h00",
     duration: "2h",
     expert: "Claire Vallée",
     expertId: "2",
-    variant: "visio",
+    variant: "presentiel",
+    venue: "Maison des Vins",
+    city: "Beaune",
+    spotsLeft: 6,
     description:
-      "Cépages, terroirs et art de la dégustation, décryptés par une sommelière passionnée.",
+      "Cépages, terroirs et art de la dégustation, en petit cercle, décryptés par une sommelière passionnée.",
     image:
       "https://image.shutterstock.com/image-photo/confident-elderly-positive-smiling-man-tasting-600nw-1902582988.jpg",
   },
@@ -92,7 +95,7 @@ export const events: Event[] = [
     duration: "1h30",
     expert: "Caroline Bourgeois",
     expertId: "5",
-    variant: "visio",
+    variant: "fenetre",
     description:
       "Depuis chez vous, parcourez les trésors du musée égyptien du Caire, des merveilles de Toutânkhamon aux salles des momies royales, commentés en direct.",
     image:

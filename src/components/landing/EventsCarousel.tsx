@@ -10,8 +10,16 @@ import {
 } from "@/components/ui/carousel";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { events } from "@/data/landing";
+import { type Event, events } from "@/data/landing";
 import { EventCard } from "./EventCard";
+
+// Une carte par format, pour montrer la diversité : rendez-vous du savoir
+// (visio) → atelier (présentiel) → fenêtre sur le monde.
+const featured = [
+  events.find((e) => e.variant === "visio"),
+  events.find((e) => e.variant === "presentiel"),
+  events.find((e) => e.variant === "fenetre"),
+].filter(Boolean) as Event[];
 
 export function EventsCarousel() {
   const [isMobile, setIsMobile] = useState(false);
@@ -42,7 +50,7 @@ export function EventsCarousel() {
           aria-label="Vos rendez-vous"
         >
           <CarouselContent className="-ml-4">
-            {events.map((event) => (
+            {featured.map((event) => (
               <CarouselItem
                 key={event.id}
                 className="pl-4 basis-[85%] sm:basis-1/2 lg:basis-1/3"
