@@ -11,6 +11,7 @@ const legendDot: Record<EventVariant, string> = {
   visio: "bg-terracotta",
   presentiel: "bg-sage",
   signature: "bg-gold",
+  fenetre: "bg-anthracite",
 };
 
 export function CalendarGrid() {

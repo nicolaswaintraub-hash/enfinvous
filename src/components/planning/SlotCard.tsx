@@ -16,6 +16,10 @@ const slotStyles: Record<EventVariant, { card: string; sub: string }> = {
     card: "bg-gradient-to-br from-[#d8c39a] to-[#c4a87a] text-anthracite border border-[#b8985f]",
     sub: "text-anthracite/70",
   },
+  fenetre: {
+    card: "bg-anthracite text-creme",
+    sub: "text-creme/75",
+  },
 };
 
 interface SlotCardProps {
