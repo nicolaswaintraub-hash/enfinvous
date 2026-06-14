@@ -41,14 +41,6 @@ export function AboutSection() {
                 nouvelle étape comme la plus belle de leur vie.
               </p>
             </div>
-
-            {/* La signature — plaque dorée « invitation » */}
-            <p className="about-signature mt-8 md:mt-9">
-              <span className="about-signature__label">Bienvenue dans le</span>
-              <span className="about-signature__name font-serif">
-                Cercle des Éveillés de la Vie
-              </span>
-            </p>
           </div>
 
           {/* Le portrait — des visages réels — à droite */}
