@@ -13,6 +13,10 @@ export function ThemesGrid() {
       <Container>
         <SectionHeading title="Thématiques" separator id="themes-heading" />
 
+        <p className="mx-auto -mt-8 mb-10 max-w-2xl text-center font-serif text-[22px] font-medium italic leading-snug text-terracotta md:mb-14 md:text-[26px]">
+          Que voulez-vous découvrir&nbsp;?
+        </p>
+
         <FadeIn
           stagger
           className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 md:gap-6"

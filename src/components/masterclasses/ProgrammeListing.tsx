@@ -69,6 +69,11 @@ export function ProgrammeListing() {
           du savoir qui vous appelle.
         </p>
 
+        {/* Invitation — mini call to action */}
+        <p className="mx-auto mb-5 max-w-2xl text-center font-serif text-[22px] font-medium italic leading-snug text-terracotta md:text-[26px]">
+          Que voulez-vous découvrir&nbsp;?
+        </p>
+
         {/* Recherche par mot-clé */}
         <div className="mx-auto mb-6 max-w-2xl">
           <div className="relative">
