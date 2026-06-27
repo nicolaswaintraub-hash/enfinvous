@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/rendez-vous-du-savoir", label: "Les rendez-vous du savoir" },
   { href: "/rendez-vous", label: "Ateliers" },
   { href: "/planning", label: "Planning" },
+  { href: "/devenir-expert", label: "Vous êtes un professionnel ?" },
   { href: "/entrer", label: "Se connecter" },
 ];
 
@@ -76,7 +77,7 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
             href={link.href}
             onClick={onClose}
             className={cn(
-              "py-3 font-serif text-[28px] font-medium text-creme/90 transition-all duration-500 hover:text-gold",
+              "py-3 text-center font-serif text-[28px] font-medium text-creme/90 transition-all duration-500 hover:text-gold",
               open ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0",
             )}
             style={{

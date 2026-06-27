@@ -55,6 +55,21 @@ export interface Plan {
   features: string[];
 }
 
+/** Appel aux professionnels qui souhaitent animer un atelier ou un rendez-vous du savoir. */
+export interface ExpertContact {
+  surtitre: string;
+  /** Accroche éditoriale ; `accent` est le membre de phrase souligné « à la main ». */
+  title: { lead: string; accent: string; tail: string };
+  /** Sous-titre du hero de la page dédiée. */
+  heroSubtitle: string;
+  intro: string;
+  points: { title: string; description: string }[];
+  /** Adresse de repli, pour le lien mailto du formulaire. */
+  email: string;
+  /** Options du champ « Format souhaité ». */
+  formats: string[];
+}
+
 export const events: Event[] = [
   {
     id: "1",
@@ -278,5 +293,42 @@ export const plan: Plan = {
     "Escapades et voyages culturels",
     "Priorité sur les événements signature",
     "Communauté privée et échanges privilégiés",
+  ],
+};
+
+export const expertContact: ExpertContact = {
+  surtitre: "Vous transmettez · Nous réunissons",
+  title: {
+    lead: "Votre savoir mérite un cercle ",
+    accent: "qui l'écoute",
+    tail: ".",
+  },
+  heroSubtitle:
+    "Conférencier, artiste, artisan, chercheur ou simple passionné : si vous aimez transmettre, le Cercle vous confie un public attentif, curieux et fidèle. À vous la matière, à nous l'intendance.",
+  intro:
+    "Conférencier, artiste, artisan, chercheur ou passionné : si vous aimez transmettre, le Cercle vous ouvre ses portes.",
+  points: [
+    {
+      title: "Un public curieux et fidèle",
+      description:
+        "Des retraités de 70 ans et plus, animés par l'envie d'apprendre et de se cultiver, qui reviennent rendez-vous après rendez-vous.",
+    },
+    {
+      title: "Deux formats, à votre rythme",
+      description:
+        "Un atelier en présentiel pour le contact direct, ou un rendez-vous du savoir en visio pour toucher le cercle où qu'il soit.",
+    },
+    {
+      title: "Un accompagnement à chaque étape",
+      description:
+        "Nous préparons votre intervention avec vous : choix du format, déroulé, mise en relation avec le cercle. Vous restez maître de votre intervention, nous facilitons le reste.",
+    },
+  ],
+  email: "experts@vivreenfin.fr",
+  formats: [
+    "Un atelier en présentiel",
+    "Un rendez-vous du savoir (visio)",
+    "Les deux formats",
+    "Je ne sais pas encore",
   ],
 };

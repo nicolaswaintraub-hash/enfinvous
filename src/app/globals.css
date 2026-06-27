@@ -421,6 +421,88 @@
   }
 }
 
+/* ── Devenir expert — invitation aux professionnels, cadre doré, champs filets ── */
+.expert-contact-panel {
+  position: relative;
+  background:
+    radial-gradient(
+      130% 120% at 100% 0%,
+      rgba(196, 168, 122, 0.14),
+      transparent 50%
+    ), linear-gradient(160deg, #ffffff 0%, #faf6ef 45%, #f3ebdf 100%);
+  border: 1px solid rgba(196, 168, 122, 0.45);
+  box-shadow:
+    0 30px 60px -32px rgba(31, 34, 51, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+.expert-contact-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #b8985f 18%,
+    #f3e6c6 50%,
+    #b8985f 82%,
+    transparent
+  );
+  opacity: 0.9;
+}
+
+/* La « fiche » — colonne formulaire, surface crème un cran plus chaude que le panneau */
+.expert-contact-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)),
+    rgba(196, 168, 122, 0.08);
+}
+
+/* Intitulé de champ — compact, discret, au-dessus de chaque saisie */
+.expert-contact-label {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8a6d3b;
+}
+
+/* Champ — vraie surface crème, filet doré, focus terracotta avec halo discret */
+.expert-contact-field {
+  width: 100%;
+  background: #fffdf9;
+  border: 1px solid rgba(196, 168, 122, 0.5);
+  border-radius: 6px;
+  padding: 0.7rem 0.85rem;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: var(--color-foreground);
+  box-shadow: inset 0 1px 2px rgba(31, 34, 51, 0.04);
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.expert-contact-field::placeholder {
+  color: rgba(31, 34, 51, 0.38);
+}
+
+.expert-contact-field:hover {
+  border-color: rgba(196, 168, 122, 0.85);
+}
+
+.expert-contact-field:focus,
+.expert-contact-field:focus-visible {
+  outline: none;
+  border-color: var(--color-terracotta);
+  box-shadow:
+    inset 0 1px 2px rgba(31, 34, 51, 0.04),
+    0 0 0 3px rgba(179, 84, 61, 0.14);
+}
+
 /* ── Qui sommes-nous — récit éditorial, cadre doré, signature « invitation » ── */
 @keyframes about-aura-pulse {
   0%,
@@ -476,6 +558,18 @@
   }
 }
 
+/* Variante posée sur une photo sombre (hero « devenir » en mobile) : on
+   éclaircit le libellé et le filet pour rester lisible sur le voile chaud. */
+@media (max-width: 1023px) {
+  .about-kicker--onphoto {
+    color: #f0d9a8;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
+  }
+  .about-kicker--onphoto::before {
+    background: linear-gradient(90deg, transparent, #e6c98a);
+  }
+}
+
 /* Mot mis en valeur — trait doré dessiné « à la main » sous le mot */
 .about-accent {
   position: relative;
@@ -500,6 +594,17 @@
   transform: rotate(-0.6deg);
   z-index: -1;
   opacity: 0.55;
+}
+
+/* Sur la photo sombre du hero mobile, la terracotta s'assombrit : on bascule
+   le mot accentué vers la crème et on appuie un peu le trait doré. */
+@media (max-width: 1023px) {
+  .about-accent--onphoto {
+    color: var(--color-creme);
+  }
+  .about-accent--onphoto::after {
+    opacity: 0.85;
+  }
 }
 
 /* Récit — filet terracotta vertical, posé à gauche sur grand écran */
@@ -570,6 +675,34 @@
 @media (min-width: 768px) {
   .about-signature__name {
     font-size: 1.6rem;
+  }
+}
+
+/* Variante « posée sur la photo » — la plaque déborde le coin inférieur gauche du portrait */
+.about-signature--floating {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: max-content;
+  max-width: 88%;
+  align-items: center;
+  text-align: center;
+  box-shadow:
+    0 26px 50px -24px rgba(31, 34, 51, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+@media (min-width: 768px) {
+  .about-signature--floating {
+    left: auto;
+    right: -1.25rem;
+    bottom: -1.5rem;
+    transform: none;
+    align-items: flex-start;
+    text-align: left;
+    max-width: min(20rem, 80%);
   }
 }
 
