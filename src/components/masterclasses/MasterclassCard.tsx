@@ -1,4 +1,10 @@
-import { CalendarDays, Clock, Repeat, Users } from "lucide-react";
+import {
+  CalendarDays,
+  Clock,
+  MessageCircle,
+  Repeat,
+  Users,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
@@ -35,6 +41,10 @@ export function MasterclassCard({ entry }: MasterclassCardProps) {
         />
         <span className="absolute top-3 left-3 z-10 rounded-full bg-creme/90 px-3 py-1 font-sans text-[12px] font-medium uppercase tracking-[0.12em] text-anthracite backdrop-blur-sm">
           {entry.theme}
+        </span>
+        <span className="absolute bottom-3 right-3 z-10 inline-flex items-center gap-1 rounded-full bg-terracotta/95 px-2 py-0.5 font-sans text-[10px] font-medium uppercase tracking-[0.08em] text-primary-foreground backdrop-blur-sm">
+          <MessageCircle className="size-2.5" aria-hidden="true" />
+          Posez vos questions
         </span>
       </div>
 

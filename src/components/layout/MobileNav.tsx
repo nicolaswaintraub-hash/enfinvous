@@ -113,7 +113,7 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
 
       <div className="relative px-8 pb-8 text-center">
         <p className="font-serif text-base italic text-creme/40">
-          Apprendre, partager, échanger, découvrir.
+          Apprendre, Partager, Échanger, Découvrir.
         </p>
       </div>
     </div>

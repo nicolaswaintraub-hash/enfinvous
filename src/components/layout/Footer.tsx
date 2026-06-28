@@ -29,7 +29,7 @@ export function Footer() {
               Vivre·Enfin
             </Link>
             <p className="mt-3 font-serif text-base italic text-muted-foreground">
-              Apprendre, partager, échanger, découvrir.
+              Apprendre, Partager, Échanger, Découvrir.
             </p>
           </div>
 

@@ -130,7 +130,7 @@ export function HeroSection() {
               : "none",
           }}
         >
-          Apprendre, partager, échanger, découvrir
+          Apprendre, Partager, Échanger, Découvrir
         </p>
 
         <div

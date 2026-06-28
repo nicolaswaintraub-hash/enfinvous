@@ -1,4 +1,4 @@
-import { MapPin, Video } from "lucide-react";
+import { MapPin, MessageCircle, Video } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
@@ -12,9 +12,16 @@ interface EventCardProps {
   large?: boolean;
   /** Surcharge l'attribut sizes de l'image selon la grille d'accueil. */
   sizes?: string;
+  /** Affiche l'applat « Posez vos questions » (rendez-vous participatifs). */
+  showAsk?: boolean;
 }
 
-export function EventCard({ event, large = false, sizes }: EventCardProps) {
+export function EventCard({
+  event,
+  large = false,
+  sizes,
+  showAsk = false,
+}: EventCardProps) {
   const imageSizes =
     sizes ??
     (large
@@ -70,6 +77,12 @@ export function EventCard({ event, large = false, sizes }: EventCardProps) {
             {isPresentiel ? "Présentiel" : "Visio"}
           </Badge>
         </div>
+        {showAsk && (
+          <span className="absolute bottom-3 right-3 z-10 inline-flex items-center gap-1 rounded-full bg-terracotta/95 px-2 py-0.5 font-sans text-[10px] font-medium uppercase tracking-[0.08em] text-primary-foreground backdrop-blur-sm">
+            <MessageCircle className="size-2.5" aria-hidden="true" />
+            Posez vos questions
+          </span>
+        )}
       </div>
 
       <div className={cn("flex flex-1 flex-col", large ? "p-5 md:p-6" : "p-4")}>
