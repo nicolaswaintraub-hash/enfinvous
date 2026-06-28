@@ -2,6 +2,7 @@
 
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -95,21 +96,6 @@ export function HeroSection() {
           }}
           aria-hidden="true"
         />
-        <p
-          className={cn(
-            "mb-6 font-sans text-[15px] font-medium uppercase tracking-[0.2em] text-creme/90",
-            entered ? "opacity-100" : "opacity-0",
-          )}
-          style={{
-            textShadow: "0 1px 2px rgba(0,0,0,0.7), 0 1px 12px rgba(0,0,0,0.5)",
-            animation: entered
-              ? "hero-reveal-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both"
-              : "none",
-          }}
-        >
-          Le cercle des éveillés de la vie
-        </p>
-
         <div
           className="mx-auto mb-8 h-px w-20 origin-center bg-gold"
           style={{
@@ -131,8 +117,21 @@ export function HeroSection() {
               : "none",
           }}
         >
-          Vivre enfin passionnément !
+          Vivre enfin !
         </h1>
+
+        <p
+          className="mx-auto mt-7 max-w-2xl font-serif text-[19px] font-normal leading-snug text-creme/95 sm:text-[22px] md:text-[26px]"
+          style={{
+            textShadow:
+              "0 1px 2px rgba(0,0,0,0.75), 0 2px 14px rgba(0,0,0,0.5)",
+            animation: entered
+              ? "hero-reveal-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.95s both"
+              : "none",
+          }}
+        >
+          Apprendre, partager, échanger, découvrir
+        </p>
 
         <div
           className="mx-auto mt-8 h-px w-20 origin-center bg-gold"
@@ -169,7 +168,13 @@ export function HeroSection() {
               : "none",
           }}
         >
-          <Button size="lg">Vous abonner</Button>
+          <Button
+            size="lg"
+            nativeButton={false}
+            render={(props) => <Link href="/entrer" {...props} />}
+          >
+            Vous abonner
+          </Button>
           <Button
             variant="secondary"
             size="lg"

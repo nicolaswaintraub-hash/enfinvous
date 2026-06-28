@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { Theme } from "@/data/landing";
 
 interface ThemeTileProps {
@@ -6,8 +7,15 @@ interface ThemeTileProps {
 }
 
 export function ThemeTile({ theme }: ThemeTileProps) {
+  const href = theme.filter
+    ? `/rendez-vous?theme=${encodeURIComponent(theme.filter)}`
+    : "/rendez-vous";
+
   return (
-    <div className="group relative aspect-square cursor-pointer overflow-hidden rounded-sm">
+    <Link
+      href={href}
+      className="group relative block aspect-square cursor-pointer overflow-hidden rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+    >
       <Image
         src={theme.image}
         alt={theme.title}
@@ -26,6 +34,6 @@ export function ThemeTile({ theme }: ThemeTileProps) {
           {theme.tagline}
         </p>
       </div>
-    </div>
+    </Link>
   );
 }

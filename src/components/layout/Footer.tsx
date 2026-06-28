@@ -6,7 +6,7 @@ import { Separator } from "@/components/ui/separator";
 const navLinks = [
   { href: "/rendez-vous-du-savoir", label: "Les rendez-vous du savoir" },
   { href: "/rendez-vous", label: "Ateliers" },
-  { href: "/planning", label: "Planning" },
+  { href: "/fenetres-sur-le-monde", label: "Fenêtres sur le monde" },
   { href: "/devenir-expert", label: "Vous êtes un professionnel ?" },
 ];
 
@@ -29,7 +29,7 @@ export function Footer() {
               Vivre·Enfin
             </Link>
             <p className="mt-3 font-serif text-base italic text-muted-foreground">
-              Le cercle des éveillés de la vie.
+              Apprendre, partager, échanger, découvrir.
             </p>
           </div>
 

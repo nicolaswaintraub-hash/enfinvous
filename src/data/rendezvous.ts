@@ -9,7 +9,7 @@ export const presentielEvents: Event[] = [
     date: "Mercredi 28 mai",
     time: "18h00",
     duration: "2h",
-    expert: "Claire Vallée",
+    expert: "Bertrand Caillaux",
     variant: "presentiel",
     theme: "Gastronomie",
     description:
@@ -26,7 +26,7 @@ export const presentielEvents: Event[] = [
     date: "Samedi 31 mai",
     time: "10h30",
     duration: "2h30",
-    expert: "Caroline Bourgeois",
+    expert: "Florence Aubry",
     variant: "signature",
     theme: "Culture",
     description:
@@ -56,11 +56,11 @@ export const presentielEvents: Event[] = [
   },
   {
     id: "rv4",
-    title: "Salon littéraire autour d'Annie Ernaux",
+    title: "Salon littéraire autour de Margaux Lenoir",
     date: "Jeudi 5 juin",
     time: "17h00",
     duration: "2h",
-    expert: "Annie Ernaux",
+    expert: "Margaux Lenoir",
     variant: "signature",
     theme: "Littérature",
     description:
@@ -77,7 +77,7 @@ export const presentielEvents: Event[] = [
     date: "Samedi 7 juin",
     time: "12h30",
     duration: "3h",
-    expert: "Claire Vallée",
+    expert: "Bertrand Caillaux",
     variant: "presentiel",
     theme: "Gastronomie",
     description:
@@ -94,7 +94,7 @@ export const presentielEvents: Event[] = [
     date: "Vendredi 13 juin",
     time: "19h00",
     duration: "1h30",
-    expert: "Philippe Jordan",
+    expert: "Henri Lemaire",
     variant: "presentiel",
     theme: "Musique",
     description:

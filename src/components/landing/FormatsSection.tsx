@@ -7,7 +7,7 @@ const formats = [
   {
     title: "Les rendez-vous du savoir",
     description:
-      "Depuis chez vous, en visio, avec des intervenants d'exception. Posez vos questions, échangez, revivez en replay.",
+      "Depuis chez vous, en visio, des spécialistes viennent partager leurs connaissances. Posez vos questions et échangez avec eux.",
     link: "/rendez-vous-du-savoir",
     image:
       "https://image.shutterstock.com/image-photo/serious-elder-grey-haired-college-600nw-2156185771.jpg",
@@ -15,7 +15,7 @@ const formats = [
   {
     title: "Les Ateliers",
     description:
-      "Ateliers et salons en présentiel, en petits groupes, dans des lieux d'exception soigneusement choisis.",
+      "Ateliers en présentiel : profitez, en petits groupes, d'expériences et de lieux soigneusement choisis.",
     link: "/rendez-vous",
     image:
       "https://image.shutterstock.com/image-photo/when-pouring-red-wine-into-glass-600nw-2681993181.jpg",
@@ -23,10 +23,10 @@ const formats = [
   {
     title: "Fenêtres sur le monde",
     description:
-      "Escapades et voyages culturels d'exception, accompagnés par des experts passionnés.",
-    link: "/rendez-vous",
+      "Voyagez depuis chez vous et découvrez, avec des guides, des sites incroyables.",
+    link: "/fenetres-sur-le-monde",
     image:
-      "https://image.shutterstock.com/image-photo/castle-versailles-beautiful-glow-golden-hour-600nw-2556716313.jpg",
+      "https://images.unsplash.com/photo-1539768942893-daf53e448371?w=900&q=80",
   },
 ];
 

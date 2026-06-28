@@ -66,7 +66,7 @@ export const discoverEvents: Event[] = [
     date: "Mardi 27 mai",
     time: "15h00",
     duration: "1h",
-    expert: "Marc Riboud",
+    expert: "Julien Faure",
     variant: "visio",
     description:
       "Saisir un visage en quelques traits, apprivoiser l'ombre et la lumière.",
@@ -79,7 +79,7 @@ export const discoverEvents: Event[] = [
     date: "Mercredi 28 mai",
     time: "18h30",
     duration: "1h30",
-    expert: "Philippe Jordan",
+    expert: "Henri Lemaire",
     variant: "presentiel",
     description:
       "Un moment musical intimiste, joué pour le cercle dans un salon feutré.",
@@ -92,7 +92,7 @@ export const discoverEvents: Event[] = [
     date: "Jeudi 29 mai",
     time: "19h30",
     duration: "3h",
-    expert: "Claire Vallée",
+    expert: "Bertrand Caillaux",
     variant: "signature",
     description:
       "Accords mets et grands crus, commentés au fil d'un dîner d'exception.",
@@ -105,7 +105,7 @@ export const discoverEvents: Event[] = [
     date: "Vendredi 30 mai",
     time: "10h00",
     duration: "1h",
-    expert: "Cynthia Fleury",
+    expert: "Pascal Rivière",
     variant: "visio",
     description:
       "Des gestes simples pour entretenir souplesse, équilibre et vitalité.",

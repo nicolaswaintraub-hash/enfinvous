@@ -1,6 +1,6 @@
 "use client";
 
-import { Search } from "lucide-react";
+import { MessageCircle, Search } from "lucide-react";
 import { useMemo, useState } from "react";
 import { Container } from "@/components/ui/container";
 import { FilterSelect } from "@/components/ui/filter-select";
@@ -63,10 +63,17 @@ export function ProgrammeListing() {
           id="programme-heading"
         />
 
-        <p className="mx-auto -mt-4 mb-8 max-w-2xl text-center font-sans text-[17px] leading-relaxed text-foreground/80">
+        <p className="mx-auto -mt-4 mb-6 max-w-2xl text-center font-sans text-[17px] leading-relaxed text-foreground/80">
           Le programme du mois, à parcourir selon vos envies. Filtrez par
           thématique, par date ou par disponibilité, et réservez le rendez-vous
           du savoir qui vous appelle.
+        </p>
+
+        {/* Rappel participatif — les rendez-vous sont des échanges en direct */}
+        <p className="mx-auto mb-8 flex max-w-2xl items-center justify-center gap-2.5 rounded-full bg-terracotta/10 px-5 py-3 text-center font-sans text-[15px] font-medium leading-snug text-terracotta">
+          <MessageCircle className="size-5 shrink-0" aria-hidden="true" />
+          Tous nos rendez-vous sont participatifs : posez vos questions et
+          échangez en direct avec l'intervenant.
         </p>
 
         {/* Invitation — mini call to action */}

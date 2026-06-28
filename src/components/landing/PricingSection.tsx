@@ -1,8 +1,10 @@
 import { ArrowRight, Check } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { buttonVariants } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { plan } from "@/data/landing";
+import { cn } from "@/lib/utils";
 
 export function PricingSection() {
   return (
@@ -50,13 +52,16 @@ export function PricingSection() {
                 </p>
               </div>
 
-              <Button
-                size="lg"
-                className="abo-cta group/cta mt-1 w-full gap-2.5 text-[16px]"
+              <Link
+                href="/entrer"
+                className={cn(
+                  buttonVariants({ size: "lg" }),
+                  "abo-cta group/cta mt-1 w-full gap-2.5 text-[16px]",
+                )}
               >
                 Abonnez-vous
                 <ArrowRight className="size-[18px] transition-transform duration-300 group-hover/cta:translate-x-1" />
-              </Button>
+              </Link>
             </div>
 
             {/* Inclus — les avantages */}

@@ -1,4 +1,4 @@
-import { CalendarDays, Clock, Users } from "lucide-react";
+import { CalendarDays, Clock, Repeat, Users } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
@@ -68,7 +68,7 @@ export function MasterclassCard({ entry }: MasterclassCardProps) {
               className="size-4 shrink-0 text-foreground/45"
               aria-hidden="true"
             />
-            {entry.date} &middot; {entry.time}
+            {entry.cadence} &middot; {entry.time}
           </span>
           <span className="flex items-center gap-2">
             <Clock
@@ -77,6 +77,15 @@ export function MasterclassCard({ entry }: MasterclassCardProps) {
             />
             {entry.duration}
           </span>
+          {typeof entry.sessionsAhead === "number" && (
+            <span className="flex items-center gap-2">
+              <Repeat
+                className="size-4 shrink-0 text-foreground/45"
+                aria-hidden="true"
+              />
+              {entry.sessionsAhead} séances à venir
+            </span>
+          )}
           <span className="flex items-center gap-2">
             <Users
               className="size-4 shrink-0 text-foreground/45"

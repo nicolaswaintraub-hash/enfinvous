@@ -33,7 +33,7 @@ export default function EntrerPage() {
                 Vivre·Enfin
               </p>
               <p className="mt-2 max-w-sm font-serif text-[19px] italic leading-relaxed text-creme/85">
-                « Vivre enfin passionnément. »
+                « Vivre enfin ! »
               </p>
             </div>
           </div>

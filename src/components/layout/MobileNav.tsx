@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 const navLinks = [
   { href: "/rendez-vous-du-savoir", label: "Les rendez-vous du savoir" },
   { href: "/rendez-vous", label: "Ateliers" },
-  { href: "/planning", label: "Planning" },
+  { href: "/fenetres-sur-le-monde", label: "Fenêtres sur le monde" },
   { href: "/devenir-expert", label: "Vous êtes un professionnel ?" },
   { href: "/entrer", label: "Se connecter" },
 ];
@@ -99,7 +99,13 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
             transitionDelay: open ? `${150 + navLinks.length * 80}ms` : "0ms",
           }}
         >
-          <Button size="lg" className="min-w-[200px]" onClick={onClose}>
+          <Button
+            size="lg"
+            className="min-w-[200px]"
+            onClick={onClose}
+            nativeButton={false}
+            render={(props) => <Link href="/entrer" {...props} />}
+          >
             S'abonner
           </Button>
         </div>
@@ -107,7 +113,7 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
 
       <div className="relative px-8 pb-8 text-center">
         <p className="font-serif text-base italic text-creme/40">
-          Le cercle des éveillés de la vie.
+          Apprendre, partager, échanger, découvrir.
         </p>
       </div>
     </div>

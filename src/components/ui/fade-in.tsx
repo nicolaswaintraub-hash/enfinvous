@@ -33,17 +33,43 @@ export function FadeIn({
     const el = ref.current;
     if (!el) return;
 
+    const reveal = () => {
+      if (stagger) {
+        // Les enfants portent l'état caché ; on déclenche leur cascade.
+        el.classList.add("is-revealed");
+      } else {
+        el.classList.add(
+          highlight ? "animate-reveal-up-highlight" : "animate-reveal-up",
+        );
+      }
+    };
+
+    // Arrivée par ancre (#abonnement, #formats…) : un saut programmatique
+    // peut déposer la vue directement sur cette section sans que
+    // l'IntersectionObserver ne déclenche la révélation, laissant le bloc
+    // masqué (opacity-0). Si ce conteneur englobe la cible du hash courant,
+    // on le révèle aussitôt.
+    const revealIfHashTarget = () => {
+      const hash = window.location.hash;
+      if (hash.length <= 1) return false;
+      try {
+        const target = document.querySelector(hash);
+        if (target && el.contains(target)) {
+          reveal();
+          return true;
+        }
+      } catch {
+        // hash non valide comme sélecteur CSS — on ignore.
+      }
+      return false;
+    };
+
+    if (revealIfHashTarget()) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          if (stagger) {
-            // Les enfants portent l'état caché ; on déclenche leur cascade.
-            el.classList.add("is-revealed");
-          } else {
-            el.classList.add(
-              highlight ? "animate-reveal-up-highlight" : "animate-reveal-up",
-            );
-          }
+          reveal();
           observer.unobserve(el);
         }
       },
@@ -56,7 +82,11 @@ export function FadeIn({
     );
 
     observer.observe(el);
-    return () => observer.disconnect();
+    window.addEventListener("hashchange", revealIfHashTarget);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("hashchange", revealIfHashTarget);
+    };
   }, [stagger, highlight]);
 
   return (

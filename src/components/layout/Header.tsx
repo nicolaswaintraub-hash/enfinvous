@@ -11,7 +11,7 @@ import { MobileNav } from "./MobileNav";
 const navLinks = [
   { href: "/rendez-vous-du-savoir", label: "Les rendez-vous du savoir" },
   { href: "/rendez-vous", label: "Ateliers" },
-  { href: "/planning", label: "Planning" },
+  { href: "/fenetres-sur-le-monde", label: "Fenêtres sur le monde" },
   { href: "/devenir-expert", label: "Vous êtes un professionnel ?" },
   { href: "/entrer", label: "Se connecter" },
 ];
@@ -89,12 +89,23 @@ export function Header({ solid = false }: HeaderProps) {
                 </Link>
               );
             })}
-            <Button size="sm">S'abonner</Button>
+            <Button
+              size="sm"
+              nativeButton={false}
+              render={(props) => <Link href="/entrer" {...props} />}
+            >
+              S'abonner
+            </Button>
           </nav>
 
           {/* Mobile controls */}
           <div className="flex items-center gap-3 lg:hidden">
-            <Button size="sm" className="hidden text-sm sm:inline-flex">
+            <Button
+              size="sm"
+              className="hidden text-sm sm:inline-flex"
+              nativeButton={false}
+              render={(props) => <Link href="/entrer" {...props} />}
+            >
               S'abonner
             </Button>
             <button

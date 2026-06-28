@@ -38,6 +38,12 @@ export interface Theme {
   title: string;
   tagline: string;
   image: string;
+  /**
+   * Valeur du filtre « Thématique » de la liste des ateliers (doit exister dans
+   * `filterOptions.themes`, src/data/rendezvous.ts). Si absente, la tuile mène à
+   * la liste complète `/rendez-vous`.
+   */
+  filter?: string;
 }
 
 export interface Testimonial {
@@ -77,7 +83,7 @@ export const events: Event[] = [
     date: "Mardi 27 mai",
     time: "14h30",
     duration: "1h15",
-    expert: "Frédéric Boyer",
+    expert: "Étienne Vasseur",
     expertId: "1",
     variant: "visio",
     description:
@@ -91,14 +97,14 @@ export const events: Event[] = [
     date: "Mercredi 28 mai",
     time: "18h00",
     duration: "2h",
-    expert: "Claire Vallée",
+    expert: "Bertrand Caillaux",
     expertId: "2",
     variant: "presentiel",
     venue: "Maison des Vins",
     city: "Beaune",
     spotsLeft: 6,
     description:
-      "Cépages, terroirs et art de la dégustation, en petit cercle, décryptés par une sommelière passionnée.",
+      "Cépages, terroirs et art de la dégustation, en petit cercle, décryptés par un sommelier passionné.",
     image:
       "https://image.shutterstock.com/image-photo/confident-elderly-positive-smiling-man-tasting-600nw-1902582988.jpg",
   },
@@ -108,7 +114,7 @@ export const events: Event[] = [
     date: "Vendredi 30 mai",
     time: "15h00",
     duration: "1h30",
-    expert: "Caroline Bourgeois",
+    expert: "Florence Aubry",
     expertId: "5",
     variant: "fenetre",
     description:
@@ -122,7 +128,7 @@ export const events: Event[] = [
     date: "Jeudi 29 mai",
     time: "10h00",
     duration: "1h30",
-    expert: "Dr. Sylvie Lacombe",
+    expert: "Dr. Camille Fontaine",
     expertId: "7",
     variant: "signature",
     description:
@@ -136,7 +142,7 @@ export const events: Event[] = [
     date: "Lundi 2 juin",
     time: "17h00",
     duration: "1h15",
-    expert: "Cynthia Fleury",
+    expert: "Pascal Rivière",
     expertId: "6",
     variant: "visio",
     description:
@@ -146,53 +152,55 @@ export const events: Event[] = [
   },
 ];
 
+// Intervenants encore à confirmer : noms neutres et fictifs en attendant la
+// programmation définitive (aucune personnalité réelle).
 export const experts: Expert[] = [
   {
     id: "1",
-    name: "Frédéric Boyer",
-    discipline: "Études bibliques",
+    name: "Étienne Vasseur",
+    discipline: "Histoire des religions",
     image:
       "https://image.shutterstock.com/image-photo/portrait-senior-man-photography-enthusiast-who-600nw-2743942967.jpg",
   },
   {
     id: "2",
-    name: "Claire Vallée",
-    discipline: "Gastronomie",
+    name: "Bertrand Caillaux",
+    discipline: "Œnologie & gastronomie",
     image:
       "https://image.shutterstock.com/image-photo/portrait-beautiful-senior-woman-on-gray-600nw-2753367011.jpg",
   },
   {
     id: "3",
-    name: "Philippe Jordan",
+    name: "Henri Lemaire",
     discipline: "Musique classique",
     image:
       "https://image.shutterstock.com/image-photo/distinguished-older-gentleman-exudes-confidence-this-600nw-2323313887.jpg",
   },
   {
     id: "4",
-    name: "Annie Ernaux",
+    name: "Margaux Lenoir",
     discipline: "Littérature",
     image:
       "https://image.shutterstock.com/image-photo/studio-portrait-senior-woman-smile-funny-600nw-2544254763.jpg",
   },
   {
     id: "5",
-    name: "Caroline Bourgeois",
-    discipline: "Art contemporain",
+    name: "Florence Aubry",
+    discipline: "Art et patrimoine",
     image:
       "https://image.shutterstock.com/image-photo/senior-woman-holding-examining-vibrant-abstract-600nw-2632939913.jpg",
   },
   {
     id: "6",
-    name: "Cynthia Fleury",
+    name: "Pascal Rivière",
     discipline: "Philosophie",
     image:
       "https://image.shutterstock.com/image-photo/happy-senior-woman-600nw-370677797.jpg",
   },
   {
     id: "7",
-    name: "Dr. Sylvie Lacombe",
-    discipline: "Sexologie",
+    name: "Dr. Camille Fontaine",
+    discipline: "Intimité & bien-être",
     image:
       "https://image.shutterstock.com/image-photo/smiling-senior-woman-enjoying-nature-camera-600nw-2586291429.jpg",
   },
@@ -203,6 +211,7 @@ export const themes: Theme[] = [
     id: "1",
     title: "Culture et découverte",
     tagline: "Élargir ses horizons, nourrir sa curiosité.",
+    filter: "Culture",
     image:
       "https://image.shutterstock.com/image-photo/senior-man-examining-beautiful-paintings-art-600nw-2614716249.jpg",
   },
@@ -217,6 +226,7 @@ export const themes: Theme[] = [
     id: "3",
     title: "Gastronomie",
     tagline: "Partager le plaisir des saveurs rares.",
+    filter: "Gastronomie",
     image:
       "https://image.shutterstock.com/image-photo/diverse-senior-couple-preparing-meal-using-600nw-2526903605.jpg",
   },

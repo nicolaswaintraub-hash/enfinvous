@@ -1,25 +1,22 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
+import { FenetresListing } from "@/components/fenetres/FenetresListing";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
-import { PresentielListing } from "@/components/rendezvous/PresentielListing";
 import { FadeIn } from "@/components/ui/fade-in";
 
 export const metadata: Metadata = {
-  title: "Les Rendez-vous",
+  title: "Fenêtres sur le monde",
   description:
-    "Ateliers privilégiés, salons et escapades en présentiel, en petit comité. Les beaux ateliers se font en petit comité.",
+    "Des escapades culturelles commentées en direct — musées, sites d'exception et coulisses rarement ouvertes — accompagnées par des experts passionnés, depuis le confort de chez vous.",
 };
 
-export default function RendezVousPage() {
+export default function FenetresSurLeMondePage() {
   return (
     <>
       <Header solid />
       <main id="main-content" className="pt-14 md:pt-16">
         <FadeIn>
-          <Suspense>
-            <PresentielListing />
-          </Suspense>
+          <FenetresListing />
         </FadeIn>
       </main>
       <Footer />
