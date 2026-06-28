@@ -35,16 +35,24 @@ export function AboutSection() {
               </p>
               <p className="font-sans text-[19px] leading-[1.75] text-foreground md:text-[21px]">
                 <span className="font-semibold text-foreground">
-                  VivreEnfin
+                  VivreEnfin!
                 </span>{" "}
                 réunit des retraités curieux et passionnés qui vivent cette
                 nouvelle étape comme la plus belle de leur vie.
+              </p>
+              <p className="font-sans text-[19px] leading-[1.75] text-foreground md:text-[21px]">
+                <span className="font-semibold text-foreground">
+                  VivreEnfin!
+                </span>{" "}
+                c&apos;est votre compagnon de vie — des activités qui vous
+                éveillent, des lieux qui vous inspirent, et des personnes qui
+                partagent vos passions.
               </p>
             </div>
           </div>
 
           {/* Le portrait — des visages réels — à droite */}
-          <div className="about-figure relative mx-auto w-full max-w-[460px] md:max-w-none">
+          <div className="about-figure relative mx-auto w-full max-w-[460px] pb-12 md:max-w-none md:pb-0">
             <div className="about-figure__photo relative aspect-[4/3] overflow-hidden lg:aspect-[16/10]">
               <Image
                 src="https://images.pexels.com/photos/6838623/pexels-photo-6838623.jpeg?auto=compress&cs=tinysrgb&w=1200"
@@ -56,6 +64,14 @@ export function AboutSection() {
               {/* Voile chaud léger pour fondre l'image dans la palette */}
               <span aria-hidden="true" className="about-figure__wash" />
             </div>
+
+            {/* La signature — plaque dorée « invitation », posée sur la photo */}
+            <p className="about-signature about-signature--floating">
+              <span className="about-signature__label">Bienvenue dans le</span>
+              <span className="about-signature__name font-serif">
+                Cercle des Éveillés de la Vie
+              </span>
+            </p>
           </div>
         </FadeIn>
       </Container>
