@@ -2,3 +2,7 @@ photo cadre expert, retirer photographe. cours d'onnologie. fenetre sur le monde
 Partager ses passions -> les rendez-vous du savoir. Le quotidien de nos membre on retire. Creativite apprentissage -> les bible et ses secrets.
 
 libido 1 , onologies 2,
+
+apprendre a respirer et gerer son stress - soufle meditation.
+trouver sa voix -> une fenetre sur le monde
+atelier pas dans le planning

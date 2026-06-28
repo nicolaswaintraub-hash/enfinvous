@@ -1,5 +1,7 @@
 {
   "enabledPlugins": {
-    "commit-commands@claude-plugins-official": true
+    "commit-commands@claude-plugins-official": true,
+    "vercel@claude-plugins-official": true,
+    "react-native-best-practices@callstack-agent-skills": true
   }
 }
