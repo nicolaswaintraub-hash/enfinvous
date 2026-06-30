@@ -8,11 +8,17 @@ import { Container } from "@/components/ui/container";
 import { cn } from "@/lib/utils";
 import { MobileNav } from "./MobileNav";
 
-const navLinks = [
+/** Navigation principale : les parcours et contenus que l'on parcourt. */
+const browseLinks = [
   { href: "/rendez-vous-du-savoir", label: "Les rendez-vous du savoir" },
   { href: "/rendez-vous", label: "Ateliers" },
   { href: "/fenetres-sur-le-monde", label: "Fenêtres sur le monde" },
-  { href: "/devenir-expert", label: "Vous êtes un professionnel ?" },
+  { href: "/planning", label: "Planning" },
+];
+
+/** Liens secondaires (audience pro + accès au compte), regroupés à droite. */
+const actionLinks = [
+  { href: "/devenir-expert", label: "Professionnels" },
   { href: "/entrer", label: "Se connecter" },
 ];
 
@@ -38,6 +44,29 @@ export function Header({ solid = false }: HeaderProps) {
   }, [solid]);
 
   const opaque = solid || isScrolled;
+
+  const renderNavLink = (link: { href: string; label: string }) => {
+    const active = pathname === link.href;
+    return (
+      <Link
+        key={link.href}
+        href={link.href}
+        aria-current={active ? "page" : undefined}
+        className={cn(
+          "font-sans text-base font-medium transition-colors duration-500",
+          active
+            ? opaque
+              ? "text-terracotta"
+              : "text-gold"
+            : opaque
+              ? "text-foreground/70 hover:text-foreground"
+              : "text-creme/80 hover:text-creme",
+        )}
+      >
+        {link.label}
+      </Link>
+    );
+  };
 
   return (
     <>
@@ -65,41 +94,35 @@ export function Header({ solid = false }: HeaderProps) {
             Vivre·Enfin
           </Link>
 
-          {/* Desktop nav */}
-          <nav className="hidden items-center gap-8 lg:flex">
-            {navLinks.map((link) => {
-              const active = pathname === link.href;
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  aria-current={active ? "page" : undefined}
-                  className={cn(
-                    "font-sans text-base font-medium transition-colors duration-500",
-                    active
-                      ? opaque
-                        ? "text-terracotta"
-                        : "text-gold"
-                      : opaque
-                        ? "text-foreground/70 hover:text-foreground"
-                        : "text-creme/80 hover:text-creme",
-                  )}
-                >
-                  {link.label}
-                </Link>
-              );
-            })}
-            <Button
-              size="sm"
-              nativeButton={false}
-              render={(props) => <Link href="/entrer" {...props} />}
-            >
-              S'abonner
-            </Button>
+          {/* Desktop nav — révélée au point où la barre complète tient (xl) ;
+              en dessous, le menu plein écran prend le relais. */}
+          <nav className="hidden items-center gap-8 xl:flex">
+            <div className="flex items-center gap-6">
+              {browseLinks.map(renderNavLink)}
+            </div>
+
+            <span
+              aria-hidden
+              className={cn(
+                "h-5 w-px transition-colors duration-500",
+                opaque ? "bg-foreground/15" : "bg-creme/30",
+              )}
+            />
+
+            <div className="flex items-center gap-6">
+              {actionLinks.map(renderNavLink)}
+              <Button
+                size="sm"
+                nativeButton={false}
+                render={(props) => <Link href="/entrer" {...props} />}
+              >
+                S'abonner
+              </Button>
+            </div>
           </nav>
 
           {/* Mobile controls */}
-          <div className="flex items-center gap-3 lg:hidden">
+          <div className="flex items-center gap-3 xl:hidden">
             <Button
               size="sm"
               className="hidden text-sm sm:inline-flex"

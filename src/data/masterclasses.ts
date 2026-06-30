@@ -57,6 +57,7 @@ export const themeFilters: string[] = [
   "Bien-être",
   "Culture et découverte",
   "Gastronomie",
+  "Philosophie",
 ];
 
 export const monthFilters: string[] = ["Tous les mois", "Juillet", "Août"];
@@ -160,6 +161,52 @@ export const programme: ProgrammeEntry[] = [
     registered: 57,
     replayAvailable: false,
     status: "Inscriptions ouvertes",
+  },
+  {
+    id: "p5",
+    theme: "Philosophie",
+    title: "Repenser le temps libre",
+    summary:
+      "Et si la retraite n'était pas une fin, mais une œuvre à composer ? Un cycle pour interroger notre rapport au temps retrouvé : comment lui donner forme, sens et désir. Un rendez-vous exigeant et lumineux, pour faire de ses journées un acte de création de soi.",
+    image:
+      "https://image.shutterstock.com/image-photo/senior-asian-woman-have-happiness-wellbeing-600nw-1103392058.jpg",
+    expertName: "Hélène Delaunay",
+    expertDiscipline: "Philosophie & art de vivre",
+    expertBio:
+      "Philosophe de formation, elle explore les liens entre soin, vulnérabilité et accomplissement personnel, dans une langue claire et accessible à tous.",
+    expertImage:
+      "https://image.shutterstock.com/image-photo/happy-senior-woman-crossed-arms-isolated-600nw-1367956424.jpg",
+    cadence: "Tous les vendredis",
+    time: "17h00",
+    month: "Juillet",
+    duration: "1h15",
+    sessionsAhead: 4,
+    registered: 86,
+    replayAvailable: false,
+    status: "Inscriptions ouvertes",
+  },
+  {
+    id: "p6",
+    theme: "Culture et découverte",
+    title: "Lire un tableau : l'art contemporain apprivoisé",
+    summary:
+      "Devant une toile abstraite, beaucoup se sentent démunis. Ce cycle vous donne les clés pour entrer dans l'œuvre sans mode d'emploi : observer, ressentir, questionner. Une initiation au regard qui rend l'art contemporain enfin hospitalier.",
+    image:
+      "https://image.shutterstock.com/image-photo/portrait-elderly-woman-holding-abstract-painting-600nw-2632939801.jpg",
+    expertName: "Vincent Aubert",
+    expertDiscipline: "Art contemporain",
+    expertBio:
+      "Commissaire d'exposition, il accompagne le public dans les grandes collections et défend un art vivant, ouvert à tous, sans jargon.",
+    expertImage:
+      "https://image.shutterstock.com/image-photo/calm-senior-woman-red-sweater-sitting-600nw-2573037971.jpg",
+    cadence: "Tous les samedis",
+    time: "15h00",
+    month: "Août",
+    duration: "1h",
+    sessionsAhead: 4,
+    registered: 47,
+    replayAvailable: false,
+    status: "Bientôt complet",
   },
 ];
 

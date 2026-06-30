@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/rendez-vous-du-savoir", label: "Les rendez-vous du savoir" },
   { href: "/rendez-vous", label: "Ateliers" },
   { href: "/fenetres-sur-le-monde", label: "Fenêtres sur le monde" },
+  { href: "/planning", label: "Planning" },
   { href: "/devenir-expert", label: "Vous êtes un professionnel ?" },
   { href: "/entrer", label: "Se connecter" },
 ];

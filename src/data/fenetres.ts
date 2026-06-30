@@ -128,4 +128,48 @@ export const fenetres: ProgrammeEntry[] = [
     replayAvailable: true,
     status: "Bientôt complet",
   },
+  {
+    id: "w6",
+    theme: "Fenêtres sur le monde",
+    title: "Monet, dans les coulisses de l'exposition",
+    summary:
+      "À l'occasion du centenaire, un médiateur des Franciscaines, à Deauville, vous ouvre les portes des réserves où l'on conserve et restaure les œuvres de Claude Monet. Gestes de conservation, toiles rarement montrées, regard d'expert : une heure dans les coulisses d'une exposition, là où le public n'entre jamais.",
+    image:
+      "https://images.pexels.com/photos/9063025/pexels-photo-9063025.jpeg?w=900",
+    expertName: "Brigitte Lemoine",
+    expertDiscipline: "Médiation culturelle",
+    expertBio:
+      "Médiatrice en musée depuis trente ans, elle fait dialoguer les œuvres et les visiteurs et raconte les coulisses d'une exposition comme on partage un secret.",
+    expertImage:
+      "https://image.shutterstock.com/image-photo/calm-senior-woman-red-sweater-sitting-600nw-2573037971.jpg",
+    cadence: "Vendredi 18 juillet",
+    time: "16h00",
+    month: "Juillet",
+    duration: "1h15",
+    registered: 88,
+    replayAvailable: false,
+    status: "Bientôt complet",
+  },
+  {
+    id: "w7",
+    theme: "Fenêtres sur le monde",
+    title: "Les coulisses du monde équestre",
+    summary:
+      "Depuis le Pôle du Cheval de Deauville, un cavalier de haut niveau vous fait entrer dans son univers : l'entraînement quotidien, le lien tissé avec l'animal, les grandes ventes de yearlings. Une plongée commentée dans un monde d'ordinaire fermé au public, à vivre en direct depuis votre fauteuil.",
+    image:
+      "https://images.pexels.com/photos/5663046/pexels-photo-5663046.jpeg?w=900",
+    expertName: "Bernard Delcourt",
+    expertDiscipline: "Univers équestre",
+    expertBio:
+      "Cavalier et enseignant, il a couru les plus grands concours et transmet aujourd'hui sa passion du cheval, du travail de l'aube aux grandes ventes de yearlings.",
+    expertImage:
+      "https://image.shutterstock.com/image-photo/70-year-old-senior-man-standing-600nw-1107806642.jpg",
+    cadence: "Vendredi 29 août",
+    time: "15h00",
+    month: "Août",
+    duration: "1h",
+    registered: 51,
+    replayAvailable: false,
+    status: "Inscriptions ouvertes",
+  },
 ];
