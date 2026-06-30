@@ -18,7 +18,7 @@ const browseLinks = [
 
 /** Liens secondaires (audience pro + accès au compte), regroupés à droite. */
 const actionLinks = [
-  { href: "/devenir-expert", label: "Professionnels" },
+  { href: "/devenir-expert", label: "Vous êtes un professionnel ?" },
   { href: "/entrer", label: "Se connecter" },
 ];
 
@@ -53,7 +53,7 @@ export function Header({ solid = false }: HeaderProps) {
         href={link.href}
         aria-current={active ? "page" : undefined}
         className={cn(
-          "font-sans text-base font-medium transition-colors duration-500",
+          "font-sans text-[15px] font-medium transition-colors duration-500",
           active
             ? opaque
               ? "text-terracotta"
@@ -96,8 +96,8 @@ export function Header({ solid = false }: HeaderProps) {
 
           {/* Desktop nav — révélée au point où la barre complète tient (xl) ;
               en dessous, le menu plein écran prend le relais. */}
-          <nav className="hidden items-center gap-8 xl:flex">
-            <div className="flex items-center gap-6">
+          <nav className="hidden items-center gap-6 xl:flex">
+            <div className="flex items-center gap-7">
               {browseLinks.map(renderNavLink)}
             </div>
 
@@ -109,7 +109,7 @@ export function Header({ solid = false }: HeaderProps) {
               )}
             />
 
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-7">
               {actionLinks.map(renderNavLink)}
               <Button
                 size="sm"

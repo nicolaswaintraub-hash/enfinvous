@@ -8,8 +8,12 @@ import { Button } from "@/components/ui/button";
 export function HeroSection() {
   const bgRef = useRef<HTMLDivElement>(null);
   const [entered, setEntered] = useState(false);
+  const [reduceMotion, setReduceMotion] = useState(false);
 
   useEffect(() => {
+    setReduceMotion(
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+    );
     const enterTimer = setTimeout(() => setEntered(true), 100);
     return () => clearTimeout(enterTimer);
   }, []);
@@ -88,6 +92,58 @@ export function HeroSection() {
         }}
         aria-hidden="true"
       />
+
+      {/* Corner slogan — a celebratory accroche tucked into the top-right of the
+          frame, over the foliage where no face sits. Tilted off the horizontal
+          for a stamp-like signature; "retraite" carries the brand terracotta and
+          a gold underline ties it to the hero's gold accents. The rotation lives
+          on the outer wrapper so the focus-in (which animates scale) doesn't
+          cancel it. */}
+      <div
+        className="pointer-events-none absolute right-4 top-[6.5rem] z-20 md:right-12 md:top-[8rem]"
+        style={{ transform: "rotate(20deg)" }}
+      >
+        <div
+          className="relative isolate"
+          style={{
+            animation:
+              entered && !reduceMotion
+                ? "hero-slogan-focus 1.15s cubic-bezier(0.16, 1, 0.3, 1) 1.9s both"
+                : "none",
+            opacity: reduceMotion ? 1 : entered ? undefined : 0,
+          }}
+        >
+          <span
+            aria-hidden="true"
+            className="absolute left-1/2 top-1/2 h-[195%] w-[145%] -translate-x-1/2 -translate-y-1/2 rounded-[50%]"
+            style={{
+              background:
+                "radial-gradient(ellipse at center, rgba(14,10,7,0.84) 0%, rgba(14,10,7,0.58) 44%, rgba(14,10,7,0.24) 62%, transparent 78%)",
+              filter: "blur(16px)",
+              zIndex: 0,
+            }}
+          />
+          <p
+            className="relative z-10 whitespace-nowrap text-center font-serif text-[22px] font-medium leading-tight text-creme underline decoration-gold/80 decoration-[1.5px] underline-offset-[7px] sm:text-[26px] md:text-[42px] md:decoration-2 md:underline-offset-[10px]"
+            style={{
+              textShadow:
+                "0 2px 6px rgba(0,0,0,0.85), 0 4px 22px rgba(0,0,0,0.55)",
+            }}
+          >
+            Vive la{" "}
+            <span
+              className="text-terracotta"
+              style={{
+                textShadow:
+                  "0 0 18px rgba(179,84,61,0.5), 0 2px 6px rgba(0,0,0,0.85)",
+              }}
+            >
+              retraite
+            </span>
+            &nbsp;!
+          </p>
+        </div>
+      </div>
 
       {/* Content with staggered reveal, anchored to the bottom safe zone so it
           never covers the group's faces. */}
