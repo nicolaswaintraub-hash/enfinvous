@@ -51,27 +51,19 @@ export function AboutSection() {
             </div>
           </div>
 
-          {/* Le portrait — des visages réels — à droite */}
-          <div className="about-figure relative mx-auto w-full max-w-[460px] pb-12 md:max-w-none md:pb-0">
-            <div className="about-figure__photo relative aspect-[4/3] overflow-hidden lg:aspect-[16/10]">
+          {/* Le portrait — des visages réels — à droite. La plaque
+              « Bienvenue dans le Cercle des Éveillés de la Vie » est intégrée
+              à l'image. */}
+          <div className="about-figure relative mx-auto w-full max-w-[460px] md:max-w-none">
+            <div className="about-figure__photo relative aspect-[189/116] overflow-hidden">
               <Image
-                src="https://images.pexels.com/photos/6838623/pexels-photo-6838623.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                alt="Trois amis retraités, complices et rieurs, prennent une photo ensemble dans un parc baigné de lumière"
+                src="/enhance.png"
+                alt="Trois retraités complices prennent un selfie dans un parc lumineux, sous l'invitation « Bienvenue dans le Cercle des Éveillés de la Vie »"
                 fill
                 sizes="(max-width: 768px) 90vw, (max-width: 1024px) 460px, 600px"
                 className="object-cover"
               />
-              {/* Voile chaud léger pour fondre l'image dans la palette */}
-              <span aria-hidden="true" className="about-figure__wash" />
             </div>
-
-            {/* La signature — plaque dorée « invitation », posée sur la photo */}
-            <p className="about-signature about-signature--floating">
-              <span className="about-signature__label">Bienvenue dans le</span>
-              <span className="about-signature__name font-serif">
-                Cercle des Éveillés de la Vie
-              </span>
-            </p>
           </div>
         </FadeIn>
       </Container>
