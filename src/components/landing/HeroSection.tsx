@@ -1,16 +1,13 @@
 "use client";
 
-import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 
 export function HeroSection() {
   const bgRef = useRef<HTMLDivElement>(null);
   const [entered, setEntered] = useState(false);
-  const [hideIndicator, setHideIndicator] = useState(false);
 
   useEffect(() => {
     const enterTimer = setTimeout(() => setEntered(true), 100);
@@ -26,14 +23,13 @@ export function HeroSection() {
       if (allowParallax && bgRef.current) {
         bgRef.current.style.transform = `translateY(${window.scrollY * 0.08}px)`;
       }
-      setHideIndicator(window.scrollY > 200);
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
-    <section className="relative flex min-h-svh items-center justify-center overflow-hidden">
+    <section className="relative flex min-h-svh items-end justify-center overflow-hidden">
       {/* Full-bleed background photograph. Anchored top and sized to the
           *largest* viewport (lvh) so it always covers the hero even when the
           mobile address bar collapses — the section itself stays at svh, so the
@@ -44,12 +40,12 @@ export function HeroSection() {
         aria-hidden="true"
       >
         <Image
-          src="https://image.shutterstock.com/image-photo/happy-senior-friends-laughing-together-on-600nw-2786385961.jpg"
+          src="/hero.png"
           alt=""
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[center_30%] brightness-125 contrast-[1.02] md:object-[center_100%]"
+          className="object-cover object-center brightness-100 contrast-[1.05] saturate-[1.05]"
           style={{
             animation: entered
               ? "hero-ken-burns 8s ease-out 0.2s both"
@@ -58,23 +54,31 @@ export function HeroSection() {
         />
       </div>
 
-      {/* Warm gradient overlay */}
-      <div
-        className="absolute inset-0 -z-10 bg-gradient-to-br from-[#3d3225]/65 via-[#5c4a3a]/50 to-[#2a2520]/65 md:from-[#3d3225]/55 md:via-[#5c4a3a]/40 md:to-[#2a2520]/55"
-        aria-hidden="true"
-      />
-
-      {/* Warm light overlay */}
+      {/* Top scrim — keeps the header legible over the bright sky and fades out
+          well above the faces (which begin ~12% down the frame). */}
       <div
         className="absolute inset-0 -z-10"
         style={{
           background:
-            "radial-gradient(ellipse 60% 50% at 50% 40%, rgba(196,168,122,0.08) 0%, transparent 70%), linear-gradient(to top, rgba(0,0,0,0.35) 0%, transparent 40%, rgba(0,0,0,0.2) 100%)",
+            "linear-gradient(to bottom, rgba(40,34,28,0.42) 0%, rgba(40,34,28,0.12) 12%, transparent 22%)",
         }}
         aria-hidden="true"
       />
 
-      {/* Opening vignette */}
+      {/* Bottom scrim for text legibility — fully transparent across the upper
+          half so all nine faces stay bright and uncovered, then deepens to a
+          warm dark over the lap band where the copy sits. A faint gold glow at
+          the base ties it to the brand palette. */}
+      <div
+        className="absolute inset-0 -z-10"
+        style={{
+          background:
+            "radial-gradient(ellipse 75% 45% at 50% 98%, rgba(196,168,122,0.12) 0%, transparent 60%), linear-gradient(to top, rgba(28,22,18,0.92) 0%, rgba(28,22,18,0.74) 14%, rgba(28,22,18,0.48) 28%, rgba(28,22,18,0.22) 40%, transparent 48%)",
+        }}
+        aria-hidden="true"
+      />
+
+      {/* Opening vignette (fades out after load — purely a cinematic reveal) */}
       <div
         className="pointer-events-none absolute inset-0 z-10"
         style={{
@@ -85,28 +89,9 @@ export function HeroSection() {
         aria-hidden="true"
       />
 
-      {/* Content with staggered reveal */}
-      <div className="relative mt-16 px-4 text-center text-creme">
-        {/* Localized scrim behind the text for legibility (does not dim the rest of the photo) */}
-        <div
-          className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[150%] w-[150%] max-w-[140vw] -translate-x-1/2 -translate-y-1/2"
-          style={{
-            background:
-              "radial-gradient(ellipse 60% 55% at 50% 50%, rgba(24,20,17,0.62) 0%, rgba(24,20,17,0.3) 55%, transparent 78%)",
-          }}
-          aria-hidden="true"
-        />
-        <div
-          className="mx-auto mb-8 h-px w-20 origin-center bg-gold"
-          style={{
-            animation: entered
-              ? "hero-gold-line 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both"
-              : "none",
-            transform: "scaleX(0)",
-          }}
-          aria-hidden="true"
-        />
-
+      {/* Content with staggered reveal, anchored to the bottom safe zone so it
+          never covers the group's faces. */}
+      <div className="relative w-full px-4 pb-10 text-center text-creme md:pb-16">
         <h1
           className="mx-auto max-w-none whitespace-nowrap font-serif text-[28px] font-normal leading-[1.1] sm:text-[36px] md:text-[56px]"
           style={{
@@ -121,7 +106,7 @@ export function HeroSection() {
         </h1>
 
         <p
-          className="mx-auto mt-7 max-w-2xl font-serif text-[19px] font-normal leading-snug text-creme/95 sm:text-[22px] md:text-[26px]"
+          className="mx-auto mt-3 max-w-2xl font-serif text-[19px] font-normal leading-snug text-creme/95 sm:text-[22px] md:mt-5 md:text-[26px]"
           style={{
             textShadow:
               "0 1px 2px rgba(0,0,0,0.75), 0 2px 14px rgba(0,0,0,0.5)",
@@ -134,7 +119,7 @@ export function HeroSection() {
         </p>
 
         <div
-          className="mx-auto mt-8 h-px w-20 origin-center bg-gold"
+          className="mx-auto mt-4 h-px w-20 origin-center bg-gold md:mt-6"
           style={{
             animation: entered
               ? "hero-gold-line 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.1s both"
@@ -145,7 +130,7 @@ export function HeroSection() {
         />
 
         <p
-          className="mt-8 font-sans text-[15px] font-medium uppercase tracking-[0.15em] text-creme/90"
+          className="mt-4 font-sans text-[15px] font-medium uppercase tracking-[0.15em] text-creme/90 md:mt-6"
           style={{
             textShadow: "0 1px 2px rgba(0,0,0,0.7), 0 1px 12px rgba(0,0,0,0.5)",
             animation: entered
@@ -161,7 +146,7 @@ export function HeroSection() {
         </p>
 
         <div
-          className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
+          className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-4 md:mt-8"
           style={{
             animation: entered
               ? "hero-reveal-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.5s both"
@@ -185,22 +170,6 @@ export function HeroSection() {
             Découvrir le programme
           </Button>
         </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div
-        className={cn(
-          "absolute bottom-8 left-1/2 -translate-x-1/2 transition-opacity duration-500",
-          hideIndicator ? "opacity-0" : "opacity-100",
-        )}
-        style={{
-          animation: entered
-            ? "hero-reveal-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) 1.9s both"
-            : "none",
-        }}
-        aria-hidden="true"
-      >
-        <ChevronDown className="size-5 animate-bounce text-creme/40" />
       </div>
     </section>
   );
