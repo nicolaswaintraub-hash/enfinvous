@@ -1,6 +1,9 @@
 "use client";
 
+import { CalendarDays } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
 import {
   Carousel,
   CarouselContent,
@@ -68,6 +71,22 @@ export function EventsCarousel() {
             aria-label="Événement suivant"
           />
         </Carousel>
+
+        {/* Passerelle vers l'agenda complet : ces cartes ne sont qu'un aperçu,
+            la semaine entière se consulte sur le planning. */}
+        <div className="mt-12 flex flex-col items-center gap-3 md:mt-14">
+          <p className="text-center font-serif text-lg text-muted-foreground md:text-xl">
+            Et bien d'autres rendez-vous chaque semaine.
+          </p>
+          <Button
+            className="gap-2.5"
+            nativeButton={false}
+            render={(props) => <Link href="/planning" {...props} />}
+          >
+            <CalendarDays className="size-[18px]" aria-hidden="true" />
+            Voir le planning de la semaine
+          </Button>
+        </div>
       </Container>
     </section>
   );

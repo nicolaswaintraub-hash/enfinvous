@@ -53,7 +53,7 @@ export function Header({ solid = false }: HeaderProps) {
         href={link.href}
         aria-current={active ? "page" : undefined}
         className={cn(
-          "font-sans text-[15px] font-medium transition-colors duration-500",
+          "whitespace-nowrap font-sans text-[16px] font-medium transition-colors duration-500 xl:text-[17px]",
           active
             ? opaque
               ? "text-terracotta"
@@ -80,7 +80,7 @@ export function Header({ solid = false }: HeaderProps) {
       >
         <Container
           className={cn(
-            "flex items-center justify-between transition-all duration-500",
+            "flex max-w-[1440px] items-center justify-between gap-6 transition-all duration-500",
             opaque ? "h-14 md:h-16" : "h-16 md:h-20",
           )}
         >
@@ -94,10 +94,11 @@ export function Header({ solid = false }: HeaderProps) {
             Vivre·Enfin
           </Link>
 
-          {/* Desktop nav — révélée au point où la barre complète tient (xl) ;
-              en dessous, le menu plein écran prend le relais. */}
-          <nav className="hidden items-center gap-6 xl:flex">
-            <div className="flex items-center gap-7">
+          {/* Desktop nav — révélée à 1360px, largeur à laquelle la barre
+              complète (liens agrandis + CTA) tient sur une seule ligne ; en
+              dessous, le menu plein écran prend le relais. */}
+          <nav className="hidden items-center gap-5 min-[1360px]:flex">
+            <div className="flex items-center gap-5">
               {browseLinks.map(renderNavLink)}
             </div>
 
@@ -109,7 +110,7 @@ export function Header({ solid = false }: HeaderProps) {
               )}
             />
 
-            <div className="flex items-center gap-7">
+            <div className="flex items-center gap-5">
               {actionLinks.map(renderNavLink)}
               <Button
                 size="sm"
@@ -122,7 +123,7 @@ export function Header({ solid = false }: HeaderProps) {
           </nav>
 
           {/* Mobile controls */}
-          <div className="flex items-center gap-3 xl:hidden">
+          <div className="flex items-center gap-3 min-[1360px]:hidden">
             <Button
               size="sm"
               className="hidden text-sm sm:inline-flex"
