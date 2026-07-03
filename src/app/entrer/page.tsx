@@ -20,22 +20,14 @@ export default function EntrerPage() {
           {/* Visuel */}
           <div className="relative h-[280px] lg:h-auto">
             <Image
-              src="https://image.shutterstock.com/image-photo/senior-caucasian-man-70-years-smiling-600nw-1551174155.jpg"
+              src="/enhance.png"
               alt=""
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover object-[center_30%]"
+              className="object-cover object-[65%_center]"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-anthracite/70 via-anthracite/20 to-anthracite/30" />
-            <div className="absolute inset-x-0 bottom-0 hidden p-10 lg:block">
-              <p className="font-serif text-2xl font-medium text-creme">
-                Vivre·Enfin
-              </p>
-              <p className="mt-2 max-w-sm font-serif text-[19px] italic leading-relaxed text-creme/85">
-                « Vivre enfin ! »
-              </p>
-            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-anthracite/50 via-transparent to-transparent" />
           </div>
 
           {/* Formulaires */}

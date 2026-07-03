@@ -1,5 +1,4 @@
-import { ArrowDown } from "lucide-react";
-import Image from "next/image";
+import { Mail } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { FadeIn } from "@/components/ui/fade-in";
 import { expertContact } from "@/data/landing";
@@ -7,89 +6,64 @@ import { ExpertContactForm } from "./ExpertContactForm";
 
 /**
  * Page « Devenir expert » — recrutement des intervenants (et non des membres).
- * Rythme de page complet : hero parchemin adressé à l'expert, les raisons de
- * rejoindre le Cercle, le déroulé d'une intervention, puis la « fiche » de
+ * Rythme de page complet : hero éditorial clair adressé à l'expert (accent
+ * olive, trait dessiné, l'adresse mail en unique porte d'entrée), les raisons
+ * de rejoindre le Cercle, le déroulé d'une intervention, puis la « fiche » de
  * proposition. Réutilise les tokens dorés (about-*, expert-contact-*).
  */
 export function ExpertContactPage() {
   return (
     <>
-      {/* ── Hero — on s'adresse à l'expert, registre parchemin/or ───────────
-          Sur mobile, la photo passe en plein cadre derrière le titre (même
-          grammaire que le hero d'accueil) : le visage et l'accroche partagent
-          le premier écran. À partir de lg, on retrouve la composition côte à
-          côte d'origine. */}
-      <section className="relative flex min-h-svh flex-col justify-end overflow-hidden bg-creme pb-12 pt-28 md:pb-20 md:pt-32 lg:block lg:min-h-0 lg:pt-36">
-        {/* Photo plein cadre — mobile uniquement (au-dessus du fond crème de la
-            section, sous le contenu posé en z-10) */}
-        <div className="absolute inset-0 z-0 lg:hidden" aria-hidden="true">
-          <Image
-            src="https://images.pexels.com/photos/8424881/pexels-photo-8424881.jpeg?auto=compress&cs=tinysrgb&w=1200"
-            alt=""
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-[center_18%]"
-          />
-          {/* Voile chaud ancré en bas : le visage reste lumineux, le titre lisible */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(to top, rgba(35,28,22,0.9) 0%, rgba(35,28,22,0.72) 26%, rgba(45,38,30,0.32) 52%, transparent 78%)",
-            }}
-          />
-        </div>
+      {/* ── Hero — l'invitation à l'intervenant, registre éditorial clair ────
+          Pas de photo : le savoir prend toute la place. Surtitre au filet doré,
+          accent olive souligné d'un trait dessiné « à la main », et l'adresse
+          mail posée comme unique porte d'entrée. */}
+      <section className="relative overflow-hidden bg-creme pt-32 pb-16 md:pt-40 md:pb-24 lg:pt-44 lg:pb-28">
+        <Container>
+          <div className="max-w-3xl">
+            <p className="about-kicker mb-6 md:mb-7">
+              {expertContact.surtitre}
+            </p>
 
-        <div aria-hidden="true" className="about-aura hidden lg:block" />
+            <h1 className="font-serif text-[38px] font-medium leading-[1.12] text-foreground md:text-[58px] md:leading-[1.08] lg:text-[64px]">
+              {expertContact.title.lead}
+              <span className="relative inline-block whitespace-nowrap text-olive">
+                {expertContact.title.accent}
+                {/* Trait dessiné « à la main » — vert plus clair, sous le mot */}
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 300 16"
+                  fill="none"
+                  preserveAspectRatio="none"
+                  className="pointer-events-none absolute inset-x-0 -bottom-[0.2em] h-[0.45em] w-full overflow-visible"
+                >
+                  <path
+                    d="M3 9C58 14 132 14 190 9.5C243 5.5 283 5 297 8"
+                    stroke="#8caf52"
+                    strokeWidth="3.5"
+                    strokeLinecap="round"
+                    vectorEffect="non-scaling-stroke"
+                  />
+                </svg>
+              </span>
+              {expertContact.title.tail}
+            </h1>
 
-        <Container className="relative z-10">
-          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
-            {/* L'accroche */}
-            <div className="max-w-xl text-creme lg:text-foreground">
-              <p className="about-kicker about-kicker--onphoto mb-5 lg:mb-6">
-                {expertContact.surtitre}
-              </p>
+            <p className="mt-7 max-w-xl font-sans text-[17px] leading-relaxed text-muted-foreground md:mt-8 md:text-[19px]">
+              {expertContact.heroSubtitle}
+            </p>
 
-              <h1 className="font-serif text-[34px] font-medium leading-[1.1] [text-shadow:0_1px_12px_rgba(0,0,0,0.45)] md:text-[52px] lg:text-[58px] lg:leading-[1.08] lg:[text-shadow:none]">
-                {expertContact.title.lead}
-                <span className="about-accent about-accent--onphoto">
-                  {expertContact.title.accent}
-                </span>
-                {expertContact.title.tail}
-              </h1>
-
-              <p className="mt-5 max-w-lg font-sans text-[17px] leading-relaxed text-creme/90 [text-shadow:0_1px_8px_rgba(0,0,0,0.4)] md:mt-6 md:text-[18px] lg:text-muted-foreground lg:[text-shadow:none]">
-                {expertContact.heroSubtitle}
-              </p>
-
-              <a
-                href="#proposer"
-                className="group mt-8 inline-flex items-center gap-2.5 font-sans text-[16px] font-medium text-creme md:mt-9 lg:text-[15px] lg:text-terracotta"
-              >
-                <span className="underline decoration-gold decoration-1 underline-offset-[6px] transition-colors group-hover:text-gold lg:group-hover:text-foreground">
-                  Proposer une intervention
-                </span>
-                <span className="grid size-10 place-items-center rounded-full border border-gold/60 bg-gold/15 backdrop-blur-sm transition-transform duration-300 group-hover:translate-y-0.5 lg:size-9 lg:bg-gold/10 lg:backdrop-blur-none">
-                  <ArrowDown className="size-4" strokeWidth={2} />
-                </span>
-              </a>
-            </div>
-
-            {/* La professionnelle, carnet en main — desktop : composition côte à côte */}
-            <figure className="relative mx-auto hidden w-full max-w-[460px] lg:block lg:max-w-none">
-              <div className="about-figure__photo relative aspect-[4/5] overflow-hidden">
-                <Image
-                  src="https://images.pexels.com/photos/8424881/pexels-photo-8424881.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                  alt="Une professionnelle souriante, carnet en main, prête à transmettre son savoir au Cercle"
-                  fill
-                  priority
-                  sizes="460px"
-                  className="object-cover object-[center_15%]"
-                />
-                <div className="about-figure__wash" />
-              </div>
-            </figure>
+            <a
+              href={`mailto:${expertContact.email}`}
+              className="group mt-9 inline-flex items-center gap-4 md:mt-11"
+            >
+              <span className="grid size-14 shrink-0 place-items-center rounded-full bg-olive text-creme shadow-[0_12px_26px_-12px_rgba(103,135,58,0.75)] transition-transform duration-300 group-hover:-translate-y-0.5">
+                <Mail className="size-6" strokeWidth={1.75} />
+              </span>
+              <span className="font-serif text-[22px] font-medium text-olive underline-offset-[6px] transition-all group-hover:underline md:text-[26px]">
+                {expertContact.email}
+              </span>
+            </a>
           </div>
         </Container>
       </section>
@@ -102,14 +76,12 @@ export function ExpertContactPage() {
         >
           <Container>
             <div className="mx-auto mb-12 max-w-2xl text-center md:mb-16">
-              <p className="about-kicker justify-center">
-                Pourquoi nous rejoindre
-              </p>
+              <p className="about-kicker justify-center">Comment ça se passe</p>
               <h2
                 id="expert-pourquoi-heading"
                 className="mt-4 font-serif text-[28px] font-medium leading-tight text-foreground md:text-[40px]"
               >
-                Ce que le Cercle vous offre
+                Trois étapes, et vous intervenez
               </h2>
             </div>
 

@@ -30,6 +30,7 @@
   --color-beige: #efe9e1;
   --color-sage: #a9c1bd;
   --color-gold: #c4a87a;
+  --color-olive: #67873a;
 
   --font-sans: var(--font-roboto-slab), "Roboto Slab", ui-serif, Georgia, serif;
   --font-serif:
@@ -517,6 +518,46 @@
   box-shadow:
     inset 0 1px 2px rgba(31, 34, 51, 0.04),
     0 0 0 3px rgba(179, 84, 61, 0.14);
+}
+
+/* Option à cocher — même surface crème que les champs, filet doré, halo terracotta une fois cochée */
+.expert-contact-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  padding: 0.7rem 0.85rem;
+  background: #fffdf9;
+  border: 1px solid rgba(196, 168, 122, 0.5);
+  border-radius: 6px;
+  cursor: pointer;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.expert-contact-option:hover {
+  border-color: rgba(196, 168, 122, 0.85);
+}
+
+.expert-contact-option:has(.expert-contact-checkbox:checked) {
+  border-color: var(--color-terracotta);
+  box-shadow:
+    inset 0 1px 2px rgba(31, 34, 51, 0.04),
+    0 0 0 3px rgba(179, 84, 61, 0.14);
+}
+
+.expert-contact-option:has(.expert-contact-checkbox:focus-visible) {
+  border-color: var(--color-terracotta);
+  box-shadow: 0 0 0 3px rgba(179, 84, 61, 0.14);
+}
+
+.expert-contact-checkbox {
+  margin-top: 0.15rem;
+  width: 1.05rem;
+  height: 1.05rem;
+  flex-shrink: 0;
+  accent-color: var(--color-terracotta);
+  cursor: pointer;
 }
 
 /* ── Qui sommes-nous — récit éditorial, cadre doré, signature « invitation » ── */

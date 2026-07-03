@@ -29,24 +29,18 @@ export function AboutSection() {
             {/* Le récit — filet terracotta + interligne généreux pour le confort de lecture */}
             <div className="about-narrative mt-7 space-y-5 md:mt-8">
               <p className="font-sans text-[19px] leading-[1.75] text-foreground md:text-[21px]">
-                Plus de réunions ni d&apos;obligations. Vous êtes désormais
-                libre de faire ce qui vous passionne, d&apos;aller où vous le
-                souhaitez et de rencontrer des personnes qui vous ressemblent.
+                Enfin, plus de réunions ni d&apos;obligations. Vous êtes
+                désormais libre de faire ce qui vous passionne, de partager vos
+                envies et de rencontrer des personnes qui vous ressemblent.
               </p>
               <p className="font-sans text-[19px] leading-[1.75] text-foreground md:text-[21px]">
-                <span className="font-semibold text-foreground">
-                  VivreEnfin!
+                <span className="font-semibold text-terracotta">
+                  VivreEnfin&nbsp;!
                 </span>{" "}
-                réunit des retraités curieux et passionnés qui vivent cette
-                nouvelle étape comme la plus belle de leur vie.
-              </p>
-              <p className="font-sans text-[19px] leading-[1.75] text-foreground md:text-[21px]">
-                <span className="font-semibold text-foreground">
-                  VivreEnfin!
-                </span>{" "}
-                c&apos;est votre compagnon de vie — des activités qui vous
-                éveillent, des lieux qui vous inspirent, et des personnes qui
-                partagent vos passions.
+                c&apos;est votre compagnon de vie — celui qui ouvre des portes
+                que vous n&apos;imaginiez pas, éveille des curiosités que vous
+                n&apos;aviez pas eu le temps d&apos;explorer, et vous connecte à
+                des gens qui vivent avec la même intensité que vous.
               </p>
             </div>
           </div>

@@ -72,8 +72,15 @@ export interface ExpertContact {
   points: { title: string; description: string }[];
   /** Adresse de repli, pour le lien mailto du formulaire. */
   email: string;
-  /** Options du champ « Format souhaité ». */
-  formats: string[];
+  /** Options du champ « Quel type vous intéresse ? » (multi-sélection). */
+  interventionTypes: { value: string; label: string; description: string }[];
+  /** Message de confirmation affiché en place après l'envoi de la candidature. */
+  confirmation: {
+    title: string;
+    body: string;
+    ctaLabel: string;
+    ctaHref: string;
+  };
 }
 
 export const events: Event[] = [
@@ -314,31 +321,48 @@ export const expertContact: ExpertContact = {
     tail: ".",
   },
   heroSubtitle:
-    "Conférencier, artiste, artisan, chercheur ou simple passionné : si vous aimez transmettre, le Cercle vous confie un public attentif, curieux et fidèle. À vous la matière, à nous l'intendance.",
+    "Faites-vous connaître auprès de nous en nous envoyant un mail avec une courte présentation de ce que vous faites, et nous reviendrons vers vous.",
   intro:
-    "Conférencier, artiste, artisan, chercheur ou passionné : si vous aimez transmettre, le Cercle vous ouvre ses portes.",
+    "Vous êtes expert, artisan, guide, conférencier ou passionné d'un domaine ? VivreEnfin réunit des retraités actifs, curieux et exigeants qui cherchent de vraies conversations. Dites-nous qui vous êtes. Nous lisons chaque candidature personnellement et nous vous répondons sous 48h.",
   points: [
     {
-      title: "Un public curieux et fidèle",
+      title: "Choisissez votre format d'intervention",
       description:
-        "Des retraités de 70 ans et plus, animés par l'envie d'apprendre et de se cultiver, qui reviennent rendez-vous après rendez-vous.",
+        "Vous animez une masterclasse en visio depuis chez vous, vous proposez un atelier dans votre lieu, ou vous ouvrez les portes d'un endroit exceptionnel pour nos Fenêtres sur le monde. À vous de choisir ce qui correspond le mieux à votre expertise.",
     },
     {
-      title: "Deux formats, à votre rythme",
+      title: "Dites-nous qui vous êtes",
       description:
-        "Un atelier en présentiel pour le contact direct, ou un rendez-vous du savoir en visio pour toucher le cercle où qu'il soit.",
+        "Remplissez notre formulaire en 3 minutes — votre domaine, votre approche, vos disponibilités. Pas de dossier à monter, pas de jury. Nous lisons chaque candidature personnellement et vous répondons sous 48h.",
     },
     {
-      title: "Un accompagnement à chaque étape",
+      title: "On s'occupe du reste",
       description:
-        "Nous préparons votre intervention avec vous : choix du format, déroulé, mise en relation avec le cercle. Vous restez maître de votre intervention, nous facilitons le reste.",
+        "Nous préparons votre intervention avec vous — format, déroulé, public. Vous restez maître de votre contenu. Nous gérons la technique, les inscriptions et la mise en relation avec nos membres.",
     },
   ],
-  email: "experts@vivreenfin.fr",
-  formats: [
-    "Un atelier en présentiel",
-    "Un rendez-vous du savoir (visio)",
-    "Les deux formats",
-    "Je ne sais pas encore",
+  email: "contact@vivreenfin.fr",
+  interventionTypes: [
+    {
+      value: "Visio",
+      label: "Masterclasse en visio",
+      description: "j'anime une session en ligne depuis chez moi",
+    },
+    {
+      value: "Atelier",
+      label: "Atelier en physique",
+      description: "je propose une activité dans mon lieu ou atelier",
+    },
+    {
+      value: "Fenêtre",
+      label: "Fenêtre sur le monde",
+      description: "j'ouvre les portes d'un lieu exceptionnel en live",
+    },
   ],
+  confirmation: {
+    title: "Merci — nous avons bien reçu votre candidature.",
+    body: "Nous lisons chaque message personnellement. Vous recevrez une réponse de notre équipe sous 48 heures ouvrées. En attendant, n'hésitez pas à découvrir le programme VivreEnfin.",
+    ctaLabel: "Découvrir le programme",
+    ctaHref: "/planning",
+  },
 };
