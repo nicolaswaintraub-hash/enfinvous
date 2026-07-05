@@ -262,8 +262,7 @@ export const themes: Theme[] = [
     id: "7",
     title: "Sexualité et intimité",
     tagline: "Oser aborder ce qui compte, en toute confiance.",
-    image:
-      "https://image.shutterstock.com/image-photo/portrait-lovely-senior-couple-on-beige-600nw-2617461885.jpg",
+    image: "/couple.jpeg",
   },
   {
     id: "8",

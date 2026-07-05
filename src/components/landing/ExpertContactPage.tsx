@@ -1,4 +1,5 @@
 import { Mail } from "lucide-react";
+import Image from "next/image";
 import { Container } from "@/components/ui/container";
 import { FadeIn } from "@/components/ui/fade-in";
 import { expertContact } from "@/data/landing";
@@ -14,13 +15,29 @@ import { ExpertContactForm } from "./ExpertContactForm";
 export function ExpertContactPage() {
   return (
     <>
-      {/* ── Hero — l'invitation à l'intervenant, registre éditorial clair ────
-          Pas de photo : le savoir prend toute la place. Surtitre au filet doré,
-          accent olive souligné d'un trait dessiné « à la main », et l'adresse
-          mail posée comme unique porte d'entrée. */}
-      <section className="relative overflow-hidden bg-creme pt-32 pb-16 md:pt-40 md:pb-24 lg:pt-44 lg:pb-28">
-        <Container>
-          <div className="max-w-3xl">
+      {/* ── Hero — l'invitation à l'intervenante ─────────────────────────────
+          L'intervenante émerge du fond crème : le portrait déborde à droite et
+          se dissout dans la page ; sa main tendue franchit le seuil vers le
+          texte — le geste même d'« un cercle qui l'écoute ». À gauche, l'adresse
+          à l'expert : surtitre au filet doré, accent olive souligné « à la
+          main », l'adresse mail posée comme unique porte d'entrée. */}
+      <section className="relative isolate overflow-hidden bg-creme pt-32 pb-16 md:pt-40 md:pb-24 lg:flex lg:min-h-[54rem] lg:items-center lg:py-24">
+        {/* Portrait plein cadre — desktop : débord à droite, bord gauche fondu
+            dans la crème, sans cadre. Décoratif : le sens vit dans le texte. */}
+        <div className="absolute inset-y-0 right-0 hidden w-[56%] lg:block xl:w-[52%]">
+          <Image
+            src="/professional.jpeg"
+            alt=""
+            fill
+            priority
+            sizes="56vw"
+            className="object-cover object-[50%_45%]"
+          />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-creme to-transparent to-[18%]" />
+        </div>
+
+        <Container className="relative z-10 w-full">
+          <div className="max-w-xl">
             <p className="about-kicker mb-6 md:mb-7">
               {expertContact.surtitre}
             </p>
@@ -49,7 +66,7 @@ export function ExpertContactPage() {
               {expertContact.title.tail}
             </h1>
 
-            <p className="mt-7 max-w-xl font-sans text-[17px] leading-relaxed text-muted-foreground md:mt-8 md:text-[19px]">
+            <p className="mt-7 max-w-md font-sans text-[17px] leading-relaxed text-muted-foreground md:mt-8 md:text-[19px]">
               {expertContact.heroSubtitle}
             </p>
 
@@ -66,6 +83,18 @@ export function ExpertContactPage() {
             </a>
           </div>
         </Container>
+
+        {/* Portrait — mobile/tablette : sous le texte, plein bord, fondu haut */}
+        <div className="relative mt-12 aspect-[4/5] w-full sm:aspect-[16/10] lg:hidden">
+          <Image
+            src="/professional.jpeg"
+            alt="Une intervenante souriante à son bureau, stylo et carnet en main"
+            fill
+            sizes="100vw"
+            className="object-cover object-[50%_28%]"
+          />
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-creme to-transparent" />
+        </div>
       </section>
 
       {/* ── Pourquoi le Cercle — les trois raisons, en triptyque éditorial ── */}

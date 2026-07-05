@@ -4,8 +4,6 @@ import { ExpertsCarousel } from "@/components/landing/ExpertsCarousel";
 import { FormatsSection } from "@/components/landing/FormatsSection";
 import { HeroSection } from "@/components/landing/HeroSection";
 import { PricingSection } from "@/components/landing/PricingSection";
-
-import { TestimonialsSection } from "@/components/landing/TestimonialsSection";
 import { ThemesGrid } from "@/components/landing/ThemesGrid";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
@@ -31,9 +29,6 @@ export default function Home() {
         </FadeIn>
         <FadeIn>
           <ExpertsCarousel />
-        </FadeIn>
-        <FadeIn>
-          <TestimonialsSection />
         </FadeIn>
         <FadeIn highlight>
           <PricingSection />
