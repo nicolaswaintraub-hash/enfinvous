@@ -18,6 +18,10 @@ interface EventCardProps {
   /** Masque l'horaire (section éditoriale « À ne pas rater ») ; le pied de
    *  carte affiche alors le titre de l'intervenant plutôt que l'heure. */
   hideTime?: boolean;
+  /** Destination de la carte cliquable. Fournie, elle rend toute la carte
+   *  cliquable (vitrine → page du format). À défaut : lien « /entrer » hors
+   *  bêta, carte non cliquable en bêta. */
+  href?: string;
 }
 
 export function EventCard({
@@ -26,6 +30,7 @@ export function EventCard({
   sizes,
   showAsk = false,
   hideTime = false,
+  href,
 }: EventCardProps) {
   const imageSizes =
     sizes ??
@@ -54,13 +59,18 @@ export function EventCard({
       ? "Fenêtre sur le monde"
       : "Rendez-vous du savoir";
 
+  // Cible du lien étendu : la page du format en showcase (`href`), sinon
+  // l'inscription hors bêta. En bêta sans `href`, la carte reste une vitrine.
+  const linkHref = href ?? (!BETA ? "/entrer" : undefined);
+
   return (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-sm bg-card transition-all duration-250 hover:-translate-y-1 hover:shadow-[var(--shadow-card-hover)]">
-      {/* Lien étendu : toute la carte mène à l'inscription pour réserver.
-          Masqué en bêta — la carte reste une vitrine non cliquable. */}
-      {!BETA && (
+      {/* Lien étendu : toute la carte est cliquable. En showcase, `href` mène
+          à la page du format ; sinon (hors bêta) à l'inscription. En bêta sans
+          `href`, la carte reste une vitrine non cliquable. */}
+      {linkHref && (
         <Link
-          href="/entrer"
+          href={linkHref}
           className="absolute inset-0 z-10 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
         >
           <span className="sr-only">Réserver : {event.title}</span>
@@ -161,7 +171,7 @@ export function EventCard({
             </span>
           </div>
 
-          {!BETA && (
+          {linkHref && (
             <span
               aria-hidden="true"
               className={cn(

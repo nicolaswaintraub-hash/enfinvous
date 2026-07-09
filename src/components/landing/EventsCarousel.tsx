@@ -13,7 +13,8 @@ import {
 } from "@/components/ui/carousel";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { type Event, events } from "@/data/landing";
+import { type Event, type EventVariant, events } from "@/data/landing";
+import { BETA } from "@/lib/flags";
 import { EventCard } from "./EventCard";
 
 // Une carte par format, pour montrer la diversité : rendez-vous du savoir
@@ -23,6 +24,16 @@ const featured = [
   events.find((e) => e.variant === "presentiel"),
   events.find((e) => e.variant === "fenetre"),
 ].filter(Boolean) as Event[];
+
+// Chaque carte de l'aperçu mène à la page de son format (mêmes cibles que la
+// section « Nos formats »). Actif en showcase seulement : hors bêta, la carte
+// retrouve son lien de réservation par défaut.
+const FORMAT_HREF: Record<EventVariant, string> = {
+  visio: "/rendez-vous-du-savoir",
+  presentiel: "/rendez-vous",
+  signature: "/rendez-vous",
+  fenetre: "/fenetres-sur-le-monde",
+};
 
 export function EventsCarousel() {
   const [isMobile, setIsMobile] = useState(false);
@@ -58,7 +69,12 @@ export function EventsCarousel() {
                 key={event.id}
                 className="pl-4 basis-[85%] sm:basis-1/2 lg:basis-1/3"
               >
-                <EventCard event={event} showAsk hideTime />
+                <EventCard
+                  event={event}
+                  href={BETA ? FORMAT_HREF[event.variant] : undefined}
+                  showAsk
+                  hideTime
+                />
               </CarouselItem>
             ))}
           </CarouselContent>
