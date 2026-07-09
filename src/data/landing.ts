@@ -86,17 +86,16 @@ export interface ExpertContact {
 export const events: Event[] = [
   {
     id: "1",
-    title: "Les secrets de la Bible",
-    date: "Mardi 27 mai",
-    time: "14h30",
-    duration: "1h15",
-    expert: "Étienne Vasseur",
-    expertId: "1",
+    title: "L'homme qui murmure à l'oreille des chevaux",
+    date: "Samedi 6 juin",
+    time: "11h00",
+    duration: "1h",
+    expert: "Astier Nicolas",
+    expertId: "8",
     variant: "visio",
     description:
-      "Derrière les récits familiers se cachent des symboles et des sens oubliés. Une plongée passionnante pour redécouvrir la Bible autrement.",
-    image:
-      "https://images.pexels.com/photos/8675090/pexels-photo-8675090.jpeg?w=600",
+      "Derrière les victoires se cachent des histoires. Une plongée passionnante dans le monde équestre avec un guide exceptionnel.",
+    image: "/cheval-deauville.jpeg",
   },
   {
     id: "2",
@@ -210,6 +209,12 @@ export const experts: Expert[] = [
     discipline: "Médecin, sexologue",
     image:
       "https://image.shutterstock.com/image-photo/smiling-senior-woman-enjoying-nature-camera-600nw-2586291429.jpg",
+  },
+  {
+    id: "8",
+    name: "Astier Nicolas",
+    discipline: "Champion olympique",
+    image: "/astier-nicolas.jpg",
   },
 ];
 

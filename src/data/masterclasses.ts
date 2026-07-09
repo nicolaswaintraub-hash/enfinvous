@@ -71,6 +71,26 @@ export const statusFilters: string[] = [
 
 export const programme: ProgrammeEntry[] = [
   {
+    id: "p-equestre",
+    theme: "Culture et découverte",
+    title: "L'homme qui murmure à l'oreille des chevaux",
+    summary:
+      "Derrière les victoires se cachent des histoires. Une plongée passionnante dans le monde équestre avec un guide exceptionnel : au Pôle International du Cheval de Deauville, à la rencontre des champions.",
+    image: "/cheval-deauville.jpeg",
+    expertName: "Astier Nicolas",
+    expertDiscipline: "Champion olympique",
+    expertBio:
+      "Cavalier de concours complet et médaillé olympique, il ouvre les portes de son univers : le lien rare qui unit l'homme et le cheval, loin des projecteurs.",
+    expertImage: "/astier-nicolas.jpg",
+    cadence: "Rendez-vous unique",
+    time: "11h00",
+    month: "Juillet",
+    duration: "1h",
+    registered: 52,
+    replayAvailable: false,
+    status: "Inscriptions ouvertes",
+  },
+  {
     id: "p1",
     theme: "Bien-être",
     title: "L'intimité après 60 ans",
