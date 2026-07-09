@@ -1,6 +1,6 @@
 "use client";
 
-import { MessageCircle, Search } from "lucide-react";
+import { Search } from "lucide-react";
 import { useMemo, useState } from "react";
 import { Container } from "@/components/ui/container";
 import { FilterSelect } from "@/components/ui/filter-select";
@@ -63,12 +63,21 @@ export function ProgrammeListing() {
           id="programme-heading"
         />
 
-        {/* Rappel participatif — les rendez-vous sont des échanges en direct */}
-        <p className="mx-auto mb-8 flex max-w-2xl items-center justify-center gap-2.5 rounded-full bg-terracotta/10 px-5 py-3 text-center font-sans text-[15px] font-medium leading-snug text-terracotta">
-          <MessageCircle className="size-5 shrink-0" aria-hidden="true" />
-          Tous nos rendez-vous sont participatifs : posez vos questions et
-          échangez en direct avec l'intervenant.
-        </p>
+        {/* Rappel participatif — échanges en direct avec l'intervenant */}
+        <div className="mx-auto mb-8 max-w-xl text-center">
+          <p className="flex items-center justify-center gap-2 font-sans text-[0.72rem] font-semibold uppercase tracking-[0.26em] text-[#8a6d3b]">
+            <span className="rv-live-dot" aria-hidden="true" />
+            En direct
+          </p>
+          <p className="mt-3 font-sans text-[16px] font-medium leading-relaxed text-foreground/75 md:text-[18px]">
+            Tous nos rendez-vous sont participatifs&nbsp;: posez vos questions
+            et{" "}
+            <span className="text-terracotta">
+              échangez en direct avec l'intervenant
+            </span>
+            .
+          </p>
+        </div>
 
         {/* Invitation — mini call to action */}
         <p className="mx-auto mb-5 max-w-2xl text-center font-serif text-[22px] font-medium italic leading-snug text-terracotta md:text-[26px]">
