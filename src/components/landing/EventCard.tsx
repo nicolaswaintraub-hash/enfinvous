@@ -14,6 +14,9 @@ interface EventCardProps {
   sizes?: string;
   /** Affiche l'applat « Posez vos questions » (rendez-vous participatifs). */
   showAsk?: boolean;
+  /** Masque l'horaire (section éditoriale « À ne pas rater ») ; le pied de
+   *  carte affiche alors le titre de l'intervenant plutôt que l'heure. */
+  hideTime?: boolean;
 }
 
 export function EventCard({
@@ -21,6 +24,7 @@ export function EventCard({
   large = false,
   sizes,
   showAsk = false,
+  hideTime = false,
 }: EventCardProps) {
   const imageSizes =
     sizes ??
@@ -111,7 +115,7 @@ export function EventCard({
               {event.venue}
               {event.city ? `, ${event.city}` : ""}
             </span>
-          ) : (
+          ) : hideTime ? null : (
             <span className="font-sans text-[15px] text-muted-foreground">
               {event.time} &middot; {event.duration}
             </span>
@@ -146,7 +150,7 @@ export function EventCard({
                 {event.expert}
               </span>
               <span className="truncate font-sans text-[13px] text-muted-foreground">
-                {event.venue
+                {event.venue && !hideTime
                   ? `${event.time} · ${event.duration}`
                   : expert?.discipline}
               </span>

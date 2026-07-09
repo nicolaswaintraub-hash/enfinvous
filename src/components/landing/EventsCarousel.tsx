@@ -58,7 +58,7 @@ export function EventsCarousel() {
                 key={event.id}
                 className="pl-4 basis-[85%] sm:basis-1/2 lg:basis-1/3"
               >
-                <EventCard event={event} showAsk />
+                <EventCard event={event} showAsk hideTime />
               </CarouselItem>
             ))}
           </CarouselContent>

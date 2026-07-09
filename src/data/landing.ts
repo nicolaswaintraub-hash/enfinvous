@@ -165,49 +165,49 @@ export const experts: Expert[] = [
   {
     id: "1",
     name: "Étienne Vasseur",
-    discipline: "Histoire des religions",
+    discipline: "Historien des religions",
     image:
       "https://image.shutterstock.com/image-photo/portrait-senior-man-photography-enthusiast-who-600nw-2743942967.jpg",
   },
   {
     id: "2",
     name: "Bertrand Caillaux",
-    discipline: "Œnologie & gastronomie",
+    discipline: "Œnologue",
     image:
       "https://image.shutterstock.com/image-photo/portrait-beautiful-senior-woman-on-gray-600nw-2753367011.jpg",
   },
   {
     id: "3",
     name: "Henri Lemaire",
-    discipline: "Musique classique",
+    discipline: "Musicologue",
     image:
       "https://image.shutterstock.com/image-photo/distinguished-older-gentleman-exudes-confidence-this-600nw-2323313887.jpg",
   },
   {
     id: "4",
     name: "Margaux Lenoir",
-    discipline: "Littérature",
+    discipline: "Critique littéraire",
     image:
       "https://image.shutterstock.com/image-photo/studio-portrait-senior-woman-smile-funny-600nw-2544254763.jpg",
   },
   {
     id: "5",
     name: "Florence Aubry",
-    discipline: "Art et patrimoine",
+    discipline: "Historienne de l'art",
     image:
       "https://image.shutterstock.com/image-photo/senior-woman-holding-examining-vibrant-abstract-600nw-2632939913.jpg",
   },
   {
     id: "6",
     name: "Pascal Rivière",
-    discipline: "Philosophie",
+    discipline: "Philosophe",
     image:
       "https://image.shutterstock.com/image-photo/happy-senior-woman-600nw-370677797.jpg",
   },
   {
     id: "7",
     name: "Dr. Camille Fontaine",
-    discipline: "Intimité & bien-être",
+    discipline: "Médecin, sexologue",
     image:
       "https://image.shutterstock.com/image-photo/smiling-senior-woman-enjoying-nature-camera-600nw-2586291429.jpg",
   },
