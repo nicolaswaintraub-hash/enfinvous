@@ -79,12 +79,15 @@ export function EventsCarousel() {
             Et bien d'autres rendez-vous chaque semaine.
           </p>
           <Button
-            className="gap-2.5"
+            className="max-w-full gap-2.5"
             nativeButton={false}
             render={(props) => <Link href="/planning" {...props} />}
           >
-            <CalendarDays className="size-[18px]" aria-hidden="true" />
-            Voir le planning de la semaine
+            <CalendarDays className="size-[18px] shrink-0" aria-hidden="true" />
+            <span>
+              Voir le planning
+              <span className="hidden sm:inline">&nbsp;de la semaine</span>
+            </span>
           </Button>
         </div>
       </Container>
