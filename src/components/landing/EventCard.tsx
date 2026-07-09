@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { type Event, experts } from "@/data/landing";
+import { BETA } from "@/lib/flags";
 import { cn } from "@/lib/utils";
 
 interface EventCardProps {
@@ -55,13 +56,16 @@ export function EventCard({
 
   return (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-sm bg-card transition-all duration-250 hover:-translate-y-1 hover:shadow-[var(--shadow-card-hover)]">
-      {/* Lien étendu : toute la carte mène à l'inscription pour réserver. */}
-      <Link
-        href="/entrer"
-        className="absolute inset-0 z-10 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-      >
-        <span className="sr-only">Réserver : {event.title}</span>
-      </Link>
+      {/* Lien étendu : toute la carte mène à l'inscription pour réserver.
+          Masqué en bêta — la carte reste une vitrine non cliquable. */}
+      {!BETA && (
+        <Link
+          href="/entrer"
+          className="absolute inset-0 z-10 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+        >
+          <span className="sr-only">Réserver : {event.title}</span>
+        </Link>
+      )}
       <div className="relative aspect-[4/5] overflow-hidden">
         <Image
           src={event.image}
@@ -157,15 +161,17 @@ export function EventCard({
             </span>
           </div>
 
-          <span
-            aria-hidden="true"
-            className={cn(
-              buttonVariants({ variant: "tertiary" }),
-              "pointer-events-none shrink-0 text-base after:ml-1 after:transition-transform after:duration-250 after:content-['\\2192'] group-hover:after:translate-x-0.5",
-            )}
-          >
-            Je réserve
-          </span>
+          {!BETA && (
+            <span
+              aria-hidden="true"
+              className={cn(
+                buttonVariants({ variant: "tertiary" }),
+                "pointer-events-none shrink-0 text-base after:ml-1 after:transition-transform after:duration-250 after:content-['\\2192'] group-hover:after:translate-x-0.5",
+              )}
+            >
+              Je réserve
+            </span>
+          )}
         </div>
       </div>
     </article>

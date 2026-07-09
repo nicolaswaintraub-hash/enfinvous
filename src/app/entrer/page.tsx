@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { AuthTabs } from "@/components/entrer/AuthTabs";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { BETA } from "@/lib/flags";
 
 export const metadata: Metadata = {
   title: "Entrer dans le cercle",
@@ -12,6 +14,9 @@ export const metadata: Metadata = {
 };
 
 export default function EntrerPage() {
+  // En bêta, l'accès au compte est masqué : on renvoie vers l'accueil.
+  if (BETA) redirect("/");
+
   return (
     <>
       <Header solid />

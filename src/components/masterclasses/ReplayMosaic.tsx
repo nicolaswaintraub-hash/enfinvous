@@ -9,6 +9,7 @@ import { Container } from "@/components/ui/container";
 import { MemberModal } from "@/components/ui/member-modal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { replayItems } from "@/data/masterclasses";
+import { BETA } from "@/lib/flags";
 import { cn } from "@/lib/utils";
 
 export function ReplayMosaic() {
@@ -83,15 +84,17 @@ export function ReplayMosaic() {
         description="Les replays sont l'un des privilèges du cercle. Rejoignez-nous pour revoir chaque rendez-vous du savoir à votre rythme."
         signature="Le cercle vous attend."
       >
-        <Link
-          href="/#abonnement"
-          className={cn(
-            buttonVariants({ variant: "default", size: "lg" }),
-            "w-full",
-          )}
-        >
-          Rejoindre le cercle
-        </Link>
+        {!BETA && (
+          <Link
+            href="/#abonnement"
+            className={cn(
+              buttonVariants({ variant: "default", size: "lg" }),
+              "w-full",
+            )}
+          >
+            Rejoindre le cercle
+          </Link>
+        )}
         <button
           type="button"
           onClick={() => setOpen(false)}

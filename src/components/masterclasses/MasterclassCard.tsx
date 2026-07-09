@@ -9,6 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import type { ProgrammeEntry } from "@/data/masterclasses";
+import { BETA } from "@/lib/flags";
 import { cn } from "@/lib/utils";
 
 interface MasterclassCardProps {
@@ -125,15 +126,17 @@ export function MasterclassCard({ entry }: MasterclassCardProps) {
           </div>
         </div>
 
-        <Link
-          href="/#abonnement"
-          className={cn(
-            buttonVariants({ variant: "default", size: "default" }),
-            "mt-5 w-full",
-          )}
-        >
-          Je m'inscris
-        </Link>
+        {!BETA && (
+          <Link
+            href="/#abonnement"
+            className={cn(
+              buttonVariants({ variant: "default", size: "default" }),
+              "mt-5 w-full",
+            )}
+          >
+            Je m'inscris
+          </Link>
+        )}
       </div>
     </article>
   );

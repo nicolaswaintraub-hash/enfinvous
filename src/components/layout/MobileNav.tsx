@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { BETA } from "@/lib/flags";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
@@ -15,6 +16,9 @@ const navLinks = [
   { href: "/devenir-expert", label: "Vous êtes un professionnel ?" },
   { href: "/entrer", label: "Se connecter" },
 ];
+
+// En bêta, on masque l'accès au compte (« Se connecter ») : le site reste une vitrine.
+const visibleLinks = navLinks.filter((l) => !BETA || l.href !== "/entrer");
 
 interface MobileNavProps {
   open: boolean;
@@ -72,7 +76,7 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
       </div>
 
       <nav className="relative flex flex-1 flex-col items-center justify-center gap-1 px-8">
-        {navLinks.map((link, i) => (
+        {visibleLinks.map((link, i) => (
           <Link
             key={link.href}
             href={link.href}
@@ -89,27 +93,33 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
           </Link>
         ))}
 
-        <Separator className="my-6 w-16 bg-gold" />
+        {!BETA && (
+          <>
+            <Separator className="my-6 w-16 bg-gold" />
 
-        <div
-          className={cn(
-            "transition-all duration-500",
-            open ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0",
-          )}
-          style={{
-            transitionDelay: open ? `${150 + navLinks.length * 80}ms` : "0ms",
-          }}
-        >
-          <Button
-            size="lg"
-            className="min-w-[200px]"
-            onClick={onClose}
-            nativeButton={false}
-            render={(props) => <Link href="/entrer" {...props} />}
-          >
-            S'abonner
-          </Button>
-        </div>
+            <div
+              className={cn(
+                "transition-all duration-500",
+                open ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0",
+              )}
+              style={{
+                transitionDelay: open
+                  ? `${150 + visibleLinks.length * 80}ms`
+                  : "0ms",
+              }}
+            >
+              <Button
+                size="lg"
+                className="min-w-[200px]"
+                onClick={onClose}
+                nativeButton={false}
+                render={(props) => <Link href="/entrer" {...props} />}
+              >
+                S'abonner
+              </Button>
+            </div>
+          </>
+        )}
       </nav>
 
       <div className="relative px-8 pb-8 text-center">

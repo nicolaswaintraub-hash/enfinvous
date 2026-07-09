@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { redirect } from "next/navigation";
 import { AccountDiscover } from "@/components/account/AccountDiscover";
 import { AccountSideMenu } from "@/components/account/AccountSideMenu";
 import { AccountTiles } from "@/components/account/AccountTiles";
@@ -8,6 +9,7 @@ import { Header } from "@/components/layout/Header";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { Container } from "@/components/ui/container";
 import { FadeIn } from "@/components/ui/fade-in";
+import { BETA } from "@/lib/flags";
 
 export const metadata: Metadata = {
   title: "Mon compte",
@@ -16,6 +18,9 @@ export const metadata: Metadata = {
 };
 
 export default function MonComptePage() {
+  // En bêta, l'espace membre (dont la déconnexion) est masqué.
+  if (BETA) redirect("/");
+
   return (
     <>
       <Header solid />

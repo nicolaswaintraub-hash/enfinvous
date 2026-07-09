@@ -8,6 +8,7 @@ import { ThemesGrid } from "@/components/landing/ThemesGrid";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { FadeIn } from "@/components/ui/fade-in";
+import { BETA } from "@/lib/flags";
 
 export default function Home() {
   return (
@@ -30,9 +31,11 @@ export default function Home() {
         <FadeIn>
           <ExpertsCarousel />
         </FadeIn>
-        <FadeIn highlight>
-          <PricingSection />
-        </FadeIn>
+        {!BETA && (
+          <FadeIn highlight>
+            <PricingSection />
+          </FadeIn>
+        )}
       </main>
       <Footer />
     </>

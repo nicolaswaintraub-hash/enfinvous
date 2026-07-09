@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { BETA } from "@/lib/flags";
 
 export function HeroSection() {
   const bgRef = useRef<HTMLDivElement>(null);
@@ -209,22 +210,34 @@ export function HeroSection() {
               : "none",
           }}
         >
-          <Button
-            size="lg"
-            nativeButton={false}
-            render={(props) => <Link href="/entrer" {...props} />}
-          >
-            Vous abonner
-          </Button>
-          <Button
-            variant="secondary"
-            size="lg"
-            className="border-creme/60 bg-foreground/55 text-creme hover:bg-creme hover:text-foreground"
-            nativeButton={false}
-            render={(props) => <a href="#formats" {...props} />}
-          >
-            Découvrir le programme
-          </Button>
+          {BETA ? (
+            <Button
+              size="lg"
+              nativeButton={false}
+              render={(props) => <a href="#formats" {...props} />}
+            >
+              Découvrir le programme
+            </Button>
+          ) : (
+            <>
+              <Button
+                size="lg"
+                nativeButton={false}
+                render={(props) => <Link href="/entrer" {...props} />}
+              >
+                Vous abonner
+              </Button>
+              <Button
+                variant="secondary"
+                size="lg"
+                className="border-creme/60 bg-foreground/55 text-creme hover:bg-creme hover:text-foreground"
+                nativeButton={false}
+                render={(props) => <a href="#formats" {...props} />}
+              >
+                Découvrir le programme
+              </Button>
+            </>
+          )}
         </div>
       </div>
     </section>

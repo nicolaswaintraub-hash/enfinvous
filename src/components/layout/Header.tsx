@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
+import { BETA } from "@/lib/flags";
 import { cn } from "@/lib/utils";
 import { MobileNav } from "./MobileNav";
 
@@ -111,27 +112,33 @@ export function Header({ solid = false }: HeaderProps) {
             />
 
             <div className="flex items-center gap-5">
-              {actionLinks.map(renderNavLink)}
-              <Button
-                size="sm"
-                nativeButton={false}
-                render={(props) => <Link href="/entrer" {...props} />}
-              >
-                S'abonner
-              </Button>
+              {actionLinks
+                .filter((link) => !BETA || link.href !== "/entrer")
+                .map(renderNavLink)}
+              {!BETA && (
+                <Button
+                  size="sm"
+                  nativeButton={false}
+                  render={(props) => <Link href="/entrer" {...props} />}
+                >
+                  S'abonner
+                </Button>
+              )}
             </div>
           </nav>
 
           {/* Mobile controls */}
           <div className="flex items-center gap-3 min-[1360px]:hidden">
-            <Button
-              size="sm"
-              className="hidden text-sm sm:inline-flex"
-              nativeButton={false}
-              render={(props) => <Link href="/entrer" {...props} />}
-            >
-              S'abonner
-            </Button>
+            {!BETA && (
+              <Button
+                size="sm"
+                className="hidden text-sm sm:inline-flex"
+                nativeButton={false}
+                render={(props) => <Link href="/entrer" {...props} />}
+              >
+                S'abonner
+              </Button>
+            )}
             <button
               type="button"
               className={cn(
