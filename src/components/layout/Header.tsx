@@ -15,13 +15,11 @@ const browseLinks = [
   { href: "/rendez-vous", label: "Ateliers" },
   { href: "/fenetres-sur-le-monde", label: "Fenêtres sur le monde" },
   { href: "/planning", label: "Planning" },
+  { href: "/devenir-expert", label: "Vous êtes un professionnel ?" },
 ];
 
-/** Liens secondaires (audience pro + accès au compte), regroupés à droite. */
-const actionLinks = [
-  { href: "/devenir-expert", label: "Vous êtes un professionnel ?" },
-  { href: "/entrer", label: "Se connecter" },
-];
+/** Liens secondaires (accès au compte), regroupés à droite. */
+const actionLinks = [{ href: "/entrer", label: "Se connecter" }];
 
 interface HeaderProps {
   /**

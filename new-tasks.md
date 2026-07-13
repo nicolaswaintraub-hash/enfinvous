@@ -1,0 +1,3 @@
+- rv savoir trop de texte au dessus + visiblite
+- plutot qu'un theme, mettre un titre sur les rendez-vous du savoir.
+-

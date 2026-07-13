@@ -161,22 +161,6 @@
   }
 }
 
-/* Accroche centrale — mise au point « cinéma » (flou → net), léger settle
-   d'échelle et fondu, déclenchée une fois la séquence principale posée.
-   Le mouvement réduit est géré côté composant (prefers-reduced-motion). */
-@keyframes hero-slogan-focus {
-  from {
-    opacity: 0;
-    filter: blur(12px);
-    transform: scale(1.05);
-  }
-  to {
-    opacity: 1;
-    filter: blur(0);
-    transform: scale(1);
-  }
-}
-
 @keyframes grain {
   0%,
   100% {
