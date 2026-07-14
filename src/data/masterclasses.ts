@@ -222,7 +222,7 @@ export const programme: ProgrammeEntry[] = [
     expertBio:
       "Commissaire d'exposition, il accompagne le public dans les grandes collections et défend un art vivant, ouvert à tous, sans jargon.",
     expertImage:
-      "https://image.shutterstock.com/image-photo/calm-senior-woman-red-sweater-sitting-600nw-2573037971.jpg",
+      "https://images.pexels.com/photos/35466969/pexels-photo-35466969.jpeg?w=1200",
     cadence: "Tous les samedis",
     time: "15h00",
     month: "Août",
@@ -273,7 +273,7 @@ export const replayItems: ReplayItem[] = [
     duration: "1h10",
     expert: "Henri Lemaire",
     image:
-      "https://image.shutterstock.com/image-photo/side-view-portrait-black-senior-woman-600nw-2487420187.jpg",
+      "https://images.pexels.com/photos/18596686/pexels-photo-18596686.jpeg?w=1200",
   },
   {
     id: "r5",
