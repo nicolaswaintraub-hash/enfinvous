@@ -172,7 +172,8 @@ export const programme: ProgrammeEntry[] = [
     image:
       "https://image.shutterstock.com/image-photo/senior-couple-yoga-meditation-breathing-nature-600nw-2710892563.jpg",
     expertName: "Dr. Paul Mercier",
-    expertDiscipline: "Vitalité & santé active",
+    expertDiscipline:
+      "Médecin du sport et du vieillissement actif · Spécialiste de la longévité · Auteur de « Bien vieillir, mode d'emploi »",
     expertBio:
       "Médecin du mouvement et du vieillissement actif, il aborde la santé comme un art de vivre : des conseils concrets pour rester énergique, mobile et libre après 60 ans.",
     expertImage:
@@ -195,7 +196,8 @@ export const programme: ProgrammeEntry[] = [
     image:
       "https://image.shutterstock.com/image-photo/senior-asian-woman-have-happiness-wellbeing-600nw-1103392058.jpg",
     expertName: "Hélène Delaunay",
-    expertDiscipline: "Philosophie & art de vivre",
+    expertDiscipline:
+      "Philosophe · Spécialiste de l'art de vivre et du temps retrouvé · Conférencière à la Sorbonne",
     expertBio:
       "Philosophe de formation, elle explore les liens entre soin, vulnérabilité et accomplissement personnel, dans une langue claire et accessible à tous.",
     expertImage:
@@ -218,7 +220,8 @@ export const programme: ProgrammeEntry[] = [
     image:
       "https://image.shutterstock.com/image-photo/portrait-elderly-woman-holding-abstract-painting-600nw-2632939801.jpg",
     expertName: "Vincent Aubert",
-    expertDiscipline: "Art contemporain",
+    expertDiscipline:
+      "Commissaire d'exposition · Spécialiste de l'art contemporain · Conférencier au Centre Pompidou",
     expertBio:
       "Commissaire d'exposition, il accompagne le public dans les grandes collections et défend un art vivant, ouvert à tous, sans jargon.",
     expertImage:
