@@ -105,6 +105,23 @@ export const presentielEvents: Event[] = [
     city: "Paris",
     spotsLeft: 8,
   },
+  {
+    id: "rv7",
+    title: "Café philo : repenser le temps libre",
+    date: "Mardi 17 juin",
+    time: "16h00",
+    duration: "1h30",
+    expert: "Pascal Rivière",
+    variant: "presentiel",
+    theme: "Philosophie",
+    description:
+      "Un échange guidé par un philosophe pour interroger ce que devient le temps quand il devient enfin le vôtre.",
+    image:
+      "https://images.pexels.com/photos/13405739/pexels-photo-13405739.jpeg?w=1200",
+    venue: "Hôtel Particulier Montmartre",
+    city: "Paris",
+    spotsLeft: 7,
+  },
 ];
 
 export interface Lieu {
@@ -194,6 +211,7 @@ export const filterOptions = {
     "Culture",
     "Musique",
     "Littérature",
+    "Philosophie",
   ],
   villes: ["Toutes les villes", "Paris", "Reims", "Aix-en-Provence"],
   mois: ["Tous les mois", "Mai 2026", "Juin 2026"],

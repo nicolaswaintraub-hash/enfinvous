@@ -78,7 +78,8 @@ export const programme: ProgrammeEntry[] = [
       "Derrière les victoires se cachent des histoires. Une plongée passionnante dans le monde équestre avec un guide exceptionnel : au Pôle International du Cheval de Deauville, à la rencontre des champions.",
     image: "/cheval-deauville.jpeg",
     expertName: "Astier Nicolas",
-    expertDiscipline: "Champion olympique",
+    expertDiscipline:
+      "Champion olympique de concours complet · Médaillé de bronze aux JO de Paris 2024",
     expertBio:
       "Cavalier de concours complet et médaillé olympique, il ouvre les portes de son univers : le lien rare qui unit l'homme et le cheval, loin des projecteurs.",
     expertImage: "/astier-nicolas.jpg",
@@ -99,7 +100,8 @@ export const programme: ProgrammeEntry[] = [
     image:
       "https://image.shutterstock.com/image-photo/senior-adult-couple-enjoying-view-their-600nw-2461499359.jpg",
     expertName: "Dr. Camille Fontaine",
-    expertDiscipline: "Intimité & bien-être",
+    expertDiscipline:
+      'Médecin et sexologue clinicienne · Diplômée de l\'Université Paris Descartes · Auteure de "Désir et intimité après 60 ans"',
     expertBio:
       "Médecin et thérapeute, elle accompagne depuis vingt ans les couples et les personnes seules autour des questions de l'intimité, dans une parole apaisée et sans jugement.",
     expertImage:
@@ -122,7 +124,8 @@ export const programme: ProgrammeEntry[] = [
     image:
       "https://images.pexels.com/photos/8675090/pexels-photo-8675090.jpeg?w=900",
     expertName: "Étienne Vasseur",
-    expertDiscipline: "Histoire des religions",
+    expertDiscipline:
+      "Historien des religions · Spécialiste des trois religions abrahamiques · Conférencier à l'École Pratique des Hautes Études",
     expertBio:
       "Historien des religions, il explore l'Antiquité et les textes fondateurs avec un souci constant de clarté, loin de tout dogme, pour rendre la culture accessible à tous.",
     expertImage:
@@ -145,11 +148,12 @@ export const programme: ProgrammeEntry[] = [
     image:
       "https://image.shutterstock.com/image-photo/group-man-woman-sommelier-tasting-red-600nw-2310290235.jpg",
     expertName: "Bertrand Caillaux",
-    expertDiscipline: "Œnologie & gastronomie",
+    expertDiscipline:
+      "Œnologue certifié · Expert en grands crus de Bourgogne · Formateur en dégustation depuis 15 ans",
     expertBio:
       "Sommelier passé par les plus belles tables, il défend une approche sensible et joyeuse du vin, débarrassée de tout snobisme, où la culture compte autant que le palais.",
     expertImage:
-      "https://image.shutterstock.com/image-photo/mature-senior-woman-winemaker-stand-basement-600nw-2471839275.jpg",
+      "https://images.pexels.com/photos/16779595/pexels-photo-16779595.jpeg?w=1200",
     cadence: "Tous les mercredis",
     time: "18h00",
     month: "Août",
@@ -277,7 +281,7 @@ export const replayItems: ReplayItem[] = [
     duration: "45 min",
     expert: "Pascal Rivière",
     image:
-      "https://image.shutterstock.com/image-photo/senior-asian-woman-have-happiness-wellbeing-600nw-1103392058.jpg",
+      "https://images.pexels.com/photos/8939925/pexels-photo-8939925.jpeg?w=1200",
   },
   {
     id: "r6",

@@ -146,8 +146,8 @@ export function EventCard({
           )}
         </div>
 
-        <div className="mt-4 flex items-center justify-between gap-3 border-t border-foreground/10 pt-4">
-          <div className="flex min-w-0 items-center gap-2.5">
+        <div className="mt-4 flex items-start justify-between gap-3 border-t border-foreground/10 pt-4">
+          <div className="flex min-w-0 items-start gap-2.5">
             {expert ? (
               <div className="relative size-11 shrink-0 overflow-hidden rounded-full border border-foreground/10 bg-beige">
                 <Image
@@ -163,7 +163,7 @@ export function EventCard({
               <span className="truncate font-serif text-[15px] font-medium text-foreground">
                 {event.expert}
               </span>
-              <span className="truncate font-sans text-[13px] text-muted-foreground">
+              <span className="font-sans text-[13px] leading-snug text-muted-foreground">
                 {event.venue && !hideTime
                   ? `${event.time} · ${event.duration}`
                   : expert?.discipline}

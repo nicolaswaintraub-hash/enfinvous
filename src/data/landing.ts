@@ -164,56 +164,64 @@ export const experts: Expert[] = [
   {
     id: "1",
     name: "Étienne Vasseur",
-    discipline: "Historien des religions",
+    discipline:
+      "Historien des religions · Spécialiste des trois religions abrahamiques · Conférencier à l'École Pratique des Hautes Études",
     image:
       "https://image.shutterstock.com/image-photo/portrait-senior-man-photography-enthusiast-who-600nw-2743942967.jpg",
   },
   {
     id: "2",
     name: "Bertrand Caillaux",
-    discipline: "Œnologue",
+    discipline:
+      "Œnologue certifié · Expert en grands crus de Bourgogne · Formateur en dégustation depuis 15 ans",
     image:
-      "https://image.shutterstock.com/image-photo/portrait-beautiful-senior-woman-on-gray-600nw-2753367011.jpg",
+      "https://images.pexels.com/photos/16779595/pexels-photo-16779595.jpeg?w=1200",
   },
   {
     id: "3",
     name: "Henri Lemaire",
-    discipline: "Musicologue",
+    discipline:
+      "Musicologue · Ancien professeur au Conservatoire National Supérieur · Spécialiste de musique baroque et romantique",
     image:
       "https://image.shutterstock.com/image-photo/distinguished-older-gentleman-exudes-confidence-this-600nw-2323313887.jpg",
   },
   {
     id: "4",
     name: "Margaux Lenoir",
-    discipline: "Critique littéraire",
+    discipline:
+      "Critique littéraire · Chroniqueuse au Magazine Littéraire · Spécialiste du roman français contemporain",
     image:
       "https://image.shutterstock.com/image-photo/studio-portrait-senior-woman-smile-funny-600nw-2544254763.jpg",
   },
   {
     id: "5",
     name: "Florence Aubry",
-    discipline: "Historienne de l'art",
+    discipline:
+      "Historienne de l'art · Guide-conférencière au musée du Louvre · Spécialiste de l'Égypte ancienne et de l'art islamique",
     image:
       "https://image.shutterstock.com/image-photo/senior-woman-holding-examining-vibrant-abstract-600nw-2632939913.jpg",
   },
   {
     id: "6",
     name: "Pascal Rivière",
-    discipline: "Philosophe",
+    discipline:
+      "Philosophe praticien · Auteur de \"L'art de vieillir libre\" · Animateur d'ateliers de philosophie appliquée",
     image:
-      "https://image.shutterstock.com/image-photo/happy-senior-woman-600nw-370677797.jpg",
+      "https://images.pexels.com/photos/6378198/pexels-photo-6378198.jpeg?w=1200",
   },
   {
     id: "7",
     name: "Dr. Camille Fontaine",
-    discipline: "Médecin, sexologue",
+    discipline:
+      'Médecin et sexologue clinicienne · Diplômée de l\'Université Paris Descartes · Auteure de "Désir et intimité après 60 ans"',
     image:
       "https://image.shutterstock.com/image-photo/smiling-senior-woman-enjoying-nature-camera-600nw-2586291429.jpg",
   },
   {
     id: "8",
     name: "Astier Nicolas",
-    discipline: "Champion olympique",
+    discipline:
+      "Champion olympique de concours complet · Médaillé de bronze aux JO de Paris 2024",
     image: "/astier-nicolas.jpg",
   },
 ];
@@ -241,13 +249,6 @@ export const themes: Theme[] = [
     filter: "Gastronomie",
     image:
       "https://image.shutterstock.com/image-photo/diverse-senior-couple-preparing-meal-using-600nw-2526903605.jpg",
-  },
-  {
-    id: "4",
-    title: "Numérique",
-    tagline: "Maîtriser les outils d'aujourd'hui, sans complexe.",
-    image:
-      "https://image.shutterstock.com/image-photo/senior-man-learning-digital-skills-tutor-600nw-2705788047.jpg",
   },
   {
     id: "5",

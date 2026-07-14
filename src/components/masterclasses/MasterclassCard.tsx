@@ -106,7 +106,7 @@ export function MasterclassCard({ entry }: MasterclassCardProps) {
           </span>
         </div>
 
-        <div className="mt-4 flex items-center gap-3 border-t border-foreground/10 pt-4">
+        <div className="mt-4 flex items-start gap-3 border-t border-foreground/10 pt-4">
           <div className="relative size-10 shrink-0 overflow-hidden rounded-full">
             <Image
               src={entry.expertImage}
@@ -120,7 +120,7 @@ export function MasterclassCard({ entry }: MasterclassCardProps) {
             <p className="truncate font-serif text-[15px] font-medium leading-tight">
               {entry.expertName}
             </p>
-            <p className="truncate font-sans text-[13px] text-muted-foreground">
+            <p className="font-sans text-[13px] leading-snug text-muted-foreground">
               {entry.expertDiscipline}
             </p>
           </div>
