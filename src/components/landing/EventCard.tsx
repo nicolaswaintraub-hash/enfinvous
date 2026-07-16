@@ -6,6 +6,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { type Event, experts } from "@/data/landing";
 import { BETA } from "@/lib/flags";
 import { cn } from "@/lib/utils";
+import { ZoomJoinOverlay } from "./ZoomJoinOverlay";
 
 interface EventCardProps {
   event: Event;
@@ -65,16 +66,25 @@ export function EventCard({
 
   return (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-sm bg-card transition-all duration-250 hover:-translate-y-1 hover:shadow-[var(--shadow-card-hover)]">
-      {/* Lien étendu : toute la carte est cliquable. En showcase, `href` mène
-          à la page du format ; sinon (hors bêta) à l'inscription. En bêta sans
-          `href`, la carte reste une vitrine non cliquable. */}
-      {linkHref && (
-        <Link
-          href={linkHref}
-          className="absolute inset-0 z-10 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-        >
-          <span className="sr-only">Réserver : {event.title}</span>
-        </Link>
+      {/* Lien étendu : toute la carte est cliquable. Séance en direct (`zoom`)
+          → ouvre la modale « Rejoindre ». Sinon, en showcase `href` mène à la
+          page du format (hors bêta : l'inscription) ; en bêta sans `href`, la
+          carte reste une vitrine non cliquable. */}
+      {event.zoom ? (
+        <ZoomJoinOverlay
+          title={event.title}
+          link={event.zoom.link}
+          code={event.zoom.code}
+        />
+      ) : (
+        linkHref && (
+          <Link
+            href={linkHref}
+            className="absolute inset-0 z-10 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          >
+            <span className="sr-only">Réserver : {event.title}</span>
+          </Link>
+        )
       )}
       <div className="relative aspect-[4/5] overflow-hidden">
         <Image
@@ -171,7 +181,7 @@ export function EventCard({
             </span>
           </div>
 
-          {linkHref && (
+          {(linkHref || event.zoom) && (
             <span
               aria-hidden="true"
               className={cn(
@@ -179,7 +189,7 @@ export function EventCard({
                 "pointer-events-none shrink-0 text-base after:ml-1 after:transition-transform after:duration-250 after:content-['\\2192'] group-hover:after:translate-x-0.5",
               )}
             >
-              Je réserve
+              {event.zoom ? "Je rejoins" : "Je réserve"}
             </span>
           )}
         </div>

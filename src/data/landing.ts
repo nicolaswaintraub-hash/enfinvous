@@ -22,6 +22,9 @@ export interface Event {
   theme?: string;
   /** Résumé long, pour les fiches éditoriales (programme, replay). */
   summary?: string;
+  /** Séance en direct : ouvre une popup « Rejoindre » (lien + code Zoom) au
+   *  lieu de naviguer. Présent = la carte déclenche la modale. */
+  zoom?: { link: string; code: string };
 }
 
 export interface Expert {
@@ -96,6 +99,10 @@ export const events: Event[] = [
     description:
       "Derrière les victoires se cachent des histoires. Une plongée passionnante dans le monde équestre avec un guide exceptionnel.",
     image: "/cheval-deauville.jpeg",
+    zoom: {
+      link: "https://us05web.zoom.us/j/85275832118?pwd=uF0Jkd2DbaI4BGQZ7VcgTIx9IE2mga.1",
+      code: "C7t8SQ",
+    },
   },
   {
     id: "2",
