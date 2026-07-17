@@ -63,6 +63,11 @@ export function ProgrammeListing() {
           id="programme-heading"
         />
 
+        <p className="mx-auto -mt-4 mb-8 max-w-2xl text-center font-sans text-[17px] leading-relaxed text-foreground/80">
+          Le temps devient le vôtre, et avec lui la liberté de vivre tout ce qui
+          vous passionne.
+        </p>
+
         {/* Rappel participatif — échanges en direct avec l'intervenant */}
         <div className="mx-auto mb-8 max-w-xl text-center">
           <p className="flex items-center justify-center gap-2 font-sans text-[0.72rem] font-semibold uppercase tracking-[0.26em] text-[#8a6d3b]">

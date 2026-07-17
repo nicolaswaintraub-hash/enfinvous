@@ -116,8 +116,7 @@ export const presentielEvents: Event[] = [
     theme: "Philosophie",
     description:
       "Un échange guidé par un philosophe pour interroger ce que devient le temps quand il devient enfin le vôtre.",
-    image:
-      "https://images.pexels.com/photos/13405739/pexels-photo-13405739.jpeg?w=1200",
+    image: "/penseur-rodin.jpg",
     venue: "Hôtel Particulier Montmartre",
     city: "Paris",
     spotsLeft: 7,
