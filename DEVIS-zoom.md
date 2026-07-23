@@ -1,4 +1,4 @@
-# Devis — Plateforme de rendez-vous du savoir VivreEnfin
+# Devis — Plateforme de rendez-vous du savoir Veevre
 
 **Devis commercial**
 
@@ -7,8 +7,8 @@
 | **Numéro de devis**   | DEV-2026-001                                                    |
 | **Date d'émission**   | 21 juin 2026                                                    |
 | **Validité du devis** | 30 jours (jusqu'au 21 juillet 2026)                             |
-| **Référence projet**  | VivreEnfin — Plateforme de rendez-vous du savoir en direct (V1) |
-| **Document associé**  | PRD VivreEnfin v1.0 du 20 juin 2026                             |
+| **Référence projet**  | Veevre — Plateforme de rendez-vous du savoir en direct (V1) |
+| **Document associé**  | PRD Veevre v1.0 du 20 juin 2026                             |
 
 ---
 
@@ -26,7 +26,7 @@
 
 | Champ              | Valeur                     |
 | ------------------ | -------------------------- |
-| **Raison sociale** | VivreEnfin _[à compléter]_ |
+| **Raison sociale** | Veevre _[à compléter]_ |
 | **Adresse**        | _[à compléter]_            |
 | **SIRET**          | _[à compléter]_            |
 | **Contact**        | _[à compléter]_            |
@@ -35,7 +35,7 @@
 
 ## 1. Contexte
 
-VivreEnfin dispose aujourd'hui d'un **site vitrine** en ligne, qui présente l'offre et son univers : palette de couleurs, typographie, mise en page, ambiance générale. Ce site donne déjà à la marque une identité visuelle aboutie et reconnaissable.
+Veevre dispose aujourd'hui d'un **site vitrine** en ligne, qui présente l'offre et son univers : palette de couleurs, typographie, mise en page, ambiance générale. Ce site donne déjà à la marque une identité visuelle aboutie et reconnaissable.
 
 L'objet du présent devis est de construire, **par-dessus cette identité existante**, la plateforme réelle qui permet aux membres de s'abonner et de participer en direct aux rendez-vous du savoir.
 
@@ -47,14 +47,14 @@ Cette reprise du design existant est **comprise dans le forfait** ; en revanche,
 
 ## 2. Objet du devis
 
-Conception et développement de la **plateforme VivreEnfin (version 1)** : un espace web sur lequel les membres abonnés se connectent et, **d'un seul clic, rejoignent en direct les rendez-vous du savoir** — des séances animées par des intervenants d'exception, en français, **sans rien à installer** côté participant.
+Conception et développement de la **plateforme Veevre (version 1)** : un espace web sur lequel les membres abonnés se connectent et, **d'un seul clic, rejoignent en direct les rendez-vous du savoir** — des séances animées par des intervenants d'exception, en français, **sans rien à installer** côté participant.
 
 Le présent devis couvre les **quatre fonctionnalités** définies au périmètre de la version 1 :
 
 1. **Comptes membres** — création de compte, connexion, mot de passe oublié, session sécurisée. Un membre reste connecté d'une visite à l'autre.
 2. **Abonnement (Stripe)** — souscription à l'offre unique « Illimité » (29 €/mois), prélèvement automatique mensuel, résiliation en autonomie depuis l'espace membre. L'accès aux séances est **réservé aux abonnés à jour** : la vérification est automatique à chaque entrée dans une séance.
-3. **Séance vidéo intégrée (Zoom Meeting SDK)** — la visioconférence en direct, **embarquée dans une page du site** (un intervenant face à jusqu'à ~100 participants) : vidéo et son de l'intervenant, chat et **questions** via les fonctions natives de Zoom. Le membre rejoint **en un clic depuis le navigateur, sans télécharger de logiciel** : le composant Zoom s'ouvre **dans la page VivreEnfin**, sans renvoyer vers l'application Zoom externe.
-4. **Espace d'administration** — une zone réservée à VivreEnfin pour **créer, modifier et programmer les séances en toute autonomie**, sans aucune intervention technique de notre part. Une séance ajoutée est **immédiatement** accessible aux membres.
+3. **Séance vidéo intégrée (Zoom Meeting SDK)** — la visioconférence en direct, **embarquée dans une page du site** (un intervenant face à jusqu'à ~100 participants) : vidéo et son de l'intervenant, chat et **questions** via les fonctions natives de Zoom. Le membre rejoint **en un clic depuis le navigateur, sans télécharger de logiciel** : le composant Zoom s'ouvre **dans la page Veevre**, sans renvoyer vers l'application Zoom externe.
+4. **Espace d'administration** — une zone réservée à Veevre pour **créer, modifier et programmer les séances en toute autonomie**, sans aucune intervention technique de notre part. Une séance ajoutée est **immédiatement** accessible aux membres.
 
 Les pages que nous construisons (connexion, abonnement, administration, ainsi que la page d'accueil de la séance) reprennent le **même design que le site actuel** (voir §1).
 
@@ -70,21 +70,21 @@ Le cœur de ce projet est la séance vidéo. L'approche retenue est de **réutil
 
 - **Une technologie éprouvée et familière.** Zoom est une référence mondiale de la visioconférence, déjà connue de beaucoup de vos membres. La qualité vidéo/audio, la robustesse réseau et l'adaptation à une connexion faible sont assurées par Zoom.
 
-- **Rejoindre depuis le site, sans installation.** Grâce au composant web (« Component View ») du Meeting SDK, la réunion s'ouvre **dans une page de VivreEnfin** : le membre clique sur « Rejoindre » et participe **depuis son navigateur**, sans télécharger ni installer l'application Zoom. La page d'accueil de la séance (avant et après) est à vos couleurs.
+- **Rejoindre depuis le site, sans installation.** Grâce au composant web (« Component View ») du Meeting SDK, la réunion s'ouvre **dans une page de Veevre** : le membre clique sur « Rejoindre » et participe **depuis son navigateur**, sans télécharger ni installer l'application Zoom. La page d'accueil de la séance (avant et après) est à vos couleurs.
 
 ### Ce que cette approche implique — à connaître
 
 Par honnêteté, voici les limites propres au Meeting SDK :
 
-- **L'interface de la réunion reste celle de Zoom.** Une fois dans la séance, le membre voit l'interface Zoom (sa disposition, ses contrôles, et la **marque Zoom**). On peut **repositionner et habiller** certains éléments (barre de menu, vidéo, chat, participants) pour les intégrer à la page, mais on n'obtient pas une salle **entièrement** à la marque VivreEnfin : ce niveau de personnalisation totale supposerait de reconstruire la salle vidéo de zéro, hors périmètre de cette version.
+- **L'interface de la réunion reste celle de Zoom.** Une fois dans la séance, le membre voit l'interface Zoom (sa disposition, ses contrôles, et la **marque Zoom**). On peut **repositionner et habiller** certains éléments (barre de menu, vidéo, chat, participants) pour les intégrer à la page, mais on n'obtient pas une salle **entièrement** à la marque Veevre : ce niveau de personnalisation totale supposerait de reconstruire la salle vidéo de zéro, hors périmètre de cette version.
 
-- **Un compte Zoom est requis côté VivreEnfin.** Le Meeting SDK fonctionne avec une **licence Zoom** (compte hôte) : c'est ce compte qui « porte » les séances. Les participants, eux, n'ont rien à créer ni installer.
+- **Un compte Zoom est requis côté Veevre.** Le Meeting SDK fonctionne avec une **licence Zoom** (compte hôte) : c'est ce compte qui « porte » les séances. Les participants, eux, n'ont rien à créer ni installer.
 
-- **Les échanges transitent par Zoom.** Le chat et les questions passent par l'infrastructure de Zoom, et non par votre plateforme. La distinction **public / privé** s'appuie sur les fonctions natives de Zoom (message à tous / message privé à l'hôte). Si VivreEnfin souhaite **conserver et maîtriser** l'historique des messages côté plateforme, cela suppose un développement complémentaire (chiffré séparément) ; ce n'est pas inclus ici.
+- **Les échanges transitent par Zoom.** Le chat et les questions passent par l'infrastructure de Zoom, et non par votre plateforme. La distinction **public / privé** s'appuie sur les fonctions natives de Zoom (message à tous / message privé à l'hôte). Si Veevre souhaite **conserver et maîtriser** l'historique des messages côté plateforme, cela suppose un développement complémentaire (chiffré séparément) ; ce n'est pas inclus ici.
 
 - **Le cadre est celui d'un éditeur tiers.** Les évolutions, limites et règles de la réunion dépendent de Zoom et de votre formule. C'est précisément le compromis retenu : on gagne en coût et en délai, on cède en maîtrise et en personnalisation.
 
-> En clair : l'approche **réutilise Zoom**, intégré au plus près du site, pour livrer **plus vite et à moindre coût**. Elle fournit une **séance Zoom embarquée** dans l'univers VivreEnfin, plutôt qu'une salle vidéo entièrement reconstruite à vos couleurs. Le curseur est volontairement placé du côté du **coût** et du **délai**.
+> En clair : l'approche **réutilise Zoom**, intégré au plus près du site, pour livrer **plus vite et à moindre coût**. Elle fournit une **séance Zoom embarquée** dans l'univers Veevre, plutôt qu'une salle vidéo entièrement reconstruite à vos couleurs. Le curseur est volontairement placé du côté du **coût** et du **délai**.
 
 ---
 
@@ -96,7 +96,7 @@ Par honnêteté, voici les limites propres au Meeting SDK :
 | **Abonnement Stripe + connexion** — comptes membres (création, connexion, mot de passe oublié, session persistante), souscription et prélèvement automatique mensuel via Stripe, renouvellements et résiliation en autonomie, accès réservé aux abonnés à jour                                                                            | 8 000 €    |
 | **Backoffice** — espace d'administration pour créer, modifier, programmer et lister les séances en autonomie ; insertion dynamique des séances sans intervention technique ; accès en un clic à la séance le moment venu ; toute séance ajoutée est immédiatement accessible aux membres                                                  | 4 000 €    |
 
-> **Ce que couvre le lot « séance vidéo » (12 000 €) :** Zoom fournit déjà le moteur vidéo, l'interface de réunion, le chat et le modèle d'hôte ; le travail se concentre donc sur **l'intégration** du composant dans le site, la **signature d'accès** et le **conditionnement à l'abonnement**. Construire une salle vidéo de zéro (moteur, interface, messagerie publique/privée et persistance entièrement côté VivreEnfin) représenterait un coût sensiblement plus élevé — ce n'est pas le périmètre retenu ici. Le lot backoffice (4 000 €) ne comprend pas le planning des séances (agenda côté membres), hors périmètre de cette version.
+> **Ce que couvre le lot « séance vidéo » (12 000 €) :** Zoom fournit déjà le moteur vidéo, l'interface de réunion, le chat et le modèle d'hôte ; le travail se concentre donc sur **l'intégration** du composant dans le site, la **signature d'accès** et le **conditionnement à l'abonnement**. Construire une salle vidéo de zéro (moteur, interface, messagerie publique/privée et persistance entièrement côté Veevre) représenterait un coût sensiblement plus élevé — ce n'est pas le périmètre retenu ici. Le lot backoffice (4 000 €) ne comprend pas le planning des séances (agenda côté membres), hors périmètre de cette version.
 
 ---
 
@@ -157,8 +157,8 @@ Les éléments suivants ne sont **pas** couverts par le présent devis et feront
 
 - **Coûts de fonctionnement récurrents**, à la charge du client (détaillés au §10) : licence/abonnement Zoom, hébergement, frais Stripe.
 - **Planning des séances** (agenda des rendez-vous du savoir à venir côté membres, avec bouton « Rejoindre » qui s'active au bon moment) : non inclus dans cette version. Le backoffice permet de programmer les séances, et chaque séance reste accessible le moment venu, mais sans calendrier consultable par les membres.
-- **Salle entièrement à la marque** (interface de réunion 100 % VivreEnfin, sans interface ni marque Zoom) : supposerait de reconstruire la salle vidéo de zéro, hors périmètre de cette version.
-- **Conservation et maîtrise des messages côté VivreEnfin** (historique du chat persisté et administrable sur votre plateforme) : non inclus, car les échanges transitent par Zoom (voir §3).
+- **Salle entièrement à la marque** (interface de réunion 100 % Veevre, sans interface ni marque Zoom) : supposerait de reconstruire la salle vidéo de zéro, hors périmètre de cette version.
+- **Conservation et maîtrise des messages côté Veevre** (historique du chat persisté et administrable sur votre plateforme) : non inclus, car les échanges transitent par Zoom (voir §3).
 - **Nouvelle création graphique** au-delà de la reprise du design existant (refonte, écrans inventés de zéro, nouvelle charte) — voir §1.
 - Offres d'abonnement multiples ou tarifs par paliers (la V1 propose une seule offre).
 - Replays : enregistrement et médiathèque des séances passées (l'enregistrement Zoom peut être activé côté Zoom, mais sa reprise/médiathèque dans le site n'est pas incluse).
@@ -195,9 +195,9 @@ Le service vidéo retenu est le **Zoom Meeting SDK**. Contrairement au Video SDK
 - **Pénalités de retard** : taux d'intérêt légal en vigueur, plus indemnité forfaitaire de recouvrement de 40 € (art. L441-10 du Code de commerce).
 - **Propriété intellectuelle** : le transfert des droits sur le code livré intervient au paiement intégral des sommes dues. Le Zoom Meeting SDK reste soumis aux conditions de licence de Zoom.
 - **Réserve de propriété** : les livrables restent la propriété du prestataire jusqu'au complet paiement.
-- **Dépendance Zoom** : la plateforme requiert un compte/licence Zoom valide côté VivreEnfin ; la disponibilité et les conditions de la séance vidéo dépendent du service Zoom.
+- **Dépendance Zoom** : la plateforme requiert un compte/licence Zoom valide côté Veevre ; la disponibilité et les conditions de la séance vidéo dépendent du service Zoom.
 - **Disponibilité et collaboration du client** : la bonne marche du projet suppose la **disponibilité du client** tout au long de la prestation pour valider les étapes, répondre aux questions et fournir les éléments nécessaires. En particulier, la création des comptes et l'obtention des accès aux services tiers (**Stripe**, **Zoom**) requièrent des **informations que seul le client peut fournir** (données de l'entreprise, coordonnées bancaires, validations d'identité, etc.). Le client s'engage à transmettre ces informations et accès dans des délais raisonnables ; tout retard ou indisponibilité de sa part décale d'autant les délais de réalisation, sans que le prestataire en soit tenu pour responsable.
-- Le présent devis est établi sur la base du **PRD VivreEnfin v1.0 du 20 juin 2026** ; toute évolution du périmètre fera l'objet d'un avenant.
+- Le présent devis est établi sur la base du **PRD Veevre v1.0 du 20 juin 2026** ; toute évolution du périmètre fera l'objet d'un avenant.
 
 ---
 

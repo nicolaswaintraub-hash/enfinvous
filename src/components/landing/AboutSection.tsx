@@ -35,7 +35,7 @@ export function AboutSection() {
               </p>
               <p className="font-sans text-[19px] leading-[1.75] text-foreground md:text-[21px]">
                 <span className="font-semibold text-terracotta">
-                  VivreEnfin&nbsp;!
+                  Veevre&nbsp;!
                 </span>{" "}
                 c&apos;est votre compagnon de vie — celui qui ouvre des portes
                 que vous n&apos;imaginiez pas, éveille des curiosités que vous

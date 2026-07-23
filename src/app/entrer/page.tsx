@@ -10,7 +10,7 @@ import { BETA } from "@/lib/flags";
 export const metadata: Metadata = {
   title: "Entrer dans le cercle",
   description:
-    "Connectez-vous ou créez votre compte pour rejoindre le cercle VivreEnfin.",
+    "Connectez-vous ou créez votre compte pour rejoindre le cercle Veevre.",
 };
 
 export default function EntrerPage() {

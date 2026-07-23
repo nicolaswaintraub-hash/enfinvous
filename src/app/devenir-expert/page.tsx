@@ -6,7 +6,7 @@ import { Header } from "@/components/layout/Header";
 export const metadata: Metadata = {
   title: "Devenir expert",
   description:
-    "Expert, artisan, guide, conférencier ou passionné : intervenez chez VivreEnfin et partagez votre expertise avec un cercle de retraités curieux et exigeants. Trois formats, une réponse sous 48h.",
+    "Expert, artisan, guide, conférencier ou passionné : intervenez chez Veevre et partagez votre expertise avec un cercle de retraités curieux et exigeants. Trois formats, une réponse sous 48h.",
 };
 
 export default function DevenirExpertPage() {

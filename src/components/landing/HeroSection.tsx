@@ -103,7 +103,7 @@ export function HeroSection() {
               : "none",
           }}
         >
-          Vivre enfin !
+          Vivre pleinement
         </h1>
 
         <p

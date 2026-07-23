@@ -16,7 +16,7 @@ export function PricingSection() {
       <div aria-hidden className="abo-glow" />
 
       <Container className="relative">
-        <SectionHeading title="L'abonnement VivreEnfin" id="pricing-heading" />
+        <SectionHeading title="L'abonnement Veevre" id="pricing-heading" />
 
         <div className="abo-panel mx-auto max-w-4xl overflow-hidden rounded-lg">
           <div className="grid grid-cols-1 md:grid-cols-[1.05fr_0.95fr]">
@@ -31,7 +31,7 @@ export function PricingSection() {
                   {plan.name}
                 </h3>
                 <p className="font-sans text-[15px] leading-snug text-muted-foreground md:text-base">
-                  Tout l'univers VivreEnfin, sans la moindre limite.
+                  Tout l'univers Veevre, sans la moindre limite.
                 </p>
               </div>
 

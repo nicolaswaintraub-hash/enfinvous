@@ -335,7 +335,7 @@ export const expertContact: ExpertContact = {
   heroSubtitle:
     "Faites-vous connaître auprès de nous en nous envoyant un mail avec une courte présentation de ce que vous faites, et nous reviendrons vers vous.",
   intro:
-    "Vous êtes expert, artisan, guide, conférencier ou passionné d'un domaine ? VivreEnfin réunit des retraités actifs, curieux et exigeants qui cherchent de vraies conversations. Dites-nous qui vous êtes. Nous lisons chaque candidature personnellement et nous vous répondons sous 48h.",
+    "Vous êtes expert, artisan, guide, conférencier ou passionné d'un domaine ? Veevre réunit des retraités actifs, curieux et exigeants qui cherchent de vraies conversations. Dites-nous qui vous êtes. Nous lisons chaque candidature personnellement et nous vous répondons sous 48h.",
   points: [
     {
       title: "Choisissez votre format d'intervention",
@@ -353,7 +353,7 @@ export const expertContact: ExpertContact = {
         "Nous préparons votre intervention avec vous — format, déroulé, public. Vous restez maître de votre contenu. Nous gérons la technique, les inscriptions et la mise en relation avec nos membres.",
     },
   ],
-  email: "contact@vivreenfin.fr",
+  email: "contact@veevre.fr",
   interventionTypes: [
     {
       value: "Visio",
@@ -373,7 +373,7 @@ export const expertContact: ExpertContact = {
   ],
   confirmation: {
     title: "Merci — nous avons bien reçu votre candidature.",
-    body: "Nous lisons chaque message personnellement. Vous recevrez une réponse de notre équipe sous 48 heures ouvrées. En attendant, n'hésitez pas à découvrir le programme VivreEnfin.",
+    body: "Nous lisons chaque message personnellement. Vous recevrez une réponse de notre équipe sous 48 heures ouvrées. En attendant, n'hésitez pas à découvrir le programme Veevre.",
     ctaLabel: "Découvrir le programme",
     ctaHref: "/planning",
   },

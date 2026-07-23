@@ -1,10 +1,10 @@
-# PRD — Plateforme de masterclass VivreEnfin
+# PRD — Plateforme de masterclass Veevre
 
 **Document de spécifications produit (Product Requirements Document)**
 
 |                   |                                                            |
 | ----------------- | ---------------------------------------------------------- |
-| **Projet**        | VivreEnfin — Plateforme de rendez-vous du savoir en direct |
+| **Projet**        | Veevre — Plateforme de rendez-vous du savoir en direct |
 | **Version**       | 1.0                                                        |
 | **Date**          | 20 juin 2026                                               |
 | **Statut**        | Proposition — à valider                                    |
@@ -15,9 +15,9 @@
 
 ## 1. Contexte et vision
 
-VivreEnfin est un service premium destiné aux seniors actifs de 70 ans et plus. Le site vitrine actuel (Next.js) présente l'offre ; il s'agit désormais de construire la **plateforme réelle** qui permet aux membres abonnés de **participer en direct aux rendez-vous du savoir** — des séances de transmission animées par des intervenants d'exception, depuis le confort de leur domicile.
+Veevre est un service premium destiné aux seniors actifs de 70 ans et plus. Le site vitrine actuel (Next.js) présente l'offre ; il s'agit désormais de construire la **plateforme réelle** qui permet aux membres abonnés de **participer en direct aux rendez-vous du savoir** — des séances de transmission animées par des intervenants d'exception, depuis le confort de leur domicile.
 
-L'enjeu central : offrir une expérience de visioconférence **native**, intégrée à VivreEnfin, **sans installation ni friction technique** pour un public senior. Le membre se connecte, et d'un clic rejoint la séance dans un environnement chaleureux, à la marque, en français.
+L'enjeu central : offrir une expérience de visioconférence **native**, intégrée à Veevre, **sans installation ni friction technique** pour un public senior. Le membre se connecte, et d'un clic rejoint la séance dans un environnement chaleureux, à la marque, en français.
 
 ### Principe directeur
 
@@ -46,7 +46,7 @@ L'enjeu central : offrir une expérience de visioconférence **native**, intégr
 3. **Salle de masterclass native** — visioconférence type Zoom :
    - Diffusion vidéo/audio de l'intervenant vers les participants.
    - Messagerie **publique** (visible de tous) et **privée** (question adressée uniquement à l'intervenant).
-   - Rejoindre en un clic, sans installation, dans l'interface VivreEnfin.
+   - Rejoindre en un clic, sans installation, dans l'interface Veevre.
 4. **Planning** — calendrier des rendez-vous du savoir à venir, avec accès à la séance le moment venu.
 5. **Back-office d'administration** — zone protégée réservée à l'administrateur, permettant de **créer, modifier et planifier les masterclass en autonomie** (CRUD de la table `masterclasses` : titre, thème, intervenant, date, heure, durée). La séance ajoutée apparaît immédiatement dans le planning des membres. Aucune intervention technique requise pour programmer une séance.
 
@@ -70,7 +70,7 @@ L'enjeu central : offrir une expérience de visioconférence **native**, intégr
 | --------------------------------- | --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | **Le membre senior** (70+)        | Abonné, peu à l'aise avec la technique. Sur ordinateur ou tablette, connexion Wi-Fi parfois faible. | Rejoindre sans installer, gros boutons, interface simple, poser une question facilement. |
 | **L'intervenant**                 | Expert qui anime la séance en direct.                                                               | Diffuser sa vidéo, voir les questions publiques et privées, animer sereinement.          |
-| **L'administrateur** (VivreEnfin) | Gère les séances et les membres.                                                                    | Créer/planifier une séance, suivre les inscriptions.                                     |
+| **L'administrateur** (Veevre) | Gère les séances et les membres.                                                                    | Créer/planifier une séance, suivre les inscriptions.                                     |
 
 ---
 
@@ -143,7 +143,7 @@ L'enjeu central : offrir une expérience de visioconférence **native**, intégr
 | **Accès BDD**        | sqlx                    | Requêtes SQL vérifiées à la compilation      |
 | **Templates**        | Askama                  | Templates HTML vérifiés à la compilation     |
 | **Interactivité**    | htmx (+ îlots JS)       | Chat, formulaires, navigation                |
-| **Styles**           | Tailwind CSS + DaisyUI  | Composants, design VivreEnfin                |
+| **Styles**           | Tailwind CSS + DaisyUI  | Composants, design Veevre                |
 | **Authentification** | tower-sessions + argon2 | Sessions, hachage                            |
 | **Paiement**         | Stripe (`async-stripe`) | Abonnements + webhooks                       |
 | **Vidéo (SFU)**      | LiveKit                 | Moteur de visioconférence (le serveur média) |
@@ -185,7 +185,7 @@ La diffusion d'un intervenant vers de nombreux participants nécessite un **SFU*
 
 ### 6.4. Réutilisation du design existant
 
-Le design VivreEnfin (palette terracotta/anthracite/crème, Roboto Slab, tokens de `globals.css`) est **reproduit** dans la nouvelle stack via Askama + DaisyUI. Les composants React existants (`.tsx`) ne sont pas réutilisables tels quels : ils sont **re-exprimés** en templates Askama. Le rendu visuel est conservé à l'identique ; aucun nouveau design n'est produit en V1.
+Le design Veevre (palette terracotta/anthracite/crème, Roboto Slab, tokens de `globals.css`) est **reproduit** dans la nouvelle stack via Askama + DaisyUI. Les composants React existants (`.tsx`) ne sont pas réutilisables tels quels : ils sont **re-exprimés** en templates Askama. Le rendu visuel est conservé à l'identique ; aucun nouveau design n'est produit en V1.
 
 ---
 
@@ -204,7 +204,7 @@ Le design VivreEnfin (palette terracotta/anthracite/crème, Roboto Slab, tokens 
 ## 8. Contraintes et exigences non fonctionnelles
 
 - **Accessibilité senior** : texte large, contrastes, gros boutons, respect de `prefers-reduced-motion`, parcours simplifié.
-- **Langue** : français, vouvoiement, pas d'emoji. Vocabulaire VivreEnfin respecté (« rendez-vous du savoir », invariable).
+- **Langue** : français, vouvoiement, pas d'emoji. Vocabulaire Veevre respecté (« rendez-vous du savoir », invariable).
 - **Fiabilité réseau** : gestion des reconnexions WebSocket/WebRTC (public senior en Wi-Fi variable).
 - **Capacité V1** : jusqu'à ~100 participants par séance en direct (WebRTC).
 - **Montée en charge (V2)** : au-delà de plusieurs centaines de spectateurs passifs, ajout possible d'une diffusion **HLS** (LiveKit Egress → FFmpeg → CDN) sans réécriture de l'application.

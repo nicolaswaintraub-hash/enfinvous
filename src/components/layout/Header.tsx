@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -86,12 +87,20 @@ export function Header({ solid = false }: HeaderProps) {
           {/* Colonne gauche — logo */}
           <Link
             href="/"
-            className={cn(
-              "col-start-1 justify-self-start font-serif text-xl font-medium tracking-tight transition-colors duration-500 md:text-2xl",
-              opaque ? "text-foreground" : "text-creme",
-            )}
+            className="col-start-1 justify-self-start"
+            aria-label="Veevre — accueil"
           >
-            Vivre·Enfin
+            <Image
+              src="/logo-wordmark.png"
+              alt="Veevre"
+              width={661}
+              height={153}
+              priority
+              className={cn(
+                "h-7 w-auto transition-[filter] duration-500 md:h-8",
+                opaque ? "" : "brightness-0 invert",
+              )}
+            />
           </Link>
 
           {/* Colonne centrale — navigation principale, centrée. Révélée à
