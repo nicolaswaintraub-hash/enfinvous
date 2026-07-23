@@ -14,7 +14,7 @@ import { BETA } from "@/lib/flags";
 export const metadata: Metadata = {
   title: "Mon compte",
   description:
-    "Votre espace membre VivreEnfin : abonnement, rendez-vous, favoris et parrainage.",
+    "Votre espace membre Veevre : abonnement, rendez-vous, favoris et parrainage.",
 };
 
 export default function MonComptePage() {

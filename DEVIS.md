@@ -1,4 +1,4 @@
-# Devis — Plateforme de rendez-vous du savoir VivreEnfin
+# Devis — Plateforme de rendez-vous du savoir Veevre
 
 **Devis commercial**
 
@@ -7,8 +7,8 @@
 | **Numéro de devis**   | DEV-2026-001                                                    |
 | **Date d'émission**   | 20 juin 2026                                                    |
 | **Validité du devis** | 30 jours (jusqu'au 20 juillet 2026)                             |
-| **Référence projet**  | VivreEnfin — Plateforme de rendez-vous du savoir en direct (V1) |
-| **Document associé**  | PRD VivreEnfin v1.0 du 20 juin 2026                             |
+| **Référence projet**  | Veevre — Plateforme de rendez-vous du savoir en direct (V1) |
+| **Document associé**  | PRD Veevre v1.0 du 20 juin 2026                             |
 
 ---
 
@@ -26,7 +26,7 @@
 
 | Champ              | Valeur                     |
 | ------------------ | -------------------------- |
-| **Raison sociale** | VivreEnfin _[à compléter]_ |
+| **Raison sociale** | Veevre _[à compléter]_ |
 | **Adresse**        | _[à compléter]_            |
 | **SIRET**          | _[à compléter]_            |
 | **Contact**        | _[à compléter]_            |
@@ -35,7 +35,7 @@
 
 ## 1. Contexte
 
-VivreEnfin dispose aujourd'hui d'un **site vitrine** en ligne, qui présente l'offre et son univers : palette de couleurs, typographie, mise en page, ambiance générale. Ce site donne déjà à la marque une identité visuelle aboutie et reconnaissable.
+Veevre dispose aujourd'hui d'un **site vitrine** en ligne, qui présente l'offre et son univers : palette de couleurs, typographie, mise en page, ambiance générale. Ce site donne déjà à la marque une identité visuelle aboutie et reconnaissable.
 
 L'objet du présent devis est de construire, **par-dessus cette identité existante**, la plateforme réelle qui permet aux membres de s'abonner et de participer en direct aux rendez-vous du savoir.
 
@@ -47,35 +47,35 @@ Cette reprise à l'identique du design existant est **comprise dans le forfait**
 
 ## 2. Objet du devis
 
-Conception et développement de la **plateforme VivreEnfin (version 1)** : un espace web sur lequel les membres abonnés se connectent et, **d'un seul clic, rejoignent en direct les rendez-vous du savoir** — des séances animées par des intervenants d'exception, dans un environnement entièrement aux couleurs de VivreEnfin, en français, **sans rien à installer ni paramétrer**.
+Conception et développement de la **plateforme Veevre (version 1)** : un espace web sur lequel les membres abonnés se connectent et, **d'un seul clic, rejoignent en direct les rendez-vous du savoir** — des séances animées par des intervenants d'exception, dans un environnement entièrement aux couleurs de Veevre, en français, **sans rien à installer ni paramétrer**.
 
 Le présent devis couvre les **cinq fonctionnalités** définies au périmètre de la version 1 :
 
 1. **Comptes membres** — création de compte, connexion, mot de passe oublié, session sécurisée. Un membre reste connecté d'une visite à l'autre.
 2. **Abonnement (Stripe)** — souscription à l'offre unique « Illimité » (29 €/mois), prélèvement automatique mensuel, résiliation en autonomie depuis l'espace membre. L'accès aux séances est **réservé aux abonnés à jour** : la vérification est automatique à chaque connexion à une salle.
-3. **Salle de séance VivreEnfin** — la visioconférence en direct, **intégrée au site** (un intervenant face à jusqu'à ~100 participants) : vidéo et son de l'intervenant, messagerie publique pour échanger entre membres, et **question privée** adressée uniquement à l'intervenant. On rejoint en un clic, depuis le navigateur, sans logiciel à télécharger.
+3. **Salle de séance Veevre** — la visioconférence en direct, **intégrée au site** (un intervenant face à jusqu'à ~100 participants) : vidéo et son de l'intervenant, messagerie publique pour échanger entre membres, et **question privée** adressée uniquement à l'intervenant. On rejoint en un clic, depuis le navigateur, sans logiciel à télécharger.
 4. **Planning** — l'agenda des rendez-vous du savoir à venir (thème, intervenant, date, heure). Le bouton « Rejoindre » s'active automatiquement au bon moment.
-5. **Espace d'administration** — une zone réservée à VivreEnfin pour **créer, modifier et programmer les séances en toute autonomie**, sans aucune intervention technique de notre part. Une séance ajoutée apparaît **immédiatement** dans le planning des membres.
+5. **Espace d'administration** — une zone réservée à Veevre pour **créer, modifier et programmer les séances en toute autonomie**, sans aucune intervention technique de notre part. Une séance ajoutée apparaît **immédiatement** dans le planning des membres.
 
 Chacune de ces fonctionnalités est développée dans le **même design que le site actuel** (voir §1), pour une continuité visuelle totale avec l'existant.
 
 ---
 
-## 3. Une salle de séance VivreEnfin, pas un simple lien Zoom
+## 3. Une salle de séance Veevre, pas un simple lien Zoom
 
-Le cœur de ce projet est la salle de séance. Le choix a été fait de la construire **dans la plateforme**, et non de renvoyer les membres vers un outil externe comme Zoom. Ce choix structure tout le reste — voici ce qu'il apporte concrètement à VivreEnfin.
+Le cœur de ce projet est la salle de séance. Le choix a été fait de la construire **dans la plateforme**, et non de renvoyer les membres vers un outil externe comme Zoom. Ce choix structure tout le reste — voici ce qu'il apporte concrètement à Veevre.
 
 - **Aucune sortie du site, aucune installation.** Le membre clique sur « Rejoindre » sur une page où il est déjà connecté — et il est dans la séance. Pas de logiciel à télécharger, pas de code de réunion à saisir, pas de salle d'attente : un point décisif pour un public senior, et la première cause d'abandon avec les solutions grand public.
 
-- **Une expérience entièrement à la marque.** La salle est aux couleurs de VivreEnfin, avec une interface pensée pour vos membres (gros boutons, texte large, parcours épuré). Aucun logo, aucune mention ni publicité d'un tiers ne vient s'intercaler. Le membre reste chez VivreEnfin du début à la fin.
+- **Une expérience entièrement à la marque.** La salle est aux couleurs de Veevre, avec une interface pensée pour vos membres (gros boutons, texte large, parcours épuré). Aucun logo, aucune mention ni publicité d'un tiers ne vient s'intercaler. Le membre reste chez Veevre du début à la fin.
 
-- **Le contrôle total des échanges.** Les messages échangés pendant la séance vous appartiennent et transitent par votre plateforme. Vous maîtrisez ce qui s'affiche, vous distinguez le **chat public** (entre membres) de la **question privée** (réservée à l'intervenant), et l'ensemble est conservé côté VivreEnfin. Avec un outil externe, ces échanges vous échapperaient.
+- **Le contrôle total des échanges.** Les messages échangés pendant la séance vous appartiennent et transitent par votre plateforme. Vous maîtrisez ce qui s'affiche, vous distinguez le **chat public** (entre membres) de la **question privée** (réservée à l'intervenant), et l'ensemble est conservé côté Veevre. Avec un outil externe, ces échanges vous échapperaient.
 
-- **Pas de limites imposées par un éditeur.** Pas de durée de réunion plafonnée, pas de nombre de participants bridé par une formule, pas de fonctionnalité qui change ou disparaît au gré des décisions d'un fournisseur. Les règles de la salle, c'est VivreEnfin qui les fixe.
+- **Pas de limites imposées par un éditeur.** Pas de durée de réunion plafonnée, pas de nombre de participants bridé par une formule, pas de fonctionnalité qui change ou disparaît au gré des décisions d'un fournisseur. Les règles de la salle, c'est Veevre qui les fixe.
 
 - **Une base prête à évoluer.** Parce que la séance vit dans votre plateforme, on peut **y greffer demain de nouvelles capacités** sans tout reconstruire : par exemple un **filtrage intelligent des messages** (modération assistée par IA pour écarter automatiquement un message déplacé), une mise en avant des questions, ou des outils d'animation. Ces évolutions ne sont pas comprises dans la V1, mais le socle retenu les rend possibles — ce qui serait fermé avec une solution clé en main externe.
 
-> En clair : payer un abonnement Zoom donnerait une salle générique, hors de votre marque, soumise aux limites et aux changements d'un tiers. La salle VivreEnfin est **la vôtre** — maîtrisée, à votre image, et faite pour grandir avec le service.
+> En clair : payer un abonnement Zoom donnerait une salle générique, hors de votre marque, soumise aux limites et aux changements d'un tiers. La salle Veevre est **la vôtre** — maîtrisée, à votre image, et faite pour grandir avec le service.
 
 ---
 
@@ -83,7 +83,7 @@ Le cœur de ce projet est la salle de séance. Le choix a été fait de la const
 
 | Fonctionnalité                                                                                                                                                                                                                                                   | Montant HT |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
-| **Salle de séance VivreEnfin (visio live)** — vidéo et son de l'intervenant en direct intégrés au site (live kit), messagerie publique et question privée en temps réel, entrée dans la salle en un clic depuis le navigateur, gestion jusqu'à ~100 participants | 25 000 €   |
+| **Salle de séance Veevre (visio live)** — vidéo et son de l'intervenant en direct intégrés au site (live kit), messagerie publique et question privée en temps réel, entrée dans la salle en un clic depuis le navigateur, gestion jusqu'à ~100 participants | 25 000 €   |
 | **Abonnement Stripe + connexion** — comptes membres (création, connexion, mot de passe oublié, session persistante), souscription et prélèvement automatique mensuel via Stripe, renouvellements et résiliation en autonomie, accès réservé aux abonnés à jour   | 10 000 €   |
 | **Backoffice + planning** — espace d'administration pour créer, modifier, programmer et lister les séances en autonomie ; agenda des rendez-vous côté membres avec bouton « Rejoindre » qui s'active au bon moment ; report immédiat de toute séance ajoutée     | 5 000 €    |
 
@@ -182,7 +182,7 @@ Concrètement, à petit volume (quelques séances par mois), les volumes inclus 
 - **Pénalités de retard** : taux d'intérêt légal en vigueur, plus indemnité forfaitaire de recouvrement de 40 € (art. L441-10 du Code de commerce).
 - **Propriété intellectuelle** : le transfert des droits sur le code livré intervient au paiement intégral des sommes dues.
 - **Réserve de propriété** : les livrables restent la propriété du prestataire jusqu'au complet paiement.
-- Le présent devis est établi sur la base du **PRD VivreEnfin v1.0 du 20 juin 2026** ; toute évolution du périmètre fera l'objet d'un avenant.
+- Le présent devis est établi sur la base du **PRD Veevre v1.0 du 20 juin 2026** ; toute évolution du périmètre fera l'objet d'un avenant.
 
 ---
 
@@ -198,4 +198,4 @@ Bon pour accord — devis à retourner daté, signé et précédé de la mention
 
 ---
 
-_Devis établi en euros. Prix fermes pendant la durée de validité indiquée. Document généré à partir du PRD VivreEnfin v1.0._
+_Devis établi en euros. Prix fermes pendant la durée de validité indiquée. Document généré à partir du PRD Veevre v1.0._

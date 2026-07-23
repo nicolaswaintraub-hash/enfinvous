@@ -1,5 +1,5 @@
 // Contenu de la page Fenêtres sur le monde — escapades culturelles commentées
-// en direct, depuis chez soi. Maquette statique, ton VivreEnfin.
+// en direct, depuis chez soi. Maquette statique, ton Veevre.
 
 import type { ProgrammeEntry } from "@/data/masterclasses";
 

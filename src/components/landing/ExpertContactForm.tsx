@@ -238,7 +238,7 @@ export function ExpertContactForm() {
           href={`mailto:${expertContact.email}?subject=${encodeURIComponent(
             "Candidature intervenant",
           )}&body=${encodeURIComponent(
-            "Bonjour,\n\nJe souhaite proposer une intervention chez VivreEnfin.\n\nNom et prénom :\nEmail :\nTéléphone :\nDomaine d'expertise :\nType d'intervention :\nVille ou région :\nPrésentation :\nLien :\n",
+            "Bonjour,\n\nJe souhaite proposer une intervention chez Veevre.\n\nNom et prénom :\nEmail :\nTéléphone :\nDomaine d'expertise :\nType d'intervention :\nVille ou région :\nPrésentation :\nLien :\n",
           )}`}
           className="font-medium text-terracotta underline decoration-gold underline-offset-4 transition-colors hover:text-foreground"
         >

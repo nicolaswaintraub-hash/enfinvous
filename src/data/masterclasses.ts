@@ -1,4 +1,4 @@
-// Contenu de la page Les rendez-vous du savoir — maquette statique, ton VivreEnfin.
+// Contenu de la page Les rendez-vous du savoir — maquette statique, ton Veevre.
 
 export interface PrincipleStep {
   num: string;

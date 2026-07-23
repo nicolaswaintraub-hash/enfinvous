@@ -1,6 +1,7 @@
 "use client";
 
 import { X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
@@ -58,12 +59,14 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
       <div className="absolute inset-0 bg-anthracite/95 backdrop-blur-md" />
 
       <div className="relative flex h-16 shrink-0 items-center justify-between px-4">
-        <Link
-          href="/"
-          onClick={onClose}
-          className="font-serif text-xl font-medium text-creme"
-        >
-          Vivre·Enfin
+        <Link href="/" onClick={onClose} aria-label="Veevre — accueil">
+          <Image
+            src="/logo-wordmark.png"
+            alt="Veevre"
+            width={661}
+            height={153}
+            className="h-7 w-auto brightness-0 invert"
+          />
         </Link>
         <button
           type="button"
